@@ -11,9 +11,11 @@
 <div id="desktop">
 
   <div class="desktop-icons">
-    <button class="desktop-icon my-computer" title="My Computer">
+    <button class="desktop-icon my-computer" title="My Computer" onclick="openMC()">
       My Computer
     </button>
+
+    <iframe id="fenetreModale1" class="modal" src="myComputer.html" frameborder="0" width=600px height=400px style="border: none;"></iframe>
 
     <button class="desktop-icon my-documents" title="My Documents" onclick="openFileExplorer()">
       My Documents
@@ -25,9 +27,12 @@
       Network Neighborhood
     </button>
 
-    <button class="desktop-icon trash-empty" title="Recycle Bin">
+    <button class="desktop-icon trash-empty" title="Recycle Bin" onclick="openRB()">
       Recycle Bin
     </button>
+
+    <iframe id="fenetreModale2" class="modal" src="recycleBin.html" frameborder="0" width=800px height=500px style="border: none;"></iframe>
+
   </div>
 
   <div id="toolbar">
