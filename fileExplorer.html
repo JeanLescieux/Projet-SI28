@@ -11,16 +11,23 @@
 
 </head>
 <body>
-    <div class="window" style="width: 700px;height:400px;">
+    <div class="window" style="width: 700px;height:400px;background-color: whitesmoke;">
         <div class="title-bar">
-          <div class="title-bar-text">C://CrazyGuyDisk</div>
+          <div class="title-bar-text">Drive_c (C://CrazyGuyDisk)</div>
           <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
             <button aria-label="Maximize"></button>
             <button aria-label="Close" onclick="parent.closeFileExplorer()"></button>
           </div>
         </div>
-        <div class="window-body">
+        
+        <menu role="tablist" style="width: 100%; display: flex;">
+            <li role="tab" aria-selected="true" style="background-color:whitesmoke"><a href="#tabs">Desktop</a></li>
+            <li role="tab"><a href="#tabs">Plans (private)</a></li>
+            <li role="tab"><a href="#tabs">News (private)</a></li>
+            <li role="tab"><a href="#tabs">Hardware profiles (private)</a></li>
+            <li role="tab"><a href="#tabs">Incoming events (private)</a></li>
+          </menu>
           <p>There's so much room for activities!</p>
           <ul>
             <li>Item 1</li>
@@ -28,7 +35,7 @@
             <li>Item 3</li>
           </ul>
         </div>
-        <div class="status-bar" style="position: fixed; bottom: 90px; width: 700px;">
+        <div class="status-bar" style="position: fixed; bottom: 90px; width: 703px;background-color: lightgray;">
             <p class="status-bar-field">Press F1 for help</p>
             <p class="status-bar-field">Slide 1</p>
             <p class="status-bar-field">CPU Usage: 14%</p>
