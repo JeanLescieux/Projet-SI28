@@ -8,3 +8,5 @@ Usage:
 To use this app, just open the mainPage.html file in your navigator.
 
 Inspired by: https://codepen.io/smpnjn/pen/ExLbvdJ
+https://win98icons.alexmeub.com/
+https://jdan.github.io/98.css/#option-button
