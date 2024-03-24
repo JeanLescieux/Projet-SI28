@@ -1,6 +1,6 @@
 async function openFileExplorer() {
   // Récupère l'élément modalContent
-  var modalContent = document.getElementById('modalContent');
+  var modalContent = document.getElementById('fenetreModale');
   try {
       // Charge le contenu de fileExplorer.html dans modalContent
       const response = await fetch('fileExplorer.html');
