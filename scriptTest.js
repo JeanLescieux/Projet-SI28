@@ -1,39 +1,23 @@
-let date = new Date();
-
-setInterval(function(){
-  document.querySelector('.time').innerText = date.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
-}, 1000);
-
-setTimeout(function(){
-  document.querySelector('#boot').style.display = 'none';
-}, 0);
-
-setTimeout(function(){
-  document.querySelector('#boot-ready').style.display = 'none';
-}, 0);
-
-document.querySelector('select[name="wallpaper"]').addEventListener('click', function(e){
-  wallpaper = e.target.value;
-  switch (wallpaper){
-    case 'none':
-      document.querySelector('#desktop').style.background = 'teal';
-      break; 
-     case '1':
-      document.querySelector('#desktop').style.backgroundImage = 'url(https://i.pinimg.com/originals/e3/6b/41/e36b414450077c6a1e29eab4a27a858c.jpg)';
-      break; 
-    case '2':
-      document.querySelector('#desktop').style.backgroundImage = 'url(http://cs.gettysburg.edu/~duncjo01/archive/patterns/windows/ancestry/Black%20Thatch.bmp)';
-      break;
-    case '3':
-      document.querySelector('#desktop').style.backgroundImage = 'url(http://cs.gettysburg.edu/~duncjo01/archive/patterns/windows/ancestry/Blue%20Rivets.bmp)';
-      break;
-    case '4':
-      document.querySelector('#desktop').style.backgroundImage = 'url(http://cs.gettysburg.edu/~duncjo01/archive/patterns/windows/ancestry/Soap%20Bubbles.bmp)';
-      break;
+async function openFileExplorer() {
+  // Récupère l'élément modalContent
+  var modalContent = document.getElementById('fenetreModale');
+  try {
+      // Charge le contenu de fileExplorer.html dans modalContent
+      const response = await fetch('fileExplorer.html');
+      if (!response.ok) {
+          throw new Error('Erreur lors du chargement de fileExplorer.html');
+      }
+      modalContent.innerHTML = await response.text();
+      // Affiche la fenêtre modale en ajoutant la classe "show"
+      document.getElementById('fenetreModale').style.display = 'block';
+      console.log('Fenêtre modale affichée');
+  } catch (error) {
+      console.error(error);
   }
-});
+}
 
-var draggie = new Draggabilly( '.window', {
- // containment: '.container',
-  handle: '.window-toolbar'
-});
+function closeFileExplorer() {
+  // Cache la fenêtre modale en modifiant directement le style pour masquer l'élément
+  document.getElementById('fenetreModale').style.display = 'none';
+  console.log('Fenêtre modale cachée');
+}
