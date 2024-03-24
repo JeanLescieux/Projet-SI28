@@ -36,27 +36,28 @@
 
           <div class="window-body" style="padding: 10px;">
             <div style="display: flex; flex-wrap: wrap;">
-                <button style="margin: 15px; padding: 0; background: none !important; border: none !important; cursor: pointer;">
-                    <img src="images/fichier.png" alt="Fichier" style="width: 50px; height: 50px;">
-                    <div style="font-size: 14px; text-align: center;">Fichier 1</div>
-                </button>
-                <button style="margin: 15px; padding: 0; background: none !important; border: none !important; cursor: pointer;">
-                    <img src="images/fichier.png" alt="Fichier" style="width: 50px; height: 50px;">
-                    <div style="font-size: 14px; text-align: center;">Fichier 2</div>
-                </button>
-                <button style="margin: 15px; padding: 0; background: none !important; border: none !important; cursor: pointer;">
-                    <img src="images/fichier.png" alt="Fichier" style="width: 50px; height: 50px;">
-                    <div style="font-size: 14px; text-align: center;">Fichier 3</div>
-                </button>
-                <button style="margin: 15px; padding: 0; background: none !important; border: none !important; cursor: pointer;">
-                    <img src="images/fichier.png" alt="Fichier" style="width: 50px; height: 50px;">
-                    <div style="font-size: 14px; text-align: center;">Fichier 4</div>
-                </button>
+                <div id="file1" style="margin: 20px auto; padding: 0; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                    <img src="images/fichier.png" alt="Fichier" style="width: 50px; height: 50px; margin-bottom: 5px;">
+                    <div style="font-size: 14px;">Article.pdf</div>
+                </div>
+                <div id="file2" style="margin: 20px auto; padding: 0; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                    <img src="images/fichier.png" alt="Fichier" style="width: 50px; height: 50px; margin-bottom: 5px;">
+                    <div style="font-size: 14px;">classes.exe</div>
+                </div>
+                <div id="file3" style="margin: 20px auto; padding: 0; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                    <img src="images/fichier.png" alt="Fichier" style="width: 50px; height: 50px; margin-bottom: 5px;">
+                    <div style="font-size: 14px;">odj.txt</div>
+                </div>
+                <div id="file4" style="margin: 20px auto; padding: 0; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                    <img src="images/fichier.png" alt="Fichier" style="width: 50px; height: 50px; margin-bottom: 5px;">
+                    <div style="font-size: 14px;">Fiche.pnj</div>
+                </div>
             </div>
         </div>
         
         
-            
+        
+        
         <div class="status-bar" style="position: fixed; bottom: 90px; width: 697px;background-color: lightgray;">
             <p class="status-bar-field">Press F1 for help</p>
             <p class="status-bar-field">Slide 1</p>
@@ -64,4 +65,32 @@
           </div>
     </div>
 </body>
+<script>
+    // Récupère une référence vers chaque fichier div
+    const file1 = document.getElementById('file1');
+    const file2 = document.getElementById('file2');
+    const file3 = document.getElementById('file3');
+    const file4 = document.getElementById('file4');
+
+    // Ajoute un gestionnaire d'événement de clic à chaque fichier div
+    file1.addEventListener('click', function() {
+        console.log("Le fichier 1 a été cliqué !");
+        // Ajoutez ici le code à exécuter lorsque le fichier 1 est cliqué
+    });
+
+    file2.addEventListener('click', function() {
+        console.log("Le fichier 2 a été cliqué !");
+        // Ajoutez ici le code à exécuter lorsque le fichier 2 est cliqué
+    });
+
+    file3.addEventListener('click', function() {
+        console.log("Le fichier 3 a été cliqué !");
+        // Ajoutez ici le code à exécuter lorsque le fichier 3 est cliqué
+    });
+
+    file4.addEventListener('click', function() {
+        console.log("Le fichier 4 a été cliqué !");
+        // Ajoutez ici le code à exécuter lorsque le fichier 4 est cliqué
+    });
+</script>
 </html>
