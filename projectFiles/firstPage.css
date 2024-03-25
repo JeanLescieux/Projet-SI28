@@ -16,7 +16,7 @@
   
   #desktop{
       position: absolute;
-      background-image: url('../images/lain3.jpg');
+      background-image: url('../images/w98b.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       top: 0;
@@ -176,10 +176,6 @@
       
       &.trash-empty{
         background-image: url(https://win98icons.alexmeub.com/icons/png/recycle_bin_empty-4.png);
-      }
-      &.msn{
-        background-image: url("../images/msn.png");
-        background-size: 50px 50px;
       }
     }
     .desktop-icon:hover{
