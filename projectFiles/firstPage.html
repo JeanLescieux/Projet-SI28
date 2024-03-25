@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI28 Project</title>
+    <link rel="stylesheet" href="firstPage.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/98.css"
+  ></head>
+<body>
+
+<div id="desktop">
+    <div class="window" style="width: 300px">
+        <div class="title-bar">
+          <div class="title-bar-text">D4rk sasuke's computer reset</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <p>Do you really want to reset this computer ?</p>
+          <p>(This action might be irreversible)</p>
+            <button>Yes</button>
+            <button onClick="window.location.href='mainPage.html'">No</button>
+        </div>
+      </div>
+  </div>
+
+  <div id="toolbar">
+    <div class="toolbar-start-menu">
+      <button class="start-button">
+        Start
+      </button>
+    </div>
+    <div class="toolbar-separator"></div>
+
+    <div class="toolbar-left">
+      
+    </div>
+
+    <div class="toolbar-separator"></div>
+
+    <div class="toolbar-right">
+      <div class="time" id="currentTime"></div>
+                  <script>
+                    function updateTime() {
+                      var now = new Date();
+                      var hours = now.getHours();
+                      var minutes = now.getMinutes();
+                      var ampm = hours >= 12 ? 'PM' : 'AM';
+                      hours = hours % 12;
+                      hours = hours ? hours : 12;
+                      minutes = minutes < 10 ? '0'+minutes : minutes;
+                      var time = hours + ":" + minutes + ' ' + ampm;
+
+                      // Add the date with the year always being 1998
+                      var month = now.getMonth() + 1; // JavaScript months are 0-11
+                      var day = now.getDate();
+                      var date = month + "/" + day + "/1998 -";
+
+                      document.getElementById('currentTime').innerHTML = date + ' ' + time;
+                    }
+                    setInterval(updateTime, 1000);
+                  </script>
+                </div>
+              </div>
+            </div>
+            <script src="scriptTest.js"></script>
+            </body>
+            </html>
