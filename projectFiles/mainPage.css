@@ -177,6 +177,10 @@
       &.trash-empty{
         background-image: url(https://win98icons.alexmeub.com/icons/png/recycle_bin_empty-4.png);
       }
+      &.msn{
+        background-image: url("../images/msn.png");
+        background-size: 50px 50px;
+      }
     }
     .desktop-icon:hover{
       transform: scale(1.1); 
