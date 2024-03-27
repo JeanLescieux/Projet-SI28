@@ -15,4 +15,5 @@ https://news.ycombinator.com/item?id=22940564
 
 
 TODO's:
+Add 1 or 2 consoles for loading screen
 Internet Explorer interface
