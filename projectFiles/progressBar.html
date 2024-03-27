@@ -83,6 +83,21 @@
     scrollbar-width: none; /* Masque la barre de défilement */
     -ms-overflow-style: none; /* Masque la barre de défilement pour Internet Explorer et Edge */
 }
+
+#w {
+    top: 40px;
+    left: 30px;
+}
+
+#w1 {
+    top: 200px;
+    left: 200px;
+}
+
+#w2 {
+    top: 360px;
+    left: 500px;
+}
 </style>
 </head>
 <body>
@@ -93,12 +108,30 @@
     </div>
 </div>
 
-<div class="window" style="background-color: #000000;font-size: 15px;width: 500px;height: 300px;">
+<div class="window" id="w" style="background-color: #000000;font-size: 15px;width: 500px;height: 300px;">
     <div class="title-bar">
         <div class="title-bar-text">Console...</div>
 
     </div>
     <div id ="consoleWindow" class="window-body" style="width: 420px;height: 250px;color: #ffffff;">
+    </div>
+</div>
+
+<div class="window" id="w1" style="background-color: #000000;font-size: 15px;width: 500px;height: 300px;">
+    <div class="title-bar">
+        <div class="title-bar-text">Console...</div>
+
+    </div>
+    <div id ="consoleWindow1" class="window-body" style="width: 420px;height: 250px;color: #ffffff;">
+    </div>
+</div>
+
+<div class="window" id="w2" style="background-color: #000000;font-size: 15px;width: 500px;height: 300px;">
+    <div class="title-bar">
+        <div class="title-bar-text">Console...</div>
+
+    </div>
+    <div id ="consoleWindow2" class="window-body" style="width: 420px;height: 250px;color: #ffffff;">
     </div>
 </div>
 
@@ -123,6 +156,24 @@ function animateProgressBar() {
 // Fonction pour ajouter un message à la console
 function appendToConsole(message) {
     var consoleWindow = document.getElementById("consoleWindow");
+    var newMessage = document.createElement("div");
+    newMessage.textContent = message;
+    consoleWindow.appendChild(newMessage);
+    // Défiler automatiquement vers le bas
+    consoleWindow.scrollTop = consoleWindow.scrollHeight;
+}
+
+function appendToConsole1(message) {
+    var consoleWindow = document.getElementById("consoleWindow1");
+    var newMessage = document.createElement("div");
+    newMessage.textContent = message;
+    consoleWindow.appendChild(newMessage);
+    // Défiler automatiquement vers le bas
+    consoleWindow.scrollTop = consoleWindow.scrollHeight;
+}
+
+function appendToConsole2(message) {
+    var consoleWindow = document.getElementById("consoleWindow2");
     var newMessage = document.createElement("div");
     newMessage.textContent = message;
     consoleWindow.appendChild(newMessage);
@@ -185,6 +236,110 @@ window.onload = function() {
 
     setTimeout(function() {
         appendToConsole("Extracting files from archives... [========= ] 75%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole1("Initializing hardware detection routines... [███████████] 100%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole1("Exploring BIOS settings for data remnants... ████████████████████████");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole1("Scanning disk sectors for recoverable fragments... ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole1("Extracting data remnants from outdated file systems... ████░░░░░░░░░░░░░░░░");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole1("Analyzing historical system logs for data traces... 01001000 01100101 01111001 00100000 01010100 01101000 01100101 01110010 01100101");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole1("Reconstructing damaged files using error correction techniques... #####jdf<<####?????////68027hdb,###okd87ej?####{de]+=###");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole1("Integrating recovered information into the system database... ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole1("Performing final data validation checks... [███████████] 100%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+    appendToConsole1("Initiating file system reconstruction process... [███████████] 100%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole1("Examining disk partition tables for lost partitions... #####jdf<<####?????////68027hdb,###okd87ej?####{de]+=###");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole1("Searching for orphaned files in the directory structure... ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole1("Analyzing data blocks... [===== ] 50%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole1("Extracting files from archives... [========= ] 75%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole2("Initializing hardware detection routines... [███████████] 100%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole2("Exploring BIOS settings for data remnants... ████████████████████████");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole2("Scanning disk sectors for recoverable fragments... ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole2("Extracting data remnants from outdated file systems... ████░░░░░░░░░░░░░░░░");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole2("Analyzing historical system logs for data traces... 01001000 01100101 01111001 00100000 01010100 01101000 01100101 01110010 01100101");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole2("Reconstructing damaged files using error correction techniques... #####jdf<<####?????////68027hdb,###okd87ej?####{de]+=###");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole2("Integrating recovered information into the system database... ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole2("Performing final data validation checks... [███████████] 100%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+    appendToConsole2("Initiating file system reconstruction process... [███████████] 100%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole2("Examining disk partition tables for lost partitions... #####jdf<<####?????////68027hdb,###okd87ej?####{de]+=###");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole2("Searching for orphaned files in the directory structure... ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole2("Analyzing data blocks... [===== ] 50%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole2("Extracting files from archives... [========= ] 75%");
     }, getRandomDelay());
 
 };
