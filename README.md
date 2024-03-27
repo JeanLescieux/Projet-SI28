@@ -12,3 +12,7 @@ Inspired by: https://codepen.io/smpnjn/pen/ExLbvdJ
 https://win98icons.alexmeub.com/
 https://jdan.github.io/98.css/#option-button
 https://news.ycombinator.com/item?id=22940564
+
+
+TODO's:
+cliquer dans le bios pour passer au pc.

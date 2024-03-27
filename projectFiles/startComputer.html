@@ -77,8 +77,12 @@
     });
 
     video.addEventListener('ended', function() {
+    document.addEventListener('keydown', redirectToNextPage);
+});
+
+    function redirectToNextPage() {
       window.location.href = 'firstPage.html';
-    });
+    }
   </script>
 </body>
 </html>
