@@ -15,4 +15,4 @@ https://news.ycombinator.com/item?id=22940564
 
 
 TODO's:
-cliquer dans le bios pour passer au pc.
+Internet Explorer interface
