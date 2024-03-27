@@ -3,10 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link
-    rel="stylesheet"
-    href="https://unpkg.com/98.css"
-  >
+<link rel="stylesheet" href="https://unpkg.com/98.css">
 <title>Loading Page</title>
 <style>
     body {
@@ -19,13 +16,12 @@
         align-items: center;
         height: 100vh;
     }
-    
+
     .progress-wrapper {
         width: 300px; /* Largeur du rectangle */
         height: 100px; /* Hauteur du rectangle */
         background-color: #ffffff; /* Fond blanc */
         border: 3px solid #047a15; /* Bordure bleu-vert */
-        /*border-radius: 10px; /* Bordures arrondies */
         padding: 20px; /* Espacement interne */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombre */
         font-family: "Courier New", Courier, monospace; /* Police de caractères monospace */
@@ -35,7 +31,6 @@
         width: 100%;
         height: 15px; /* Hauteur de la barre de progression */
         background-color: #047a15; /* Couleur de la barre de progression */
-        /*border-radius: 10px; /* Bordures arrondies */
         margin-top: 20px; /* Espacement supérieur */
         position: relative; /* Position relative pour placer le pourcentage */
     }
@@ -48,6 +43,46 @@
         color: #000000; /* Couleur du texte noir */
         font-size: 12px; /* Taille de police plus petite */
     }
+
+    .window {
+        position: absolute;
+        top: 40px; /* Distance du haut de la page */
+        right: 100px; /* Distance du côté droit de la page */
+        width: 300px;
+        background-color: #ffffff;
+        /*border: 3px solid #047a15;*/
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        font-family: "Courier New", Courier, monospace;
+    }
+
+    .title-bar {
+        background-color: #047a15;
+        color: #ffffff;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title-bar-text {
+        font-weight: bold;
+    }
+
+    .title-bar-controls button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 2px;
+        margin-right: 5px;
+        color: #ffffff;
+    }
+
+    .window-body {
+    padding: 10px;
+    overflow-y: auto; /* Ajout de défilement vertical si nécessaire */
+    scrollbar-width: none; /* Masque la barre de défilement */
+    -ms-overflow-style: none; /* Masque la barre de défilement pour Internet Explorer et Edge */
+}
 </style>
 </head>
 <body>
@@ -58,8 +93,16 @@
     </div>
 </div>
 
+<div class="window" style="background-color: #000000;font-size: 15px;width: 500px;height: 300px;">
+    <div class="title-bar">
+        <div class="title-bar-text">Console...</div>
+
+    </div>
+    <div id ="consoleWindow" class="window-body" style="width: 420px;height: 250px;color: #ffffff;">
+    </div>
+</div>
+
 <script>
-// Fonction pour animer la barre de progression
 function animateProgressBar() {
     var progressBar = document.getElementById("progressBar");
     var progressPercent = document.querySelector(".progress-percent");
@@ -67,20 +110,91 @@ function animateProgressBar() {
     var interval = setInterval(function() {
         if (width >= 100) {
             clearInterval(interval);
-            // Une fois que la barre de progression atteint 100%, redirige vers une autre page
+            appendToConsole("Data retrieval complete!");
             window.location.href = "mainPage.html";
         } else {
             width++;
             progressBar.style.width = width + "%";
-            progressPercent.textContent = width + "%"; // Met à jour le pourcentage affiché
+            progressPercent.textContent = width + "%";
         }
-    }, 150); // Interval de mise à jour de la barre de progression (50 millisecondes pour une animation fluide)
+    }, 150); // Interval de mise à jour de la barre de progression (150 millisecondes pour une animation fluide)
+}
+
+// Fonction pour ajouter un message à la console
+function appendToConsole(message) {
+    var consoleWindow = document.getElementById("consoleWindow");
+    var newMessage = document.createElement("div");
+    newMessage.textContent = message;
+    consoleWindow.appendChild(newMessage);
+    // Défiler automatiquement vers le bas
+    consoleWindow.scrollTop = consoleWindow.scrollHeight;
 }
 
 // Démarrer l'animation de la barre de progression lorsque la page est entièrement chargée
 window.onload = function() {
     animateProgressBar();
+
+    // Adding messages to the console with a random delay
+    setTimeout(function() {
+        appendToConsole("Initializing hardware detection routines... [███████████] 100%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole("Exploring BIOS settings for data remnants... ████████████████████████");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole("Scanning disk sectors for recoverable fragments... ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole("Extracting data remnants from outdated file systems... ████░░░░░░░░░░░░░░░░");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole("Analyzing historical system logs for data traces... 01001000 01100101 01111001 00100000 01010100 01101000 01100101 01110010 01100101");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole("Reconstructing damaged files using error correction techniques... #####jdf<<####?????////68027hdb,###okd87ej?####{de]+=###");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole("Integrating recovered information into the system database... ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole("Performing final data validation checks... [███████████] 100%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+    appendToConsole("Initiating file system reconstruction process... [███████████] 100%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole("Examining disk partition tables for lost partitions... #####jdf<<####?????////68027hdb,###okd87ej?####{de]+=###");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole("Searching for orphaned files in the directory structure... ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole("Analyzing data blocks... [===== ] 50%");
+    }, getRandomDelay());
+
+    setTimeout(function() {
+        appendToConsole("Extracting files from archives... [========= ] 75%");
+    }, getRandomDelay());
+
 };
+
+function getRandomDelay() {
+    return Math.floor(Math.random() * 12000) + 1000; // Random delay between 1000 and 10000 milliseconds
+}
+
+
+
 </script>
 </body>
 </html>
