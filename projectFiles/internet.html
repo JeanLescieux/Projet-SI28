@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="https://unpkg.com/98.css">
 </head>
+
 <body>
     <div class="window" style="width:1200px;">
         <div class="title-bar">
@@ -11,84 +13,147 @@
                 <button aria-label="Minimize"></button>
                 <button aria-label="Maximize"></button>
                 <button aria-label="Close" onclick="parent.closeInternet()"></button>
+            </div>
         </div>
-        </div>
-    
-    <div style="background-color: lightgrey; color: black;height:20px;margin-bottom: -5px;">
-        <div style="display: flex;">
-            <p style="margin-right: 20px;margin-left: 10px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>F</u>ile</p>
-            <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>E</u>dit</p>
-            <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>V</u>iew</p>
-            <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>F</u>avourites</p>
-            <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>H</u>elp</p>
-        </div>
-    </div>
 
-    <div style="background-color: lightgrey; color: black; height: 45px;margin-bottom: 3px;">
-        <div class="window-body" style="padding: 10px;">
-            <div style="display: flex; flex-wrap: wrap;">
-                <div id="file4" style="margin-right:20px;cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: 0px;">
-                    <img src="../images/back.png" alt="Fichier" style="width: 20px; height: 20px;margin-bottom: 0px;">
-                    <div style="font-size: 9px;">Back</div>
-                </div>
-                <div id="file4" style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -8px;">
-                    <img src="../images/forward.png" alt="Fichier" style="width: 20px; height: 20px;margin-bottom: 8px;">
-                    <div style="font-size: 9px;">Forward</div>
-                </div>
-                <div id="file4" style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
-                    <img src="../images/stop.png" alt="Fichier" style="width: 20px; height: 20px;margin-bottom: 5px;">
-                    <div style="font-size: 9px;">Stop</div>
-                </div>
-                <div id="file4" style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
-                    <img src="../images/refresh.png" alt="Fichier" style="width: 20px; height: 20px;margin-bottom: 5px;">
-                    <div style="font-size: 9px;">Refresh</div>
-                </div>
-                <div id="file4" style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
-                    <img src="../images/homepage_alt.png" alt="Fichier" style="width: 20px; height: 20px;margin-bottom: 5px;">
-                    <div style="font-size: 9px;">Home</div>
-                </div>
-                <div id="file4" style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
-                    <img src="../images/favorites.png" alt="Fichier" style="width: 20px; height: 20px;margin-bottom: 5px;">
-                    <div style="font-size: 9px;">Favorites</div>
-                </div>
-                <div id="file4" style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
-                    <img src="../images/history.png" alt="Fichier" style="width: 20px; height: 20px;margin-bottom: 5px;">
-                    <div style="font-size: 9px;">History</div>
-                </div>
-                <div id="file4" style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
-                    <img src="../images/help.png" alt="Fichier" style="width: 20px; height: 20px;margin-bottom: 5px;">
-                    <div style="font-size: 9px;">Help</div>
+        <div style="background-color: lightgrey; color: black;height:20px;margin-bottom: -5px;">
+            <div style="display: flex;">
+                <p style="margin-right: 20px;margin-left: 10px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>F</u>ile
+                </p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>E</u>dit</p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>V</u>iew</p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>F</u>avourites</p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>H</u>elp</p>
+            </div>
+        </div>
+
+        <div style="background-color: lightgrey; color: black; height: 45px;margin-bottom: 3px;">
+            <div class="window-body" style="padding: 10px;">
+                <div style="display: flex; flex-wrap: wrap;">
+                    <div id="file4"
+                        style="margin-right:20px;cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: 0px;">
+                        <img src="../images/back.png" alt="Fichier"
+                            style="width: 20px; height: 20px;margin-bottom: 0px;">
+                        <div style="font-size: 9px;">Back</div>
+                    </div>
+                    <div id="file4"
+                        style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -8px;">
+                        <img src="../images/forward.png" alt="Fichier"
+                            style="width: 20px; height: 20px;margin-bottom: 8px;">
+                        <div style="font-size: 9px;">Forward</div>
+                    </div>
+                    <div id="file4"
+                        style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
+                        <img src="../images/stop.png" alt="Fichier"
+                            style="width: 20px; height: 20px;margin-bottom: 5px;">
+                        <div style="font-size: 9px;">Stop</div>
+                    </div>
+                    <div id="file4"
+                        style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
+                        <img src="../images/refresh.png" alt="Fichier"
+                            style="width: 20px; height: 20px;margin-bottom: 5px;">
+                        <div style="font-size: 9px;">Refresh</div>
+                    </div>
+                    <div id="file4"
+                        style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
+                        <img src="../images/homepage_alt.png" alt="Fichier"
+                            style="width: 20px; height: 20px;margin-bottom: 5px;">
+                        <div style="font-size: 9px;">Home</div>
+                    </div>
+                    <div id="file4"
+                        style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
+                        <img src="../images/favorites.png" alt="Fichier"
+                            style="width: 20px; height: 20px;margin-bottom: 5px;">
+                        <div style="font-size: 9px;">Favorites</div>
+                    </div>
+                    <div id="history"
+                        style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
+                        <img src="../images/history.png" alt="Fichier"
+                            style="width: 20px; height: 20px;margin-bottom: 5px;">
+                        <div style="font-size: 9px;">History</div>
+                    </div>
+                    <div id="file4"
+                        style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
+                        <img src="../images/help.png" alt="Fichier"
+                            style="width: 20px; height: 20px;margin-bottom: 5px;">
+                        <div style="font-size: 9px;">Help</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div style="background-color: lightgrey; color: black;height:20px;margin-bottom: 1px;">
-        <div style="display: flex;">
-            <p style="margin-right: 20px;margin-left: 10px;margin-top:4px;color:rgba(33, 31, 31, 0.94);">Address</p>
-            <input type="text" style="width: 90%; margin-top:0px;color:rgba(33, 31, 31, 0.94);">
-            <button type="submit" style="width: 10px;height:1px;margin-top: 0px;">Search</button>
+        <div style="background-color: lightgrey; color: black;height:20px;margin-bottom: 1px;">
+            <div style="display: flex;">
+                <p style="margin-right: 20px;margin-left: 10px;margin-top:4px;color:rgba(33, 31, 31, 0.94);">Address</p>
+                <input type="text" style="width: 90%; margin-top:0px;color:rgba(33, 31, 31, 0.94);">
+                <button type="submit" style="width: 10px;height:1px;margin-top: 0px;">Search</button>
+            </div>
         </div>
-    </div>
 
-            <menu role="tablist">
-              <li role="tab" aria-selected="true"><a href="#tabs">Page 0</a></li>
-              <li role="tab"><a href="#tabs">Page 1</a></li>
-              <li role="tab"><a href="#tabs">Page 2</a></li>
-              <li role="tab"><a href="#tabs">Page 3</a></li>
-              <li role="tab"><a href="#tabs">Page 4</a></li>
-              <li role="tab"><a href="#tabs">Page 5</a></li>
-            </menu>
-            <div class="window" role="tabpanel">
-              <div class="window-body">
+        <menu role="tablist">
+            <li role="tab" aria-selected="true"><a href="#tabs">Page 0</a></li>
+            <li role="tab"><a href="#tabs">Page 1</a></li>
+            <li role="tab"><a href="#tabs">Page 2</a></li>
+            <li role="tab"><a href="#tabs">Page 3</a></li>
+            <li role="tab"><a href="#tabs">Page 4</a></li>
+            <li role="tab"><a href="#tabs">Page 5</a></li>
+        </menu>
+
+        </menu>
+        <div class="window" role="tabpanel">
+            <div class="window-body">
                 <div class="window-body">
-                    <iframe src="./page.html" style="width:100%; height:600px;"></iframe>
+                    <iframe id="mainpage" src="./page.html" style="width:100%; height:600px;"></iframe>
                 </div>
                 <div class="status-bar">
                     <p>Welcome in Internet Explorer !</p>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
     </div>
+    </div>
+    <script>
+        var tabs = document.querySelectorAll('[role="tab"]');
+        tabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+                tabs.forEach(function (tab) {
+                    tab.setAttribute('aria-selected', 'false');
+                });
+                this.setAttribute('aria-selected', 'true');
+                var iframe = document.getElementById('mainpage');
+                switch (this.textContent) {
+                    case 'Page 0':
+                        iframe.src = './page.html';
+                        break;
+                    case 'Page 1':
+                        iframe.src = './page1.html';
+                        break;
+                    case 'Page 2':
+                        iframe.src = './page2.html';
+                        break;
+                    case 'Page 3':
+                        iframe.src = './page3.html';
+                        break;
+                    case 'Page 4':
+                        iframe.src = 'https://maze.toys/';
+                        break;
+                    case 'Page 5':
+                        iframe.src = 'https://hackertyper.com/';
+                        break;
+                    default:
+                        iframe.src = './page.html';
+                }
+
+            });
+        });
+
+        const history = document.getElementById('history');
+
+        // Ajoute un gestionnaire d'événement de clic à chaque fichier div
+        history.addEventListener('click', function () {
+            var iframe = document.getElementById('mainpage');
+            iframe.src = './history.html';
+        });
+    </script>
 </body>
+
 </html>

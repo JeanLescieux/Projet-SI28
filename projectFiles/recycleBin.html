@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Explorer</title>
-    <link
-  rel="stylesheet"
-  href="https://unpkg.com/98.css"
->
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
 
 </head>
 <style>
@@ -15,44 +13,52 @@
         transform: scale(1.1);
     }
 </style>
+
 <body>
     <div class="window" style="width: 700px;height:400px;background-color: whitesmoke;">
         <div class="title-bar">
-          <div class="title-bar-text">Recycle bin (E://HiddenDisk)</div>
-          <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close" onclick="parent.closeRB()"></button>
-          </div>
+            <div class="title-bar-text">Recycle bin (E://HiddenDisk)</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="parent.closeRB()"></button>
+            </div>
         </div>
-        
+
         <menu role="tablist" style="width: 698px; display: flex;background-color: lightgray;">
-            <li role="tab" aria-selected="true" style="background-color:whitesmoke"><a href="#tabs">Deleted documents</a></li>
+            <li role="tab" aria-selected="true" style="background-color:whitesmoke"><a href="#tabs">Deleted
+                    documents</a></li>
         </menu>
 
-          <div class="window-body" style="padding: 10px;">
+        <div class="window-body" style="padding: 10px;">
             <div style="display: flex; flex-wrap: wrap;">
-                <div id="file1" style="margin: 20px auto; padding: 0; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;">
-                    <img src="../images/fichier.png" alt="Fichier" style="width: 50px; height: 50px; margin-bottom: 5px;">
+                <div id="file1"
+                    style="margin: 20px auto; padding: 0; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                    <img src="../images/fichier.png" alt="Fichier"
+                        style="width: 50px; height: 50px; margin-bottom: 5px;">
                     <div style="font-size: 14px;">Secret.pdf</div>
                 </div>
-                <div id="file2" style="margin: 20px auto; padding: 0; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;">
-                    <img src="../images/fichier.png" alt="Fichier" style="width: 50px; height: 50px; margin-bottom: 5px;">
+                <div id="file2"
+                    style="margin: 20px auto; padding: 0; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                    <img src="../images/fichier.png" alt="Fichier"
+                        style="width: 50px; height: 50px; margin-bottom: 5px;">
                     <div style="font-size: 14px;">meurtres.txt</div>
                 </div>
-                <div id="file3" style="margin: 20px auto; padding: 0; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;">
-                    <img src="../images/fichier.png" alt="Fichier" style="width: 50px; height: 50px; margin-bottom: 5px;">
+                <div id="file3"
+                    style="margin: 20px auto; padding: 0; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                    <img src="../images/fichier.png" alt="Fichier"
+                        style="width: 50px; height: 50px; margin-bottom: 5px;">
                     <div style="font-size: 14px;">torture.pnj</div>
                 </div>
             </div>
         </div>
-        
-        
+
+
         <div class="status-bar" style="position: fixed; bottom: 90px; width: 697px;background-color: lightgray;">
             <p class="status-bar-field">Double click to retrieve</p>
             <p class="status-bar-field">Slide 1</p>
             <p class="status-bar-field">Memory available: 42%</p>
-          </div>
+        </div>
     </div>
 </body>
 <script>
@@ -62,19 +68,20 @@
     const file3 = document.getElementById('file3');
 
     // Ajoute un gestionnaire d'événement de clic à chaque fichier div
-    file1.addEventListener('click', function() {
+    file1.addEventListener('click', function () {
         console.log("Le fichier 1 a été cliqué !");
         // Ajoutez ici le code à exécuter lorsque le fichier 1 est cliqué
     });
 
-    file2.addEventListener('click', function() {
+    file2.addEventListener('click', function () {
         console.log("Le fichier 2 a été cliqué !");
         // Ajoutez ici le code à exécuter lorsque le fichier 2 est cliqué
     });
 
-    file3.addEventListener('click', function() {
+    file3.addEventListener('click', function () {
         console.log("Le fichier 3 a été cliqué !");
         // Ajoutez ici le code à exécuter lorsque le fichier 3 est cliqué
     });
 </script>
+
 </html>
