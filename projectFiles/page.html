@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Color Page</title>
+    <style>
+        body {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="randomText">Hello, World!</h1>
+
+    <script>
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        document.body.style.backgroundColor = getRandomColor();
+        document.getElementById('randomText').style.color = getRandomColor();
+    </script>
+</body>
+</html>

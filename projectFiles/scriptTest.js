@@ -57,3 +57,23 @@ function closeRB() {
   document.getElementById('fenetreModale2').style.display = 'none';
   console.log('Fenêtre modale cachée');
 }
+
+async function openInternet() {
+  var modalContent = document.getElementById('fenetreModaleInternet');
+  try {
+      const response = await fetch('internet.html');
+      if (!response.ok) {
+          throw new Error('Erreur lors du chargement de myComputer.html');
+      }
+      modalContent.innerHTML = await response.text();
+      document.getElementById('fenetreModaleInternet').style.display = 'block';
+      console.log('Fenêtre modale affichée');
+  } catch (error) {
+      console.error(error);
+  }
+}
+
+function closeInternet() {
+  document.getElementById('fenetreModaleInternet').style.display = 'none';
+  console.log('Fenêtre modale cachée');
+}

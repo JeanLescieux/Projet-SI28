@@ -15,5 +15,7 @@ https://news.ycombinator.com/item?id=22940564
 
 
 TODO's:
-Add 1 or 2 consoles for loading screen
 Internet Explorer interface
+Icone eve online to add, error message if we click it ?
+Diary to add.
+Add paths to MyDocuments.
