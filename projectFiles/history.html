@@ -9,10 +9,10 @@
 
         .column {
             float: left;
-            padding: 10px;
         }
+
         body {
-            margin:0px
+            margin: 0px
         }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/98.css">
@@ -21,21 +21,106 @@
 
 <body>
     <div class="row">
-        <div class="column" style="background-color:#aaa;flex: 25%;height:94vh">
-            <div class="title-bar inactive" style="margin-left: -10px;margin-right:-10px;margin-top: -10px;width:200px;">
+        <div class="column" style="background-color:#aaa;flex: 30%;height:94vh">
+            <div class="title-bar inactive" style="width: 100%; display: flex; align-items: center;">
+                <img src="../images/file_gears-2.png" alt="Fichier"
+                    style="width: 20px; height: 20px;margin-bottom: 0px;">
                 <div class="title-bar-text">Dates</div>
                 <div class="title-bar-controls">
                 </div>
-              </div>
-            <h2>Colonne Gauche</h2>
-            <p>Contenu de la colonne gauche...</p>
+            </div>
+            <ul style="list-style-type:none; padding:0">
+                <li><a id="01/01/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('January 1, 1998')">January 1, 1998</a></li>
+                <hr>
+                <li><a id="02/12/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('February 12, 1998')">February 12, 1998</a></li>
+                <hr>
+                <li><a id="03/23/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('March 23, 1998')">March 23, 1998</a></li>
+                <hr>
+                <li><a id="04/15/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('April 15, 1998')">April 15, 1998</a></li>
+                <hr>
+                <li><a id="05/20/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('May 20, 1998')">May 20, 1998</a></li>
+                <hr>
+                <li><a id="06/30/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('June 30, 1998')">June 30, 1998</a></li>
+                <hr>
+                <li><a id="07/04/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('July 4, 1998')">July 4, 1998</a></li>
+                <hr>
+                <li><a id="08/15/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('August 15, 1998')">August 15, 1998</a></li>
+                <hr>
+                <li><a id="09/10/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('September 10, 1998')">September 10, 1998</a></li>
+                <hr>
+                <li><a id="10/31/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('October 31, 1998')">October 31, 1998</a></li>
+                <hr>
+            </ul>
         </div>
-        <div class="column" style="background-color:#bbb;flex: 75%;">
-            <h2>Colonne Droite</h2>
-            <p>Contenu de la colonne droite...</p>
+        <div class="column" id="right-column" style="background-color:#bbb;flex: 70%;">
+            <a>galacticfederation.forum
+                (https://forums.com/sujets/discussion-generale-sur-la-federation-galactique/divulgation.123456/)</a>
+            <hr>
+            <a>amarr.empire (https://forums.com/sujets/politique-interne-de-l-empire-amarr/royaume-cosmique.789012/)</a>
+            <hr>
+            <a>caldari.corporation
+                (https://forums.com/sujets/economie-et-commerce-caldari/strategies-d-entreprise.345678/)</a>
+            <hr>
+            <a>jove.colony
+                (https://forums.com/sujets/voyages-spatiaux-et-decouvertes-jove/legende-des-anciens.901234/)</a>
+            <hr>
+            <a>sleepless.society
+                (https://forums.com/sujets/sommeil-et-conscience-sleepless/reveil-de-l-esprit.567890/)</a>
+            <hr>
         </div>
     </div>
+    <script>
+        function showContent(date) {
+            let content;
+            let url;
+            switch (date) {
+                case 'January 1, 1998':
+                    content = "<a>galacticfederation.forum (https://forums.com/sujets/discussion-generale-sur-la-federation-galactique/divulgation.123456/)</a><hr>"
+                    content += "<a>amarr.empire (https://forums.com/sujets/politique-interne-de-l-empire-amarr/royaume-cosmique.789012/)</a><hr>";
+                    content += "<a>caldari.corporation (https://forums.com/sujets/economie-et-commerce-caldari/strategies-d-entreprise.345678/)</a><hr>";
+                    content += "<a>jove.colony (https://forums.com/sujets/voyages-spatiaux-et-decouvertes-jove/legende-des-anciens.901234/)</a><hr>";
+                    content += "<a>sleepless.society (https://forums.com/sujets/sommeil-et-conscience-sleepless/reveil-de-l-esprit.567890/)</a><hr>";
+                    break;
+                case 'February 12, 1998':
+                    content = "<a>galacticfederation.forum (https://forums.com/sujets/discussion-generale-sur-la-federation-galactique/divulgation.123456/)</a><hr>"
+                    content += "<a>wormhole.explorers (https://forums.com/sujets/exploration-de-trous-de-ver/au-dela-des-frontieres.345678/)</a><hr>";
+                    content += "<a>minmatar.resistance (https://forums.com/sujets/resistance-minmatar/revolte-des-opprimes.901234/)</a><hr>";
+                    content += "<a>kybernaut.collective (https://forums.com/sujets/collectif-kybernaut/reconquete-de-l-abime.567890/)</a><hr>";
+                    content += "<a>theforgotten.cult (https://forums.com/sujets/culte-des-oublies/retour-des-anciens.345678/)</a><hr>";
+                    break;
+                case 'March 23, 1998':
+                    content = "<a>sleepless.society (https://forums.com/sujets/sommeil-et-conscience-sleepless/reveil-de-l-esprit.901234/)</a><hr>";
+                    content += "<a>theabyssal.portal (https://forums.com/sujets/portail-des-abimes/voyage-au-dela.567890/)</a><hr>";
+                    content += "<a>ethereal.beings (https://forums.com/sujets/etre-ethere/ascension-spirituelle.123456/)</a><hr>";
+                    content += "<a>jove.archives (https://forums.com/sujets/archives-jove/secrets-de-l-univers.789012/)</a><hr>";
+                    content += "<a>trigs.conclave (https://forums.com/sujets/conclave-triglavian/union-cosmique.345678/)</a><hr>";
+                    break;
+                case 'April 15, 1998':
+                    content = "<a>sleepless.society (https://forums.com/sujets/sommeil-et-conscience-sleepless/reveil-de-l-esprit.901234/)</a><hr>"
+                    content += "<a>thedark.path (https://forums.com/sujets/voie-sombre/recherche-du-savoir.567890/)</a><hr>";
+                    content += "<a>sleeper.cult (https://forums.com/sujets/culte-des-dormeurs/erection-de-la-matrice.123456/)</a><hr>";
+                    content += "<a>drifter.encounter (https://forums.com/sujets/rencontre-avec-les-deriveurs/mysteres-de-l-espace.789012/)</a><hr>";
+                    content += "<a>theancient.mystery (https://forums.com/sujets/mystere-des-anciens/legende-ou-verite.345678/)</a><hr>";
+                    content += "<a>neweden.lore (https://forums.com/sujets/histoires-de-new-eden/legendes-galactiques.901234/)</a><hr>";
+                    break;
+                default:
+                    url = '#';
+                    content = "<h2>" + date + "</h2><p>This is the default content for " + date + ". Visit <a href='" + url + "'>Example Website</a></p>";
+            }
+            document.getElementById('right-column').innerHTML = content;
+        }
+
+    </script>
 </body>
 
 </html>
-</div>
