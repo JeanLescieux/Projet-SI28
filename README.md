@@ -15,8 +15,10 @@ https://news.ycombinator.com/item?id=22940564
 
 
 TODO's:
-Internet Explorer interface
-Icone eve online to add, error message if we click it ?
-Diary to add.
+Secte website.
+Forum website.
+Icone eve online to add, error message if we click it?
+Diary.
+Calculator hidden diary.
 Add paths to MyDocuments.
-Calculatrice journal caché .
+Skype/MSN and conversations.

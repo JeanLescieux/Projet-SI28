@@ -89,7 +89,8 @@
         <div style="background-color: lightgrey; color: black;height:20px;margin-bottom: 1px;">
             <div style="display: flex;">
                 <p style="margin-right: 20px;margin-left: 10px;margin-top:4px;color:rgba(33, 31, 31, 0.94);">Address</p>
-                <input type="text" style="width: 90%; margin-top:0px;color:rgba(33, 31, 31, 0.94);">
+                <input id="addbar" type="text" style="width: 90%; margin-top:0px;color:rgba(33, 31, 31, 0.94);"
+                    value="https://forum-secte-transhumaniste-innovation-galactique.org/discussions/philosophie-et-technologie/ascension-humaine-et-integration-cybernetique/decouverte-de-la-transcendance-cybernétique-et-ses-implications-sur-l-evolution-de-l-humanite/">
                 <button type="submit" style="width: 10px;height:1px;margin-top: 0px;">Search</button>
             </div>
         </div>
@@ -118,6 +119,7 @@
     </div>
     <script>
         var tabs = document.querySelectorAll('[role="tab"]');
+        var addbar = document.getElementById('addbar');
         tabs.forEach(function (tab) {
             tab.addEventListener('click', function () {
                 tabs.forEach(function (tab) {
@@ -128,21 +130,27 @@
                 switch (this.textContent) {
                     case 'Page 0':
                         iframe.src = './page.html';
+                        addbar.value = 'https://forum-secte-transhumaniste-innovation-galactique.org/discussions/philosophie-et-technologie/ascension-humaine-et-integration-cybernetique/decouverte-de-la-transcendance-cybernétique-et-ses-implications-sur-l-evolution-de-l-humanite/';
                         break;
                     case 'Page 1':
                         iframe.src = './page1.html';
+                        addbar.value = 'https://forum-online-video-games-and-more-community.org/discussions/gaming-culture-and-beyond/exploring-the-virtual-frontiers-and-the-evolution-of-online-entertainment/embracing-the-multiverse-a-journey-through-digital-realms-and-beyond/';
                         break;
                     case 'Page 2':
                         iframe.src = './page2.html';
+                        addbar.value = 'https://forums-cult-underground-secret-world.org/discussions/occultisme-et-conspirations/les-secrets-cachees-de-l-underground-et-leurs-influences-sur-la-societe-contemporaine/decryptage-des-mysteres-de-l-inframonde-et-des-societes-secretes/';
                         break;
                     case 'Page 3':
                         iframe.src = './page3.html';
+                        addbar.value = 'https://EveOnline/forums-galactic-federation.com/discussions/generales/divulgation-sur-la-federation-galactique-et-ses-mysteres/';
                         break;
                     case 'Page 4':
                         iframe.src = 'https://maze.toys/';
+                        addbar.value = 'https://maze.toys/';
                         break;
                     case 'Page 5':
                         iframe.src = 'https://hackertyper.com/';
+                        addbar.value = 'https://hackertyper.com/';
                         break;
                     default:
                         iframe.src = './page.html';
