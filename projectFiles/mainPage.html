@@ -1,86 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SI28 Project</title>
-    <link rel="stylesheet" href="mainPage.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SI28 Project</title>
+  <link rel="stylesheet" href="mainPage.css">
 </head>
+
 <body>
 
-<div id="desktop">
+  <div id="desktop">
 
-  <div class="desktop-icons">
-    <button class="desktop-icon my-computer" title="My Computer" onclick="openMC()">
-      My Computer
-    </button>
+    <div class="desktop-icons">
+      <button class="desktop-icon my-computer" title="My Computer" onclick="openMC()">
+        My Computer
+      </button>
 
-    <iframe id="fenetreModale1" class="modal" src="myComputer.html" frameborder="0" width=600px height=400px style="border: none;"></iframe>
+      <iframe id="fenetreModale1" class="modal" src="myComputer.html" frameborder="0" width=600px height=400px
+        style="border: none;"></iframe>
 
-    <button class="desktop-icon my-documents" title="My Documents" onclick="openFileExplorer()">
-      My Documents
-    </button>
+      <button class="desktop-icon my-documents" title="My Documents" onclick="openFileExplorer()">
+        My Documents
+      </button>
 
-    <iframe id="fenetreModale" class="modal" src="fileExplorer.html" frameborder="0" width=800px height=500px style="border: none;"></iframe>
+      <iframe id="fenetreModale" class="modal" src="fileExplorer.html" frameborder="0" width=800px height=500px
+        style="border: none;"></iframe>
 
-     <button class="desktop-icon network" title="Network Neighborhood">
-      Network Neighborhood
-    </button>
+      <button class="desktop-icon network" title="Network Neighborhood">
+        Network Neighborhood
+      </button>
 
       <button class="desktop-icon msn" title="msn" onclick="" style="text-align: center;">
         MSN
       </button>
 
-    <button class="desktop-icon trash-empty" title="Recycle Bin" onclick="openRB()">
-      Recycle Bin
-    </button>
-
-    <iframe id="fenetreModale2" class="modal" src="recycleBin.html" frameborder="0" width=800px height=500px style="border: none;"></iframe>
-
-  </div>
-
-  <div id="toolbar">
-    <div class="toolbar-start-menu">
-      <button class="start-button">
-        Start
+      <button class="desktop-icon trash-empty" title="Recycle Bin" onclick="openRB()">
+        Recycle Bin
       </button>
-    </div>
-    <div class="toolbar-separator"></div>
 
-    <div class="toolbar-left">
-      <button class="toolbar-icon ie"></button>
-      <button class="toolbar-icon outlook"></button>
-      <button class="toolbar-icon desktop"></button>
-      <button class="toolbar-icon channels"></button>
+      <iframe id="fenetreModale2" class="modal" src="recycleBin.html" frameborder="0" width=800px height=500px
+        style="border: none;"></iframe>
+
     </div>
 
-    <div class="toolbar-separator"></div>
+    <div id="toolbar">
+      <div class="toolbar-start-menu">
+        <button class="start-button">
+          Start
+        </button>
+      </div>
+      <div class="toolbar-separator"></div>
 
-    <div class="toolbar-right">
-      <div class="time" id="currentTime"></div>
-                  <script>
-                    function updateTime() {
-                      var now = new Date();
-                      var hours = now.getHours();
-                      var minutes = now.getMinutes();
-                      var ampm = hours >= 12 ? 'PM' : 'AM';
-                      hours = hours % 12;
-                      hours = hours ? hours : 12;
-                      minutes = minutes < 10 ? '0'+minutes : minutes;
-                      var time = hours + ":" + minutes + ' ' + ampm;
+      <div class="toolbar-left">
+        <button class="toolbar-icon ie" onclick="openInternet()"></button>
+        <iframe id="fenetreModaleInternet" class="modal" src="internet.html" frameborder="0" width=1500px height=900px
+          style="border: none;"></iframe>
+        <button class="toolbar-icon outlook"></button>
+        <button class="toolbar-icon desktop"></button>
+        <button class="toolbar-icon channels"></button>
+      </div>
 
-                      // Add the date with the year always being 1998
-                      var month = now.getMonth() + 1; // JavaScript months are 0-11
-                      var day = now.getDate();
-                      var date = month + "/" + day + "/1998 -";
+      <div class="toolbar-separator"></div>
 
-                      document.getElementById('currentTime').innerHTML = date + ' ' + time;
-                    }
-                    setInterval(updateTime, 1000);
-                  </script>
-                </div>
-              </div>
-            </div>
-            <script src="scriptTest.js"></script>
-            </body>
-            </html>
+      <div class="toolbar-right">
+        <div class="time" id="currentTime"></div>
+        <script>
+          function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            var time = hours + ":" + minutes + ' ' + ampm;
+
+            // Add the date with the year always being 1998
+            var month = now.getMonth() + 1; // JavaScript months are 0-11
+            var day = now.getDate();
+            var date = month + "/" + day + "/1998 -";
+
+            document.getElementById('currentTime').innerHTML = date + ' ' + time;
+          }
+          setInterval(updateTime, 1000);
+        </script>
+      </div>
+    </div>
+  </div>
+  <script src="scriptTest.js"></script>
+</body>
+
+</html>
