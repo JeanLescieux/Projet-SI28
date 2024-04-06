@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Search History</title>
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .column {
+            float: left;
+            padding: 10px;
+        }
+        body {
+            margin:0px
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+
 </head>
+
 <body>
-    <div class="window" style="margin: 20px; width: 500px;">
-        <div class="title-bar">
-            <div class="title-bar-text">Search History</div>
+    <div class="row">
+        <div class="column" style="background-color:#aaa;flex: 25%;height:94vh">
+            <div class="title-bar inactive" style="margin-left: -10px;margin-right:-10px;margin-top: -10px;width:200px;">
+                <div class="title-bar-text">Dates</div>
+                <div class="title-bar-controls">
+                </div>
+              </div>
+            <h2>Colonne Gauche</h2>
+            <p>Contenu de la colonne gauche...</p>
         </div>
-        <div class="window-body">
-            <ul class="tree-view">
-                <li>
-                    <div class="tree-item">
-                        <div class="tree-item-space"></div>
-                        <div class="tree-item-icon"></div>
-                        <p class="tree-item-text">Search 1 : https://www.example.com/search1</a></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="tree-item">
-                        <div class="tree-item-space"></div>
-                        <div class="tree-item-icon"></div>
-                        <label class="tree-item-text"><a href="https://www.example.com/search2">Search 2</a></label>
-                    </div>
-                </li>
-                <li>
-                    <div class="tree-item">
-                        <div class="tree-item-space"></div>
-                        <div class="tree-item-icon"></div>
-                        <label class="tree-item-text"><a href="https://www.example.com/search3">Search 3</a></label>
-                    </div>
-                </li>
-                <li>
-                    <div class="tree-item">
-                        <div class="tree-item-space"></div>
-                        <div class="tree-item-icon"></div>
-                        <label class="tree-item-text"><a href="https://www.example.com/search4">Search 4</a></label>
-                    </div>
-                </li>
-            </ul>
+        <div class="column" style="background-color:#bbb;flex: 75%;">
+            <h2>Colonne Droite</h2>
+            <p>Contenu de la colonne droite...</p>
         </div>
     </div>
 </body>
+
 </html>
+</div>

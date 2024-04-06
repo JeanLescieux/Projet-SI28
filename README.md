@@ -19,3 +19,4 @@ Internet Explorer interface
 Icone eve online to add, error message if we click it ?
 Diary to add.
 Add paths to MyDocuments.
+Calculatrice journal caché .
