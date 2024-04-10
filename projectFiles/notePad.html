@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Explorer</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+
+</head>
+<style>
+    button:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<body>
+    <div class="window" style="width: 700px;height:400px;background-color: whitesmoke;">
+        <div class="title-bar">
+            <div class="title-bar-text">Drive_c (C://CrazyGuyDisk)</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="parent.closeFileExplorer()"></button>
+            </div>
+        </div>
+
+        <div class="status-bar" style="position: fixed; bottom: 90px; width: 697px;background-color: lightgray;">
+            <p class="status-bar-field">Press F1 for help</p>
+            <p class="status-bar-field">Slide 1</p>
+            <p class="status-bar-field">CPU Usage: 14%</p>
+        </div>
+    </div>
+</body>
+<script>
+</script>
+
+</html>

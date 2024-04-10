@@ -16,9 +16,10 @@ strong {
 
 #desktop {
   position: absolute;
-  background-image: url('../images/w98b.jpg');
+  background-image: url('../images/windows-95-tyrzdtatcwlgan16.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   top: 0;
   right: 0;
   bottom: 0;
