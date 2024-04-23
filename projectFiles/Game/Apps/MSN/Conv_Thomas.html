@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Messagerie Skype des années 2000</title>
+</head>
+<body>
+
+   <main class="messagerie">
+
+    <section class="liste-conv">   
+        <img class="LogoMSN" src="/images/MSN-Logo-2000.png" alt="logo MSN des années 2000"> 
+        <div class="conv-liste">
+            <h1>Conversations</h1>
+            <ul class="liste">
+                <li><a href="Conv_grp_large.html" >Groupe discussion large</a></li>
+                <li><a href="Conv_12p.html" >Groupe retreint 12 pers</a></li>
+                <li><a id="grisé">Thomas</a></li>
+                <li><a href="Conv_Nicolas.html" >Nicolas</a></li>
+                <li><a href="Conv_5p.html" >Conversation 5</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="conversation">
+        <div class="title-bar">
+            <div class="buttons">
+                <button class="minimize-button" onclick="minimize()">-</button>
+                <button class="maximize-button" onclick="maximize()">□</button>
+                <button class="close-button" onclick="parent.closeMSN()">X</button>
+            </div>
+        </div>
+        <script>
+            function closeWindow() { 
+                window.close();
+            }
+        </script>
+
+        <section class="nav">
+            <br><br>
+            <p class="titre-conv">Thomas</p>
+            <button id="deconnexion-btn" class="déconnect">Se déconnecter</button>
+        </section>
+        
+        <script>
+            document.getElementById("deconnexion-btn").addEventListener("click", function() {
+                if (confirm("Êtes-vous sûr de vouloir vous déconnecter ?") == true) {
+                    window.location.href = "Connexion.html";
+                } else {
+                    return false;
+                }
+            });
+        </script>
+        
+        <section class="msg">
+            <div class="date">
+                <p>11 avril 2024 - 23h21</p>
+            </div>
+            <div class="msg-g">
+                <p>Salut Pierre, comment ca va ?</p>
+            </div>
+            <div class="date">
+                <p>12 avril 2024 - 9h23</p>
+            </div>
+            <div class="msg-d">
+                <p>Hey Thomas !</p>
+            </div>
+            <div class="msg-d">
+                <p>Ca va bien et toi?<br>Qu'est-ce que tu deviens?</p>
+            </div>
+            <div class="date">
+                <p>12 avril 2024 - 10h00</p>
+            </div>
+            <div class="msg-g">
+                <p>Oh pas grand chose tu sais...</p>
+            </div>
+            <div class="msg-g">
+                <p>A fond dans les jeux vidéos écoute</p>
+            </div>
+            <div class="msg-g">
+                <p>Et toi alors?</p>
+            </div>
+            <div class="msg-d">
+                <p>Pas grand chose non plus</p>
+            </div>
+            <div class="date">
+                <p>12 avril 2024 - 10h15</p>
+            </div>
+            <div class="msg-d">
+                <p>Bon je vais à une brocante là. Je te dis cio</p>
+            </div>
+            <div class="msg-g">
+                <p>Salut!<br>A la prochaine</p>
+            </div>
+        </section>
+
+        <div class="send-msg">
+            <form id="message-form">
+                <input type="text" id="message-input" placeholder="Tapez votre message...">
+                <input type="submit" value="Envoyer" id="envoyer-btn">
+            </form>
+        </div>
+        <script>
+            document.getElementById("message-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+                alert("Vous ne pouvez pas envoyer de message.");
+            });
+        </script>
+    </section>
+
+   </main>
+    <script src="../../scriptTest.js"></script>
+</body>
+</html>

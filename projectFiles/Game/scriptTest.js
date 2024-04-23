@@ -77,3 +77,23 @@ function closeInternet() {
   document.getElementById('fenetreModaleInternet').style.display = 'none';
   console.log('Fenêtre modale cachée');
 }
+
+async function openMSN() {
+  var modalContent = document.getElementById('fenetreModaleMSN');
+  try {
+    const response = await fetch('./Apps/MSN/Connexion.html');
+    if (!response.ok) {
+      throw new Error('Erreur lors du chargement de MSN');
+    }
+    modalContent.innerHTML = await response.text();
+    document.getElementById('fenetreModaleMSN').style.display = 'block';
+    console.log('Fenêtre modale affichée');
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function closeMSN() {
+  document.getElementById('fenetreModaleMSN').style.display = 'none';
+  console.log('Fenêtre modale cachée');
+}
