@@ -1,7 +1,7 @@
 async function openFileExplorer() {
   var modalContent = document.getElementById('fenetreModale');
   try {
-    const response = await fetch('fileExplorer.html');
+    const response = await fetch('./Apps/FileExplorer/fileExplorer.html');
     if (!response.ok) {
       throw new Error('Erreur lors du chargement de fileExplorer.html');
     }
@@ -21,7 +21,7 @@ function closeFileExplorer() {
 async function openMC() {
   var modalContent = document.getElementById('fenetreModale1');
   try {
-    const response = await fetch('myComputer.html');
+    const response = await fetch('./Apps/MyComputer/myComputer.html');
     if (!response.ok) {
       throw new Error('Erreur lors du chargement de myComputer.html');
     }
@@ -41,7 +41,7 @@ function closeMC() {
 async function openRB() {
   var modalContent = document.getElementById('fenetreModale2');
   try {
-    const response = await fetch('myComputer.html');
+    const response = await fetch('./Apps/RecycleBin/recycleBin.html');
     if (!response.ok) {
       throw new Error('Erreur lors du chargement de myComputer.html');
     }
@@ -61,7 +61,7 @@ function closeRB() {
 async function openInternet() {
   var modalContent = document.getElementById('fenetreModaleInternet');
   try {
-    const response = await fetch('internet.html');
+    const response = await fetch('./Apps/Internet/internet.html');
     if (!response.ok) {
       throw new Error('Erreur lors du chargement de myComputer.html');
     }
