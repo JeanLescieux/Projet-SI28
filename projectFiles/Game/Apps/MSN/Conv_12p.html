@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Messagerie Skype des années 2000</title>
+</head>
+<body>
+
+   <main class="messagerie">
+
+    <section class="liste-conv">   
+        <img class="LogoMSN" src="/images/MSN-Logo-2000.png" alt="logo MSN des années 2000"> 
+        <div class="conv-liste">
+            <h1>Conversations</h1>
+            <ul class="liste">
+                <li><a href="Conv_grp_large.html" >Groupe discussion large</a></li>
+                <li><a id="grisé" >Groupe retreint 12 pers</a></li>
+                <li><a href="Conv_Thomas.html" >Thomas</a></li>
+                <li><a href="Conv_Nicolas.html" >Nicolas</a></li>
+                <li><a href="Conv_5p.html" >Conversation 5</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="conversation">
+        <div class="title-bar">
+            <div class="buttons">
+                <button class="minimize-button" onclick="minimize()">-</button>
+                <button class="maximize-button" onclick="maximize()">□</button>
+                <button class="close-button" onclick="parent.closeMSN()">X</button>
+            </div>
+        </div>
+
+        <section class="nav">
+            <br><br>
+            <p class="titre-conv">Groupe 12 personnes</p>
+            <button id="deconnexion-btn" class="déconnect">Se déconnecter</button>
+        </section>
+        
+        <script>
+            document.getElementById("deconnexion-btn").addEventListener("click", function() {
+                if (confirm("Êtes-vous sûr de vouloir vous déconnecter ?") == true) {
+                    window.location.href = "Connexion.html";
+                } else {
+                    return false;
+                }
+            });
+        </script>
+        
+        <section class="msg">
+            <div class="date">
+                <p>11 avril 2024 - 23h21</p>
+            </div>
+            <div class="msg-g">
+                <p>1er un message ici à gauche</p>
+            </div>
+            <div class="msg-d">
+                <p>un message ici à droite</p>
+            </div>
+            <div class="msg-d">
+                <p>un message ici à droite</p>
+            </div>
+            <div class="msg-d">
+                <p>un message ici à droite</p>
+            </div>
+            <div class="date">
+                <p>11 avril 2024 - 23h23</p>
+            </div>
+            <div class="msg-g">
+                <p>1er un message ici à gauche <br> azertyui <br>azbencikbnazec</p>
+            </div>
+            <div class="msg-d">
+                <p>un message ici à droite</p>
+            </div>
+            <div class="msg-g">
+                <p>1er un message ici à gauche</p>
+            </div>
+            <div class="date">
+                <p>11 avril 2024 - 23h24</p>
+            </div>
+            <div class="msg-d">
+                <p>un message ici à droite</p>
+            </div>
+            <div class="msg-g">
+                <p>1er un message ici à gauche</p>
+            </div>
+            <div class="msg-d">
+                <p>un message ici à droite</p>
+            </div>
+            <div class="msg-g">
+                <p>1er un message ici à gauche</p>
+            </div>
+            <div class="msg-d">
+                <p>un message ici à droite</p>
+            </div>
+            <div class="msg-g">
+                <p>1er un message ici à gauche</p>
+            </div>
+            <div class="msg-d">
+                <p>un message ici à droite</p>
+            </div>
+            <div class="msg-g">
+                <p>1er un message ici à gauche</p>
+            </div>
+            <div class="msg-d">
+                <p>un message ici à droite</p>
+            </div>
+            <div class="msg-g">
+                <p>1er un message ici à gauche</p>
+            </div>
+            <div class="msg-d">
+                <p>un message ici à droite</p>
+            </div>
+            <div class="msg-g">
+                <p>1er un message ici à gauche</p>
+            </div>
+
+        </section>
+
+        <div class="send-msg">
+            <form id="message-form">
+                <input type="text" id="message-input" placeholder="Tapez votre message...">
+                <input type="submit" value="Envoyer" id="envoyer-btn">
+            </form>
+        </div>
+        <script>
+            document.getElementById("message-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+                alert("Vous ne pouvez pas envoyer de message.");
+            });
+        </script>
+
+    </section>
+
+   </main>
+<script src="../../scriptTest.js"></script>
+    
+</body>
+</html>

@@ -14,16 +14,17 @@
     font-weight: bold;
   }
   
-  #desktop{
-      position: absolute;
-      background-image: url('../images/w98b.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
+  #desktop {
+    position: absolute;
+    background-image: url('/images/windows-95-tyrzdtatcwlgan16.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
   }
   
   #toolbar{
@@ -155,10 +156,12 @@
       width: 120px;
       height: 100px;
       color: #fff;
-      text-align: center;
       background: no-repeat center top;
-      padding-top: 55px;
-      margin: 10px;
+      justify-content: center;
+      align-items: center;
+      padding-top: 30px;
+      margin-left: 10px;
+      margin-top: 20px;
       display: flex;
       flex-direction: column;
       border: none;
@@ -169,6 +172,11 @@
       &.my-documents{
         background-image: url(https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png);
       }
+
+      &.msn{
+        background-image: url("../images/msn1.png");
+        background-size: 50px 50px;
+      }
       
       &.network{
         background-image: url(https://win98icons.alexmeub.com/icons/png/network_cool_two_pcs-0.png);
@@ -177,10 +185,7 @@
       &.trash-empty{
         background-image: url(https://win98icons.alexmeub.com/icons/png/recycle_bin_empty-4.png);
       }
-      &.msn{
-        background-image: url("../images/msn.png");
-        background-size: 50px 50px;
-      }
+      
     }
     .desktop-icon:hover{
       transform: scale(1.1); 

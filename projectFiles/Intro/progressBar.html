@@ -10,7 +10,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-image: url('../images/digits.gif');
+            background-color: blue;
             background-size: cover;
             display: flex;
             justify-content: center;
@@ -166,7 +166,7 @@
                 if (width >= 100) {
                     clearInterval(interval);
                     appendToConsole("Data retrieval complete!");
-                    window.location.href = "mainPage.html";
+                    window.location.href = "../Game/mainPage.html";
                 } else {
                     width++;
                     progressBar.style.width = width + "%";

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style_con.css" />
+    <title>Page de Connexion</title>
+
+    
+    <script>
+        var j = 0
+        var i = 0
+        function connexion() {
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("pwd").value;
+            var MessageErr = document.getElementById("msg-err");
+            var MessageHelp = document.getElementById("msg-help");
+
+
+            if (email === "exemple@email.com" && password === "motdepasse") {
+                window.location.href = "Conv_Thomas.html";
+                return false;
+            } else if (email === "autre@example.com" && password === "mdp2") {
+                window.location.href = "ZZaccueil.html";
+                return false;
+            } else {
+
+                MessageErr.style.display = "block";
+                MessageErr.textContent = "Email ou mot de passe incorrect";
+                MessageHelp.style.display = "none"
+                if (email == "exemple@email.com") {
+                    j++
+                    i = 0
+                    if (j >= 3) {
+                        MessageHelp.style.display = "block";
+                        MessageHelp.textContent = "indice : motdepasse";
+                    }
+                } else if (email === "autre@example.com") {
+                    i++
+                    j = 0
+                    if (i >= 3) {
+                        MessageHelp.style.display = "block";
+                        MessageHelp.textContent = "indice : mdp2";
+                    }
+                } else {
+                    j = 0
+                    i = 0
+                }
+                return false;
+            }
+
+
+        }
+    </script>
+    <style>
+        .title-bar {
+            background-color: lightgray;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            padding: 0 8px;
+            font-weight: bold;
+            cursor: default;
+            user-select: none;
+            position: absolute;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 99%;
+        }
+
+        .buttons {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="title-bar">
+            <div class="buttons">
+                <button class="minimize-button" onclick="">-</button>
+                <button class="maximize-button" onclick="">□</button>
+                <button class="close-button" onclick="parent.closeMSN()">X</button>
+            </div>
+        </div>
+        <div class="container">
+            <h2>Connexion</h2>
+            <form id="loginForm" action="" onsubmit="return connexion()">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="password" name="password" id="pwd" placeholder="Mot de passe" required>
+                <input type="submit" value="Se Connecter">
+                <div id="msg-err"></div>
+                <div id="msg-help"></div>
+            </form>
+
+        </div>
+    </main>
+    <script src="../../scriptTest.js"></script>
+</body>
+
+</html>
