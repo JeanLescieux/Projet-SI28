@@ -15,8 +15,6 @@
         /* Organise les enfants en colonne */
         justify-content: space-between;
         /* Place les contenus au début et à la fin */
-        width: 700px;
-        height: 400px;
         background-color: whitesmoke;
     }
 
@@ -47,13 +45,25 @@
 </style>
 
 <body>
-    <div class="window" style="width: 400px; height: 600px; background-color: whitesmoke;">
+    <div class="window" style="width: 450px; height: 600px; background-color: whitesmoke;">
         <div class="title-bar flex-container">
             <div class="title-bar-text">Notepad - v0.2.1</div>
             <div class="title-bar-controls flex-container">
                 <button aria-label="Minimize"></button>
                 <button aria-label="Maximize"></button>
-                <button aria-label="Close" onclick="parent.closeFileExplorer()"></button>
+                <button aria-label="Close" onclick="parent.closeNP()"></button>
+            </div>
+        </div>
+
+        <div style="background-color: lightgrey; color: black;height:20px;margin-bottom: 2px;">
+            <div style="display: flex;">
+                <p style="margin-right: 20px;margin-left: 10px;margin-top:4px;color:rgba(33, 31, 31, 0.94);">
+                    <u>F</u>ile
+                </p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>E</u>dit</p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>V</u>iew</p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>F</u>avourites</p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>H</u>elp</p>
             </div>
         </div>
 
@@ -64,15 +74,9 @@
         <div class="status-bar flex-container">
             <p class="status-bar-field">Press F1 for help</p>
             <p class="status-bar-field">Slide 1</p>
-            <p class="status-bar-field">CPU Usage: 14%</p>
+            <p class="status-bar-field">23/12/1998</p>
         </div>
     </div>
-    <script>
-        function closeNP() {
-            this.style.display = 'none';
-            console.log('Fenêtre modale cachée');
-        }
-    </script>
 </body>
 
 </html>
