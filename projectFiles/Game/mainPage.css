@@ -335,8 +335,8 @@
 
   .modal {
     position: fixed;
-    top: 50%; /* Centrage vertical par rapport au point central de l'écran */
-    left: 50%; /* Centrage horizontal par rapport au point central de l'écran */
+    top: 55%; /* Centrage vertical par rapport au point central de l'écran */
+    left: 55%; /* Centrage horizontal par rapport au point central de l'écran */
     transform: translate(-50%, -50%);
     z-index: 1000;
     display: none; /* Reste non affiché jusqu'à ce qu'il soit activé */
