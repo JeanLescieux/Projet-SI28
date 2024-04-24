@@ -97,3 +97,43 @@ function closeMSN() {
   document.getElementById('fenetreModaleMSN').style.display = 'none';
   console.log('Fenêtre modale cachée');
 }
+
+async function openTrueCalculator() {
+  var modalContent = document.getElementById('fenetreModaleTrueCalculator');
+  try {
+    const response = await fetch('./Apps/Calculette/VraiCalculette/VraiCalculette.html');
+    if (!response.ok) {
+      throw new Error('Erreur lors du chargement de la calculatrice');
+    }
+    modalContent.innerHTML = await response.text();
+    document.getElementById('fenetreModaleTrueCalculator').style.display = 'block';
+    console.log('Fenêtre modale affichée');
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function closeTrueCalculator() {
+  document.getElementById('fenetreModaleTrueCalculator').style.display = 'none';
+  console.log('Fenêtre modale cachée');
+}
+
+async function openWrongCalculator() {
+  var modalContent = document.getElementById('fenetreModaleWrongCalculator');
+  try {
+    const response = await fetch('./Apps/Calculette/FausseCalculette/FausseCalculette.html');
+    if (!response.ok) {
+      throw new Error('Erreur lors du chargement de la calculatrice');
+    }
+    modalContent.innerHTML = await response.text();
+    document.getElementById('fenetreModaleWrongCalculator').style.display = 'block';
+    console.log('Fenêtre modale affichée');
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function closeWrongCalculator() {
+  document.getElementById('fenetreModaleWrongCalculator').style.display = 'none';
+  console.log('Fenêtre modale cachée');
+}

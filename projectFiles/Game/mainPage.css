@@ -176,6 +176,16 @@
         background-image: url("../../images/msn1.png");
         background-size: 50px 50px;
       }
+
+      &.truecalculator{
+        background-image: url("../../images/calculator-0.png");
+        background-size: 50px 50px;
+      }
+
+      &.wrongcalculator{
+        background-image: url("../../images/calculator-0.png");
+        background-size: 50px 50px;
+      }
       
       &.network{
         background-image: url(https://win98icons.alexmeub.com/icons/png/network_cool_two_pcs-0.png);
