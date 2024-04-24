@@ -18,6 +18,7 @@ body {
     width: 500px;
     border-right: 1px solid #4682b4;
     position: fixed;
+    overflow-y: auto;
 }
 
 .conversation {
@@ -30,7 +31,8 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 .conv-liste {
@@ -45,8 +47,8 @@ body {
 .conv-liste h1 {
     text-decoration: underline;
     font-size: 2em;
-    margin-bottom: 70px;
-    padding-top: 40px;
+    margin-bottom: 20px;
+    padding-top: 20px;
     border-top: 1px solid #4682b4;
 }
 
@@ -85,10 +87,8 @@ body {
 .conversation {
     display: flex;
     flex-direction: column;
-    width: 1000px;
+    width: 8000px;
 }
-
-
 
 .title-bar {
     background-color: #0078d7;
@@ -127,7 +127,7 @@ body {
 }
 
 .nav{
-    width: 1013px;
+    width: 680px;
     margin-top: 30px;
     background-color: #d3d2d2;
     display: flex;
@@ -165,7 +165,7 @@ body {
 }
 
 .msg {
-    width: 1010px;
+    width: 680px;
     margin-top: 100px;
 }
 
@@ -177,13 +177,13 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     margin-left: 25px;
-    width: 400px;
+    width: 200px;
 }
 
 .msg-d {
     display: flex;
     justify-content: flex-end;
-    margin-right: 25px;
+    margin-right: 20px;
 }
 .msg-d p {
     background-color: #add8e6;
@@ -192,8 +192,8 @@ body {
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    margin-left: 25px;
-    width: 400px;
+    margin-left: 20px;
+    width: 200px;
     display: flex;
     justify-content: flex-end;
 }
@@ -207,12 +207,14 @@ body {
 
 .send-msg {
     background-color: #d3d2d2;
+    display:flex;
+    position: fixed;
     color: black;
     border-top: 1px solid #4682b4;
     padding: 35px;
     
     bottom: 0;
-    width: 100%;
+    width: 610px;
     border-style: solid;
     border-width: 1px;
     border-image: conic-gradient(#444, #3d7cad, #000) 1;
@@ -223,7 +225,7 @@ body {
 }
 
 input[type="text"] {
-    width: 775px;
+    width: 500px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
