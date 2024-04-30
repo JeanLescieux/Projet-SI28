@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(`${file.id} a été cliqué !`);
             if (file.id === 'file1') {
                 console.log('Ouverture de J1.txt');
-                openNP('./J1.txt');
+                openNP('./Texte/J1.txt');
             }
         }
     });
