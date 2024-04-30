@@ -7,34 +7,68 @@ document.addEventListener('DOMContentLoaded', function() {
         if (file) {
             console.log(`${file.id} a été cliqué !`);
             if (file.id === 'file1') {
-                openNP();
+                console.log('Ouverture de J1.txt');
+                openNP('./J1.txt');
             }
         }
     });
 });
-
-
-
 
 function closeNP() {
     document.getElementById('fenetreModaleNP').style.display = 'none';
     console.log('Fenêtre modale cachée');
 }
 
-async function openNP() {
-    var modalContent = document.getElementById('fenetreModaleNP');
+async function openNP(textFilePath) {
+    var iframe = document.getElementById('fenetreModaleNP');
+    iframe.style.display = 'none';
+
     try {
-        const response = await fetch('../../Usables/notePad.html');
-        if (!response.ok) {
-            throw new Error('Erreur lors du chargement de myComputer.html');
+        const responseHTML = await fetch('../../Usables/notePad.html');
+        if (!responseHTML.ok) {
+            throw new Error('Erreur lors du chargement de notePad.html');
         }
-        modalContent.innerHTML = await response.text();
-        document.getElementById('fenetreModaleNP').style.display = 'block';
-        console.log('Fenêtre modale affichée');
+        iframe.src = '../../Usables/notePad.html';
+
+        iframe.onload = async () => {
+            const textContainer = iframe.contentWindow.document.getElementById('Diarytxt');
+            if (textContainer) {
+                console.log('Element #Diarytxt trouvé, chargement du contenu TXT...');
+                try {
+                    const responseTXT = await fetch(textFilePath);
+                    if (!responseTXT.ok) {
+                        throw new Error('Erreur lors du chargement du fichier texte');
+                    }
+                    const textContent = await responseTXT.text();
+                    if (textContent) {
+                        textContainer.textContent = textContent;
+                        console.log('Contenu du fichier texte inséré dans le DOM');
+                        iframe.style.display = 'block';
+                        console.log('Fenêtre modale affichée');
+                    } else {
+                        console.log('Aucun contenu trouvé dans le fichier texte');
+                        iframe.style.display = 'none';
+                    }
+                } catch (error) {
+                    console.error('Erreur lors de la tentative de chargement du contenu texte: ', error);
+                    iframe.style.display = 'none';
+                }
+            } else {
+                console.log('Element #Diarytxt non trouvé.');
+                iframe.style.display = 'none';
+            }
+        };
     } catch (error) {
-        console.error(error);
+        console.error('Erreur globale: ', error);
+        iframe.style.display = 'none';
     }
 }
+
+
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const interactiveItems = document.querySelectorAll('.tree-view li[data-path]');
@@ -48,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             event.stopPropagation();
             const filePath = this.getAttribute('data-path');
-            loadContent(filePath, rightColumn); // Pass rightColumn to the function
+            loadContent(filePath, rightColumn);
         });
     });
 });
