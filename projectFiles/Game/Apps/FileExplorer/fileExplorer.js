@@ -1,26 +1,25 @@
-// Récupère une référence vers chaque fichier div
-const file1 = document.getElementById('file1');
-const file2 = document.getElementById('file2');
-const file3 = document.getElementById('file3');
-const file4 = document.getElementById('file4');
 
-// Ajoute un gestionnaire d'événement de clic à chaque fichier div
-file1.addEventListener('click', function () {
-    console.log("Le fichier 1 a été cliqué !");
-    openNP();
+document.addEventListener('DOMContentLoaded', function() {
+    const rightColumn = document.querySelector('.right-column');
+
+    rightColumn.addEventListener('click', function(event) {
+        const file = event.target.closest('.file');
+        if (file) {
+            console.log(`${file.id} a été cliqué !`);
+            if (file.id === 'file1') {
+                openNP();
+            }
+        }
+    });
 });
 
-file2.addEventListener('click', function () {
-    console.log("Le fichier 2 a été cliqué !");
-});
 
-file3.addEventListener('click', function () {
-    console.log("Le fichier 3 a été cliqué !");
-});
 
-file4.addEventListener('click', function () {
-    console.log("Le fichier 4 a été cliqué !");
-});
+
+function closeNP() {
+    document.getElementById('fenetreModaleNP').style.display = 'none';
+    console.log('Fenêtre modale cachée');
+}
 
 async function openNP() {
     var modalContent = document.getElementById('fenetreModaleNP');
@@ -37,33 +36,28 @@ async function openNP() {
     }
 }
 
-function closeNP() {
-    document.getElementById('fenetreModaleNP').style.display = 'none';
-    console.log('Fenêtre modale cachée');
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Sélectionne tous les <li> avec un attribut data-path dans .tree-view
+document.addEventListener('DOMContentLoaded', function () {
     const interactiveItems = document.querySelectorAll('.tree-view li[data-path]');
     const rightColumn = document.querySelector('.right-column');
 
-    // Ajoute un écouteur d'événements à chaque élément interactif
+    //console.log(interactiveItems.length); // Doit être > 0
+    //console.log(rightColumn); // Ne doit pas être null
+
     interactiveItems.forEach(item => {
-        item.addEventListener('click', function(event) {
-            event.preventDefault(); // Empêche le comportement par défaut
-            event.stopPropagation(); // Arrête la propagation de l'événement
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
             const filePath = this.getAttribute('data-path');
-            loadContent(filePath); // Fonction pour charger le contenu
+            loadContent(filePath, rightColumn); // Pass rightColumn to the function
         });
     });
-
-    function loadContent(filePath) {
-        fetch(filePath)
-            .then(response => response.text())
-            .then(html => {
-                rightColumn.innerHTML = html;
-            })
-            .catch(error => console.error('Error loading the file:', error));
-    }
 });
+
+function loadContent(filePath, rightColumn) {
+    fetch(filePath)
+        .then(response => response.text())
+        .then(html => {
+            rightColumn.innerHTML = html;
+        })
+        .catch(error => console.error('Error loading the file:', error));
+}

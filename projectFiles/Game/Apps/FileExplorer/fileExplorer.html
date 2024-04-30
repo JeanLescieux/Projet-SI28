@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/98.css">
     <link rel="stylesheet" href="fileExplorer.css">
 </head>
+
 <body>
     <div class="window" style="width:750px; height: 500px;">
         <div class="title-bar">
@@ -90,11 +91,12 @@
                                                 <details open>
                                                     <summary>PierreDisk</summary>
                                                     <ul>
-                                                        <li data-path="feNotePad.html">Document</li>
-                                                        <li data-path="feNotePad.html">Images</li>
-                                                        <li data-path="feNotePad.html">Téléchargements</li>
-                                                        <li data-path="feNotePad.html">Journal</li>
-                                                        <li data-path="feNotePad.html">Cours</li>
+                                                        <li data-path="./Files/feDocument.html">Document</li>
+                                                        <li data-path="./Files/feImages.html">Images</li>
+                                                        <li data-path="./Files/feTelechargements.html">Téléchargements
+                                                        </li>
+                                                        <li data-path="./Files/feJournal.html">Journal</li>
+                                                        <li data-path="./Files/feCours.html">Cours</li>
                                                     </ul>
                                                 </details>
                                             </li>
@@ -108,37 +110,19 @@
                 </ul>
             </div>
             <div class="column right-column">
-                <div id="file1" class="file">
-                    <img src="https://win98icons.alexmeub.com/icons/png/notepad-1.png" alt="Fichier"
-                        style="width: 50px; height: 50px; margin-bottom: 5px;">
-                    <div>Article.pdf</div>
-                </div>
-                <div id="file2" class="file">
-                    <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png" alt="Fichier"
-                        style="width: 50px; height: 50px; margin-bottom: 5px;">
-                    <div>classes.exe</div>
-                </div>
-                <div id="file3" class="file">
-                    <img src="/images/fichier.png" alt="Fichier" style="width: 50px; height: 50px; margin-bottom: 5px;">
-                    <div>odj.txt</div>
-                </div>
-                <div id="file4" class="file">
-                    <img src="/images/fichier.png" alt="Fichier" style="width: 50px; height: 50px; margin-bottom: 5px;">
-                    <div>Fiche.pnj</div>
-                </div>
+
+            </div>
+
+
+            <div class="status-bar">
+                <p class="status-bar-field">Press F1 for help</p>
+                <p class="status-bar-field">Slide 1</p>
+                <p class="status-bar-field">CPU Usage: 14%</p>
             </div>
         </div>
 
-
-        <div class="status-bar">
-            <p class="status-bar-field">Press F1 for help</p>
-            <p class="status-bar-field">Slide 1</p>
-            <p class="status-bar-field">CPU Usage: 14%</p>
-        </div>
-    </div>
-
-    <iframe id="fenetreModaleNP" class="modal" src="../../Usables/notePad.html" frameborder="0" width="480px"
-        height="520px" style="border:none; position:absolute"></iframe>
+        <iframe id="fenetreModaleNP" class="modal" src="../../Usables/notePad.html" frameborder="0" width="480px"
+            height="520px" style="border:none; position:absolute"></iframe>
 </body>
 <script src="fileExplorer.js"></script>
 
