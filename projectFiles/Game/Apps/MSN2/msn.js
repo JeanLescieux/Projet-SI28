@@ -15,7 +15,7 @@ document.getElementById("deconnexion-btn").addEventListener("click", function() 
 
 
 
-// Fonction pour charger la conversation à partir d'un fichier JSON
+// Fonction pour charger la conversation à partir d'un fichier txt
 function chargerConversation(nomFichier) {
     // Création d'une requête HTTP (Ajax)
     const xhr = new XMLHttpRequest();
@@ -58,8 +58,9 @@ function chargerConversation(nomFichier) {
                 conversationContainer.appendChild(messageDiv);
             });
             // Ajouter l'ID "grisé" au groupe correspondant
-            const groupes = document.querySelectorAll('.liste li');
+            const groupes = document.querySelectorAll('.liste li a');
             groupes.forEach(function(groupe) {
+                groupe.removeAttribute('id'); // Supprimer l'ID de tous les éléments
                 if (groupe.textContent.trim() === premierNom) {
                     groupe.setAttribute('id', 'grisé');
                 }
