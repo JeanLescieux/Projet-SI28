@@ -1,0 +1,37 @@
+Thomas
+Thomas#00:01 :    #Salut comment ça va?
+Moi#00:02 :    #Je vais bien et toi?
+Thomas#00:03 :    #Ca va super!
+Thomas#00:03 :    #Tu racontes quoi en ce moment?
+Moi#00:10 :    #Pas grand chose tu sais. Toujours à l'école quoi...
+Thomas#00:11 :    #LOL ! Dur la vie
+Moi#00:12 :    #???
+Thomas#00:21 :    #Cheh
+Moi#00:22 :    #Pardon??
+Thomas#00:30 :    #Sorry
+Thomas#00:31 :    #j'ai pas fais exprès
+Thomas#00:41 :    #mais bon je dois y aller?
+Thomas#00:01 :    #Salut comment ça va?
+Moi#00:02 :    #Je vais bien et toi?
+Thomas#00:03 :    #Ca va super!
+Thomas#00:03 :    #Tu racontes quoi en ce moment?
+Moi#00:10 :    #Pas grand chose tu sais. Toujours à l'école quoi...
+Thomas#00:11 :    #LOL ! Dur la vie
+Moi#00:12 :    #???
+Thomas#00:21 :    #Cheh
+Moi#00:22 :    #Pardon??
+Thomas#00:30 :    #Sorry
+Thomas#00:31 :    #j'ai pas fais exprès
+Thomas#00:41 :    #mais bon je dois y aller?
+Thomas#00:01 :    #Salut comment ça va?
+Moi#00:02 :    #Je vais bien et toi?
+Thomas#00:03 :    #Ca va super!
+Thomas#00:03 :    #Tu racontes quoi en ce moment?
+Moi#00:10 :    #Pas grand chose tu sais. Toujours à l'école quoi...
+Thomas#00:11 :    #LOL ! Dur la vie
+Moi#00:12 :    #???
+Thomas#00:21 :    #Cheh
+Moi#00:22 :    #Pardon??
+Thomas#00:30 :    #Sorry
+Thomas#00:31 :    #j'ai pas fais exprès
+Thomas#00:41 :    #mais bon je dois y aller?
