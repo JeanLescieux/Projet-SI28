@@ -81,7 +81,7 @@ function closeInternet() {
 async function openMSN() {
   var modalContent = document.getElementById('fenetreModaleMSN');
   try {
-    const response = await fetch('./Apps/MSN/Connexion.html');
+    const response = await fetch('./Apps/MSN2/Connexion.html');
     if (!response.ok) {
       throw new Error('Erreur lors du chargement de MSN');
     }
