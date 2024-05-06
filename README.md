@@ -21,4 +21,3 @@ Icone eve online to add, error message if we click it?
 Diary.
 Calculator hidden diary.
 Add paths to MyDocuments.
-Skype/MSN and conversations.

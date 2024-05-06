@@ -6,33 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Explorer</title>
     <link rel="stylesheet" href="https://unpkg.com/98.css">
-
 </head>
 <style>
-    button:hover {
-        transform: scale(1.1);
+    .window {
+        display: flex;
+        /* Active Flexbox */
+        flex-direction: column;
+        /* Organise les enfants en colonne */
+        justify-content: space-between;
+        /* Place les contenus au début et à la fin */
+        background-color: whitesmoke;
+    }
+
+    .title-bar {
+        /* Assure que la title-bar ne s'étire pas */
+        flex-shrink: 0;
+    }
+
+    .status-bar {
+        display: flex;
+        justify-content: space-around;
+        flex-shrink: 0;
+        /* Empêche la barre de statut de rétrécir */
+        width: 100%;
+        /* Assure que la barre s'étend sur toute la largeur */
+        background-color: lightgray;
+    }
+
+    .window-body {
+        display: flex;
+        /* Active Flexbox pour les contenus intérieurs, si nécessaire */
+        flex-grow: 1;
+        /* Permet à cet élément de prendre tout l'espace disponible */
+        overflow: auto;
+        /* Ajoute des barres de défilement si le contenu déborde */
+
     }
 </style>
 
 <body>
-    <div class="window" style="width: 700px;height:400px;background-color: whitesmoke;">
-        <div class="title-bar">
-            <div class="title-bar-text">Drive_c (C://CrazyGuyDisk)</div>
-            <div class="title-bar-controls">
+    <div class="window" style="width: 450px; height: auto; background-color: whitesmoke;">
+        <div class="title-bar flex-container">
+            <div class="title-bar-text">Notepad - v0.2.1</div>
+            <div class="title-bar-controls flex-container">
                 <button aria-label="Minimize"></button>
                 <button aria-label="Maximize"></button>
-                <button aria-label="Close" onclick="parent.closeFileExplorer()"></button>
+                <button aria-label="Close" onclick="parent.closeNP()"></button>
             </div>
         </div>
 
-        <div class="status-bar" style="position: fixed; bottom: 90px; width: 697px;background-color: lightgray;">
+        <div style="background-color: lightgrey; color: black;height:20px;margin-bottom: 2px;">
+            <div style="display: flex;">
+                <p style="margin-right: 20px;margin-left: 10px;margin-top:4px;color:rgba(33, 31, 31, 0.94);">
+                    <u>F</u>ile
+                </p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>E</u>dit</p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>V</u>iew</p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>F</u>avourites</p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>H</u>elp</p>
+            </div>
+        </div>
+
+        <div class="window-body flex-inside">
+            <pre style="width: 450px;" id="Diarytxt">Salut</pre>
+        </div>
+
+        <div class="status-bar flex-container">
             <p class="status-bar-field">Press F1 for help</p>
             <p class="status-bar-field">Slide 1</p>
-            <p class="status-bar-field">CPU Usage: 14%</p>
+            <p class="status-bar-field">23/12/1998</p>
         </div>
     </div>
 </body>
-<script>
-</script>
 
 </html>
