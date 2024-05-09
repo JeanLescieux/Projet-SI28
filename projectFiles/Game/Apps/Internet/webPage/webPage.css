@@ -1,0 +1,127 @@
+/* Reset du style pour éliminer les marges par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    background: black;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #00FF00;
+    /* Couleur de fond du conteneur principal */
+    border: 10px solid #000000;
+    /* Bordure verte épaisse */
+    padding: 20px;
+    box-shadow: 0 0 10px #000000;
+    /* Ombre portée pour un effet néon */
+    width: 100%;
+    /* Largeur du conteneur principal */
+    max-width: 92%;
+    /* Largeur maximale */
+    min-height: 80vh;
+    /* Hauteur minimale */
+    flex: 1;
+}
+
+header {
+    background-color: #000000;
+    color: #00FF00;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    /* Prend tout l'espace disponible après l'en-tête */
+    margin: 10px 0;
+    /* Ajoute un peu d'espace vertical entre les sections */
+}
+
+.button-left,
+.button-right {
+    position: absolute;
+    /* Positionnement absolu par rapport au container */
+    transform: rotate(90deg);
+    /* Fait pivoter les boutons de 90 degrés */
+    transform-origin: right top;
+    /* Point d'origine de la rotation pour aligner correctement */
+    background-color: #00FF00;
+    /* Couleur de fond des boutons */
+    color: #000000;
+    /* Couleur du texte */
+    padding: 3px 5px;
+    /* Espacement interne */
+    border: 2px solid #000000;
+    /* Bordure noire */
+    cursor: pointer;
+    /* Change le curseur en un pointeur */
+    z-index: 10;
+    /* S'assure que les boutons sont au-dessus du conteneur */
+    white-space: nowrap;
+    /* Empêche le texte de passer à la ligne suivante */
+}
+
+.button-left {
+    right: -29px;
+    /* Ajustez selon la largeur du bouton pour le coller à l'extérieur */
+    top: 47px;
+    /* Aligné avec le haut du conteneur */
+}
+
+.button-right {
+    right: -29px;
+    /* Ajustez selon la largeur du bouton pour le coller à l'extérieur */
+    top: 107px;
+    /* Ajustez cette valeur pour positionner en dessous du premier bouton */
+}
+
+nav {
+    margin-right: 10px;
+    background-color: #000000;
+    padding: 15px;
+    width: 150px;
+    flex-shrink: 0;
+}
+
+article {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #000000;
+    background: #000000;
+}
+
+footer {
+    background-color: #000000;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+nav ul li {
+    margin-left: 20px;
+    /* Ajoute une marge à gauche pour chaque élément de liste */
+    color: #00FF00;
+    /* Assure que le texte est en vert, comme le reste du design */
+}
