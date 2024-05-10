@@ -25,20 +25,22 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #00FF00;
-    /* Couleur de fond du conteneur principal */
-    border: 10px solid #000000;
-    /* Bordure verte épaisse */
+    background-color: #00FF00; 
     padding: 20px;
-    box-shadow: 0 0 10px #000000;
-    /* Ombre portée pour un effet néon */
-    width: 100%;
-    /* Largeur du conteneur principal */
-    max-width: 92%;
-    /* Largeur maximale */
-    min-height: 80vh;
-    /* Hauteur minimale */
+    width: 100%;  
+    max-width: 92%;  
+    min-height: 80vh;  
     flex: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
+    z-index: 2;  
+}
+
+header, nav, article, footer {
+    background-color: #000000;
+    box-shadow: inset 0 0 10px #00FF00;
+    color: #00FF00;
+    padding: 10px;
+    margin: 5px 0; 
 }
 
 header {
@@ -53,47 +55,31 @@ header {
 main {
     display: flex;
     flex: 1;
-    /* Prend tout l'espace disponible après l'en-tête */
     margin: 10px 0;
-    /* Ajoute un peu d'espace vertical entre les sections */
 }
 
 .button-left,
 .button-right {
     position: absolute;
-    /* Positionnement absolu par rapport au container */
     transform: rotate(90deg);
-    /* Fait pivoter les boutons de 90 degrés */
     transform-origin: right top;
-    /* Point d'origine de la rotation pour aligner correctement */
     background-color: #00FF00;
-    /* Couleur de fond des boutons */
     color: #000000;
-    /* Couleur du texte */
     padding: 3px 5px;
-    /* Espacement interne */
     border: 2px solid #000000;
-    /* Bordure noire */
     cursor: pointer;
-    /* Change le curseur en un pointeur */
     z-index: 10;
-    /* S'assure que les boutons sont au-dessus du conteneur */
     white-space: nowrap;
-    /* Empêche le texte de passer à la ligne suivante */
 }
 
 .button-left {
     right: -29px;
-    /* Ajustez selon la largeur du bouton pour le coller à l'extérieur */
     top: 47px;
-    /* Aligné avec le haut du conteneur */
 }
 
 .button-right {
     right: -29px;
-    /* Ajustez selon la largeur du bouton pour le coller à l'extérieur */
     top: 107px;
-    /* Ajustez cette valeur pour positionner en dessous du premier bouton */
 }
 
 nav {
@@ -107,7 +93,6 @@ nav {
 article {
     flex: 1;
     padding: 20px;
-    border: 2px solid #000000;
     background: #000000;
 }
 
@@ -119,9 +104,23 @@ footer {
     width: 100%;
 }
 
-nav ul li {
-    margin-left: 20px;
-    /* Ajoute une marge à gauche pour chaque élément de liste */
-    color: #00FF00;
-    /* Assure que le texte est en vert, comme le reste du design */
+
+.menu-list {
+    list-style: none; /* Enlève les puces par défaut */
+    padding: 0; /* Supprime le padding par défaut de la liste */
+}
+
+.menu-list li {
+    color: #00FF00; /* Couleur du texte en vert */
+    padding: 5px 0 5px 25px; /* Ajoute un padding à gauche pour l'image */
+    border-bottom: 1px solid #00FF00; /* Bordure sous chaque élément pour le soulignement */
+    background-image: url('https://win98icons.alexmeub.com/icons/png/web_file_set-2.png'); /* Définissez l'image à utiliser */
+    background-repeat: no-repeat; /* Ne répète pas l'image */
+    background-size: 24px 24px; /* Taille de l'image */
+    background-position: 0px center; /* Positionne l'image à 10px du bord gauche, centrée verticalement */
+}
+
+.menu-list li a {
+    color: inherit; /* Utilise la couleur définie sur le li */
+    display: block; /* Étend le lien sur toute la largeur et la hauteur du li */
 }
