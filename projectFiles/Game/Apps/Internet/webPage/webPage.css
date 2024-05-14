@@ -73,12 +73,12 @@ main {
 }
 
 .button-left {
-    right: -29px;
+    right: -23px;
     top: 47px;
 }
 
 .button-right {
-    right: -29px;
+    right: -23px;
     top: 107px;
 }
 
@@ -111,7 +111,7 @@ footer {
 }
 
 .menu-list li {
-    color: #00FF00; /* Couleur du texte en vert */
+    color: #00FF00 !important; /* Couleur du texte en vert */
     padding: 5px 0 5px 25px; /* Ajoute un padding à gauche pour l'image */
     border-bottom: 1px solid #00FF00; /* Bordure sous chaque élément pour le soulignement */
     background-image: url('https://win98icons.alexmeub.com/icons/png/web_file_set-2.png'); /* Définissez l'image à utiliser */
