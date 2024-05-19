@@ -37,6 +37,19 @@ function chargerConversation(nomFichier) {
             // Parcourir chaque ligne et créer un élément <div> pour chaque message
             lignes.forEach(function(ligne,index) {
                 if (index==0){return;}
+                ligne = ligne.trim();
+
+                // Vérifier si la ligne ne contient pas de #
+                if (!ligne.includes('#')) {
+                    const heure = ligne
+                    const dateDiv = document.createElement('div');
+                    dateDiv.classList.add('heure');
+                    dateDiv.innerHTML = `<div class="message-header">
+                                            <span class="heure">${heure}</span><br>
+                                        </div>`;
+                    conversationContainer.appendChild(dateDiv);
+                    return;
+                }
                 const message = ligne.split('#');
                 const nom = message[0];
                 const heure = message[1];
@@ -50,12 +63,22 @@ function chargerConversation(nomFichier) {
                 } else {
                     messageDiv.classList.add('recu');
                 }
-                messageDiv.innerHTML = `<div class="message-header">
+                if (msg!='=img='){
+                    messageDiv.innerHTML = `<div class="message-header">
                                             <span class="${nomClass}">${nom}</span>
                                             <span class="heure">${heure}</span>
                                             <span class="msg">${msg}</span>
-                                        </div>`;
-                conversationContainer.appendChild(messageDiv);
+                                            </div>`;
+                    conversationContainer.appendChild(messageDiv);
+                } else {
+                    messageDiv.innerHTML = `<div class="message-header">
+                                            <span class="${nomClass}">${nom}</span>
+                                            <span class="heure">${heure}</span>
+                                            <span><img src="Image/Chien.jpg" alt="image de chien" class="image"></span><br>
+                                            </div>`;
+                    conversationContainer.appendChild(messageDiv);
+                }
+                
             });
             // Ajouter l'ID "grisé" au groupe correspondant
             const groupes = document.querySelectorAll('.liste li a');
