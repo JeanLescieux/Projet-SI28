@@ -1,22 +1,41 @@
 async function openFileExplorer() {
+  localStorage.setItem('closedFE', 'false');  
+  console.log(localStorage.getItem('showFiles'));
   var modalContent = document.getElementById('fenetreModale');
   try {
-    const response = await fetch('./Apps/FileExplorer/fileExplorer.html');
-    if (!response.ok) {
-      throw new Error('Erreur lors du chargement de fileExplorer.html');
-    }
-    modalContent.innerHTML = await response.text();
-    document.getElementById('fenetreModale').style.display = 'block';
-    console.log('Fenêtre modale affichée');
+      const response = await fetch('./Apps/FileExplorer/fileExplorer.html');
+      if (!response.ok) {
+          throw new Error('Erreur lors du chargement de fileExplorer.html');
+      }
+      modalContent.innerHTML = await response.text();
+      document.getElementById('fenetreModale').style.display = 'block';
+
+      // Clear the contents of the right-column
+      const rightColumn = modalContent.contentWindow.document.querySelector('.right-column');
+      if (rightColumn) {
+          rightColumn.innerHTML = '';
+          console.log('Right column cleared on open');
+      }
+
+      console.log('Fenêtre modale affichée');
   } catch (error) {
-    console.error(error);
+      console.error(error);
   }
 }
 
 function closeFileExplorer() {
   document.getElementById('fenetreModale').style.display = 'none';
   console.log('Fenêtre modale cachée');
+  
+  // Clear the contents of the right-column
+  const rightColumn = document.querySelector('.right-column');
+  if (rightColumn) {
+      rightColumn.innerHTML = '';
+      console.log('Right column cleared on close');
+  }
 }
+
+
 
 async function openMC() {
   var modalContent = document.getElementById('fenetreModale1');
