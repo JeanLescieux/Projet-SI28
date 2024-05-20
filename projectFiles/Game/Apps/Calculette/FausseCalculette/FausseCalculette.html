@@ -87,9 +87,9 @@
                 document.getElementById('display').value = 'ERREUR ......';
                 parent.openInternet();
             } else if (result == 2222) {
-                document.getElementById('display').value = 'JOURNAL....';
-                localStorage.setItem('showFiles', 'true');  
-                console.log(localStorage.getItem('showFiles'));
+                document.getElementById('display').value = 'JOURNAL DEBLOQUE ....';
+                localStorage.setItem('showFiles', 'true');
+                parent.openFileExplorer(); 
             } else {
                 document.getElementById('display').value = result;
             }
