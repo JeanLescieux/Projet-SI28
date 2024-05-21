@@ -16,4 +16,9 @@ https://news.ycombinator.com/item?id=22940564
 
 TODO's:
 Secte website.
-Forum website.
+Forum websites.
+Admin website.
+Calendar.
+Jauge chargement curseur.
+modifier date à 2002 au lieu de 1998.
+test cicada corbeille.
