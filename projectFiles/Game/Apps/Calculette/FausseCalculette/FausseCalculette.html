@@ -27,10 +27,10 @@
 
 
         <div class="window-body" style="margin: 10px;">
-            
+
             <div class="calculator" style="display: flex; flex-wrap: wrap;">
-                
-                
+
+
                 <div class="buttons">
                     <div style="margin-bottom: 10px;">
                         <input type="text" id="display" readonly>
@@ -60,19 +60,19 @@
                         <button onclick="appendToDisplay('.')">.</button>
                         <button onclick="calculate()">=</button>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
 
         </div>
-        
+
 
     </div>
 </body>
 <script>
     function clearDisplay() {
-    document.getElementById('display').value = '';
+        document.getElementById('display').value = '';
     }
 
     function appendToDisplay(value) {
@@ -83,13 +83,17 @@
         var expression = document.getElementById('display').value;
         try {
             var result = eval(expression);
-            if (result == 667){
+            if (result == 667) {
                 document.getElementById('display').value = 'ERREUR ......';
                 parent.openInternet();
+            } else if (result == 2222) {
+                document.getElementById('display').value = 'JOURNAL DEBLOQUE ....';
+                localStorage.setItem('showFiles', 'true');
+                parent.openFileExplorer(); 
             } else {
                 document.getElementById('display').value = result;
             }
-            
+
         } catch (error) {
             alert('Invalid expression');
         }

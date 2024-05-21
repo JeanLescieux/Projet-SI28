@@ -1,14 +1,46 @@
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const rightColumn = document.querySelector('.right-column');
 
-    rightColumn.addEventListener('click', function(event) {
+    rightColumn.addEventListener('click', function (event) {
         const file = event.target.closest('.file');
         if (file) {
             console.log(`${file.id} a été cliqué !`);
             if (file.id === 'file1') {
                 console.log('Ouverture de J1.txt');
-                openNP('./Texte/J1.txt');
+                openNP('./Texte/1.txt');
+            }
+            else if (file.id === 'file2') {
+                console.log('Ouverture de J2.txt');
+                openNP('./Texte/2.txt');
+            }
+            else if (file.id === 'file3') {
+                console.log('Ouverture de J2.txt');
+                openNP('./Texte/3.txt');
+            }
+            else if (file.id === 'file4') {
+                console.log('Ouverture de J2.txt');
+                openNP('./Texte/4.txt');
+            }
+            else if (file.id === 'file5') {
+                console.log('Ouverture de J2.txt');
+                openNP('./Texte/5.txt');
+            }
+            else if (file.id === 'file6') {
+                console.log('Ouverture de J2.txt');
+                openNP('./Texte/6.txt');
+            }
+            else if (file.id === 'file7') {
+                console.log('Ouverture de J2.txt');
+                openNP('./Texte/7.txt');
+            }
+            else if (file.id === 'file8') {
+                console.log('Ouverture de J2.txt');
+                openNP('./Texte/8.txt');
+            }
+            else if (file.id === 'file9') {
+                console.log('Ouverture de J2.txt');
+                openNP('./Texte/9.txt');
             }
         }
     });
@@ -65,11 +97,6 @@ async function openNP(textFilePath) {
 }
 
 
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const interactiveItems = document.querySelectorAll('.tree-view li[data-path]');
     const rightColumn = document.querySelector('.right-column');
@@ -92,6 +119,19 @@ function loadContent(filePath, rightColumn) {
         .then(response => response.text())
         .then(html => {
             rightColumn.innerHTML = html;
+            // Check if this is the "Journal" page
+            if (filePath.includes('feJournal.html')) {
+                checkAndShowFiles();
+            }
         })
         .catch(error => console.error('Error loading the file:', error));
+}
+
+function checkAndShowFiles() {
+    if (localStorage.getItem('showFiles') === 'true') {
+        document.getElementById('file6').style.display = 'block';
+        document.getElementById('file7').style.display = 'block';
+        document.getElementById('file8').style.display = 'block';
+        localStorage.removeItem('showFiles');
+    }
 }
