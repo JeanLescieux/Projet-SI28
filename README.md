@@ -18,6 +18,3 @@ TODO's:
 Secte website.
 Forum website.
 Icone eve online to add, error message if we click it?
-Diary.
-Calculator hidden diary.
-Add paths to MyDocuments.

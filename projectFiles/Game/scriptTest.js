@@ -156,3 +156,23 @@ function closeWrongCalculator() {
   document.getElementById('fenetreModaleWrongCalculator').style.display = 'none';
   console.log('Fenêtre modale cachée');
 }
+
+async function openEve() {
+  var modalContent = document.getElementById('fenetreModaleEve');
+  try {
+    const response = await fetch('./Usables/errorMsg.html');
+    if (!response.ok) {
+      throw new Error('Erreur lors du chargement de myComputer.html');
+    }
+    modalContent.innerHTML = await response.text();
+    document.getElementById('fenetreModaleEve').style.display = 'block';
+    console.log('Fenêtre modale affichée');
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function closeEve() {
+  document.getElementById('fenetreModaleEve').style.display = 'none';
+  console.log('Fenêtre modale cachée');
+}
