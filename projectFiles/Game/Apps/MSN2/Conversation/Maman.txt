@@ -1,5 +1,5 @@
 Maman
----------------  Jeudi 23 Mai  ---------------
+---------------  Jeudi 18 Juillet  ---------------
 
 Maman#11:25 :    #Bonsoir mon fils, comment va-tu ?
 Moi#11:35 :    #Bof, je m’ennuie depuis que Léon est parti vivre à Paris, j’ai pas grand chose à faire, et toi quoi de neuf ? Comment va Loki ?
@@ -15,7 +15,7 @@ Moi#12:26 :    #Il s’appelle Thomas, je l’ai rencontré sur un forum de jeux
 Maman#12:28 :    #Bien... méfie toi quand même, on ne sait jamais vraiment qui sont les gens avant de les avoirs rencontrés. Ton père m’attend pour dormir, Bonne nuit mon fils
 Moi#12:30 :    #Bonne nuit maman
 
----------------  Mercredi 20 Juin  ---------------
+---------------  Mercredi 23 Août  ---------------
 
 Moi#10:01 :    #Coucou Maman, tu te souviens de mon ami Thomas ?
 Moi#10:03 :    #Je pense que c’est vraiment un bon ami, on joue et discute de jeux vidéos, tu avais raison, ça fait du bien de rencontrer de nouvelles personnes
@@ -28,7 +28,7 @@ Moi#11:00 :    #Ne t’en fait pas maman, ces gens on l’air très gentils, de 
 Maman#11:25 :    #Bon, d’accord, passe à la maison quand tu as le temps, tu nous manques.
 Moi#11:26 :    #Je passerai la semaine prochaine, c’est promis.
 
----------------  Mercredi 27 Juin  ---------------
+---------------  Mercredi 19 Août  ---------------
 
 Maman#17:21 :    #Bonsoir mon fils, je sais que tu es occupé mais tu devais passer cette semaine, et je ne t’ai pas vu, tout va bien ?
 Maman#17:22 :    #Il ne t’es rien arrivé ?
@@ -38,6 +38,6 @@ Moi#17:32 :    #Puisque je te dit que ça va ! J’ai beaucoup de travail
 Maman#17:34 :    #Je m’inquiète beaucoup Pierre, ton comportement a changé, je ne pense pas que ces amis soient bon pour toi...
 Moi#17:34 :    #Je sais ce qui est bon pour moi
 
----------------  Samedi 20 Juillet  ---------------
+---------------  Samedi 29 Juillet  ---------------
 
 Maman#09:14 :    #Tu va bien ? Où est tu ? Léon m’a dit que ça faisait plusieurs semaines que tu ne lui a pas parlé, ce n’est pas toi Je suis morte d’inquiétude, réponds moi

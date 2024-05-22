@@ -207,6 +207,11 @@ strong {
       background-image: url(https://cdn2.steamgriddb.com/icon/f337d999d9ad116a7b4f3d409fcc6480/32/48x48.png);
     }
 
+    &.calendar {
+      background-image: url(../../images/calendar-1.png);
+      background-size: 50px 50px;
+    }
+
   }
 
   .desktop-icon:hover {

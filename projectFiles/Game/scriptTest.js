@@ -176,3 +176,23 @@ function closeEve() {
   document.getElementById('fenetreModaleEve').style.display = 'none';
   console.log('Fenêtre modale cachée');
 }
+
+async function openCalendar() {
+  var modalContent = document.getElementById('fenetreModaleCalendar');
+  try {
+    const response = await fetch('./Apps/Calendrier/Calendrier.html');
+    if (!response.ok) {
+      throw new Error('Erreur lors du chargement du calendrier');
+    }
+    modalContent.innerHTML = await response.text();
+    document.getElementById('fenetreModaleCalendar').style.display = 'block';
+    console.log('Fenêtre modale affichée');
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function closeCalendar() {
+  document.getElementById('fenetreModaleCalendar').style.display = 'none';
+  console.log('Fenêtre modale cachée');
+}
