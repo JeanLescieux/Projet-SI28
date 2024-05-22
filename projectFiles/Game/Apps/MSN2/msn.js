@@ -128,30 +128,30 @@ function connexion() {
     var MessageHelp = document.getElementById("msg-help");
 
 
-    if (email === "exemple@email.com" && password === "motdepasse") {
-        window.location.href = "Conversation.html";
+    if (email === "pierre@email.com" && password === "motdepasse") {
+        window.location.href = "Conv_comptePierre.html";
         return false;
-    } else if (email === "autre@example.com" && password === "mdp2") {
-        window.location.href = "Conversation.html";
+    } else if (email === "thomas@email.com" && password === "mdp") {
+        window.location.href = "Conv_compteThomas.html";
         return false;
     } else {
 
         MessageErr.style.display = "block";
         MessageErr.textContent = "Email ou mot de passe incorrect";
         MessageHelp.style.display = "none"
-        if (email == "exemple@email.com") {
+        if (email == "pierre@email.com") {
             j++
             i = 0
             if (j >= 3) {
                 MessageHelp.style.display = "block";
                 MessageHelp.textContent = "indice : motdepasse";
             }
-        } else if (email === "autre@example.com") {
+        } else if (email === "thomas@email.com") {
             i++
             j = 0
             if (i >= 3) {
                 MessageHelp.style.display = "block";
-                MessageHelp.textContent = "indice : mdp2";
+                MessageHelp.textContent = "indice : mdp";
             }
         } else {
             j = 0

@@ -1,11 +1,11 @@
 Ami
----------------  Jeudi 16 Mai  ---------------
+---------------  Jeudi 8 Juillet  ---------------
 
 Ami#10:51 :    #Hello Moi, Tu es toujours disponible pour m’aider pour le déménagement?
 Ami#10:51 :    #Je risque de galérer a descendre les meubles seuls haha !
 Moi#10:51 :    #Oui pas de soucis ! On se dit demain 10h ?
 
----------------  Vendredi 24 Mai  ---------------
+---------------  Vendredi 15 Juillet  ---------------
 
 Ami#10:51 :    #Merci encore pour hier, je n’aurai jamais réussi seul.
 Moi#10:51 :    #C’est normal, ça fait bizarre de ne plus t’avoir dans les parages.
@@ -32,7 +32,7 @@ Ami#10:51 :    #Ça à l’air super, tu me donnera le nom pour que je la télé
 Moi#10:51 :    #Bien sur ! Bon je dois y aller, à plus !
 Ami#10:51 :    #A plus !
 
----------------  Mercredi 5 Juin  ---------------
+---------------  Mercredi 06 Août  ---------------
 
 Moi#10:51 :    #Salut ! Quoi de neuf depuis le déménagement ? Ta nouvelle vie te plait ?
 Ami#10:51 :    #Oui c’est top, la ville est très vivante et mes collègues très sympa, il ne manque que toi, et toi quoi de neuf ?
@@ -43,7 +43,7 @@ Ami#10:51 :    #Et ce groupe d’amis en quoi consiste-il ?
 Moi#10:51 :    #Oh rien de spécial t’inquiète pas, on discute de technologies et de jeux vidéos.
 Ami#10:51 :    #Super, je suis content que tu te sois fait des nouveaux amis !
 
----------------  Jeudi 21 Juin  ---------------
+---------------  Jeudi 17 Août  ---------------
 
 Ami#10:51 :    #Salut Pierre, ça fait longtemps que je n’ai pas eu de nouvelles comment vas-tu ?
 Moi#10:51 :    #Désolé je suis très occupé en ce moment.
@@ -51,7 +51,7 @@ Ami#10:51 :    #Oh, je vois... c’est ton groupe d’amis qui te prends tous ce
 Moi#10:51 :    #Oui, je commence à prendre des responsabilité tu comprends, j’ai moins de temps à t’accorder, on se reparle un autre jour ?
 Ami#10:51 :    #Je vois ... Bon je te laisse alors.
 
----------------  Samedi 30 Juin  ---------------
+---------------  Samedi 20 Août  ---------------
 
 Ami#10:51 :    #Je commence à m’inquiéter, ta mère aussi trouve que tu as changé, que ce passe-il ? Tu as des problèmes ? Tu peux m’en parler tu sais ?
 Moi#10:51 :    #Tout vas bien laissez moi tranquille.
@@ -59,8 +59,8 @@ Ami#10:51 :    #Bien.. Je reviens en ville ce week-end, ça te dirait de prendre
 Moi#10:51 :    #Je ne peux pas désolé, Thomas m’a déjà proposé de se voir pour la première fois
 Ami#10:51 :    #D’accord, une autre fois alors.
 
----------------  Jeudi 18 Juillet  ---------------
+---------------  Jeudi 30 Juillet  ---------------
 
 Ami#10:51 :    #J’ai sonné chez toi mais tu n’as pas répondu, tout va bien ?
 Ami#10:51 :    #Ta mère n’a plus de nouvelle non plus, on s’inquiète
-Ami#10:51 :    #Moi ?
+Ami#10:51 :    #Pierre ?
