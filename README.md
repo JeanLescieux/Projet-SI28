@@ -26,7 +26,7 @@ x reformuler la conv 12 + ajouter des entrées
 renommer
 xcorriger la discussion avec la mere au tout debut
 xajouter 2 relances de la mere qui est passée chez lui
-ajouter des entrées pertinentes dans la conversation avec nicolas
+x ajouter des entrées pertinentes dans la conversation avec nicolas
 xajouter le nom de jeu dans la conversation avec nicolas
 ajouter la conversation avec sa copne de thomas
 changer la taille de texte des groupes msn

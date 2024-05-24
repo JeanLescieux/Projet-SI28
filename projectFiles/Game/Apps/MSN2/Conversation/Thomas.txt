@@ -56,17 +56,17 @@ Moi#16:22 :    #Ca marche, je te tiens au courant.
 
 ---------------  Lundi 14 Juillet  ---------------
 
-Moi#10:41 :    #Thomas, tu as vu, j’ai réussi le test, je suis maintenant membre du groupe !
-Thomas#10:51 :    #Super, c’est une bonne nouvelle, maintenant j’ai quelques petites choses à t’expliquer.
-Moi#10:53 :    #Je t’écoute
-Thomas#10:56 :    #Eh bien il faut que tu sache que maintenant que tu es membre, pour des raisons de confidentialité nous n’avons pas le droit de communiquer en messages privés, nous le faisons quand même mais il faudra que tu sois discret sur ce sujet.
-Moi#11:01 :    #D’accord c’est noté, je n’en parlerai pas.
-Thomas#11:25 :    #Tu ne dois non plus communiquer avec des personnes hors du groupe, même ta famille, je sais que c’est un peu restrictif mais on ne peut pas prendre le risques que certaines informations confidentielles fuittent.
-Moi#11:10 :    #Oh, donc je ne peux pas parler à ma mère et mon meilleurs ami ?
-Thomas#11:12 :    #Il faut que tu évites le plus possible, ne t’inquiète pas ça ira tu peux me parler a moi je suis ton ami, ce n’est que pour quelques temps, le temps que la technologie soit terminée.
-Moi#11:12 :    #D’accord...
-Thomas#11:15 :    #Autre conseil, évite de trop débattre avec le chef, il n’aime pas trop ça XDD et pense bien à lire les règles du groupe, sinon ils peuvent te virer...
-Moi#11:16 :    #C’est noté
+Moi#14:41 :    #Thomas, tu as vu, j’ai réussi le test, je suis maintenant membre du groupe !
+Thomas#14:51 :    #Super, c’est une bonne nouvelle, maintenant j’ai quelques petites choses à t’expliquer.
+Moi#14:53 :    #Je t’écoute
+Thomas#14:56 :    #Eh bien il faut que tu sache que maintenant que tu es membre, pour des raisons de confidentialité nous n’avons pas le droit de communiquer en messages privés, nous le faisons quand même mais il faudra que tu sois discret sur ce sujet.
+Moi#15:01 :    #D’accord c’est noté, je n’en parlerai pas.
+Thomas#15:25 :    #Tu ne dois non plus communiquer avec des personnes hors du groupe, même ta famille, je sais que c’est un peu restrictif mais on ne peut pas prendre le risques que certaines informations confidentielles fuittent.
+Moi#15:10 :    #Oh, donc je ne peux pas parler à ma mère et mon meilleurs ami ?
+Thomas#15:12 :    #Il faut que tu évites le plus possible, ne t’inquiète pas ça ira tu peux me parler a moi je suis ton ami, ce n’est que pour quelques temps, le temps que la technologie soit terminée.
+Moi#15:12 :    #D’accord...
+Thomas#15:15 :    #Autre conseil, évite de trop débattre avec le chef, il n’aime pas trop ça XDD et pense bien à lire les règles du groupe, sinon ils peuvent te virer...
+Moi#15:16 :    #C’est noté
 
 ---------------  Mercredi 16 Juillet  ---------------
 
