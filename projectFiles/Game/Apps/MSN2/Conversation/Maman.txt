@@ -1,8 +1,8 @@
 Maman
----------------  Jeudi 23 Mai  ---------------
+---------------  Mardi 8 Juillet  ---------------
 
 Maman#11:25 :    #Bonsoir mon fils, comment va-tu ?
-Moi#11:35 :    #Bof, je m’ennuie depuis que Léon est parti vivre à Paris, j’ai pas grand chose à faire, et toi quoi de neuf ? Comment va Loki ?
+Moi#11:35 :    #Bof, je m’ennuie depuis que Pierre est parti vivre à Paris, j’ai pas grand chose à faire, et toi quoi de neuf ? Comment va Loki ?
 Maman#11:45 :    #La routine tu sais, ton père travaille, Loki dort.. Comme d’habitude ^^
 Maman#11:46 :    #=img=
 Moi#11:48 :    #Loki tout craché !
@@ -15,29 +15,33 @@ Moi#12:26 :    #Il s’appelle Thomas, je l’ai rencontré sur un forum de jeux
 Maman#12:28 :    #Bien... méfie toi quand même, on ne sait jamais vraiment qui sont les gens avant de les avoirs rencontrés. Ton père m’attend pour dormir, Bonne nuit mon fils
 Moi#12:30 :    #Bonne nuit maman
 
----------------  Mercredi 20 Juin  ---------------
+---------------  Jeudi 17 Juillet  ---------------
 
 Moi#10:01 :    #Coucou Maman, tu te souviens de mon ami Thomas ?
-Moi#10:03 :    #Je pense que c’est vraiment un bon ami, on joue et discute de jeux vidéos, tu avais raison, ça fait du bien de rencontrer de nouvelles personnes
-Maman#10:26 :    #Je suis contente pour toi mon fils, c’est un bonne chose
+Moi#10:03 :    #Je pense que c’est vraiment un bon ami, on joue et discute de jeux vidéos, ça fait du bien de rencontrer de nouvelles personnes
+Maman#10:26 :    #Je suis contente pour toi mon fils, c’est une bonne chose
 Moi#10:29 :    #Il m’a même proposé de rejoindre son groupe d’amis en ligne, je pense que je vais dire oui
 Maman#10:35 :    #Un groupe d’amis en ligne ? Qu’est ce que c’est ?
 Moi#10:45 :    #Je ne sais pas trop, apparement ils aiment la technologie et chercheraient à s’en servir pour améliorer le corps humain, un vrai scénario de jeu vidéo !
-Maman#10:50 :    #Je ne sais pas trop Pierre, tu ne les connais pas ces personnes, et puis la technologie, tout ça, ça me fait peur, tu devrais faire attention...
+Maman#10:50 :    #Je ne sais pas trop Mikaël, tu ne les connais pas ces personnes, et puis la technologie, tout ça, ça me fait peur, tu devrais faire attention...
 Moi#11:00 :    #Ne t’en fait pas maman, ces gens on l’air très gentils, de toute façon je ne peux pas trop t’en parler, c’est un projet Top Secret
 Maman#11:25 :    #Bon, d’accord, passe à la maison quand tu as le temps, tu nous manques.
 Moi#11:26 :    #Je passerai la semaine prochaine, c’est promis.
 
----------------  Mercredi 27 Juin  ---------------
+---------------  Mardi 29 Juillet  ---------------
 
 Maman#17:21 :    #Bonsoir mon fils, je sais que tu es occupé mais tu devais passer cette semaine, et je ne t’ai pas vu, tout va bien ?
 Maman#17:22 :    #Il ne t’es rien arrivé ?
 Moi#17:25 :    #Tout va bien, je suis très occupé avec mon groupe d’amis, je passerai une autre fois.
 Maman#17:30 :    #D’accord, mais tu es sur que tu va bien ? Tu ne m’appelles plus non plus...
 Moi#17:32 :    #Puisque je te dit que ça va ! J’ai beaucoup de travail
-Maman#17:34 :    #Je m’inquiète beaucoup Pierre, ton comportement a changé, je ne pense pas que ces amis soient bon pour toi...
+Maman#17:34 :    #Je m’inquiète beaucoup Mikaël, ton comportement a changé, je ne pense pas que ces amis soient bon pour toi...
 Moi#17:34 :    #Je sais ce qui est bon pour moi
 
----------------  Samedi 20 Juillet  ---------------
+---------------  Jeudi 7 Aout  ---------------
 
-Maman#09:14 :    #Tu va bien ? Où est tu ? Léon m’a dit que ça faisait plusieurs semaines que tu ne lui a pas parlé, ce n’est pas toi Je suis morte d’inquiétude, réponds moi
+Maman#09:30 :    #Coucou, comment vas-tu ?
+
+---------------  Dimanche 17 Aout  ---------------
+
+Maman#09:14 :    #Tu va bien ? Où est tu ? Pierre m’a dit que ça faisait longtemps que tu ne lui a pas parlé, ce n’est pas toi. Je suis morte d’inquiétude, réponds moi

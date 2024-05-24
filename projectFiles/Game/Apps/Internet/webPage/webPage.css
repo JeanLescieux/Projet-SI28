@@ -72,6 +72,7 @@ main {
     cursor: pointer;
     z-index: 10;
     white-space: nowrap;
+    width: 30px;
 }
 
 .button-left {
