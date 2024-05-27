@@ -30,6 +30,7 @@ x ajouter des entrées pertinentes dans la conversation avec nicolas
 xajouter le nom de jeu dans la conversation avec nicolas
 ajouter la conversation avec sa copne de thomas
 changer la taille de texte des groupes msn
+ajouter liste de regles du forums
 
 ajouter easter egg : 
 description des personanges
