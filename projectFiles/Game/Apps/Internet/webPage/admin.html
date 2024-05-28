@@ -1,165 +1,130 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!-- Beginning of head -->
-
- <!-- Selects the typeface to use on the website -->
-<!-- Start of CSS link -->
-<link href="./wired.entry.neocities_files/mebious.css" media="all" rel="stylesheet" type="text/css">
-<!-- End of CSS link -->
-<style>
-    /* Tous les éléments utilisent maintenant la police Consolas */
-    * {
-        font-family: Consolas, monospace !important;
-    }
-   
-</style>
-<!-- Start of Scripts -->
-<script src="./wired.entry.neocities_files/jquery.min.js.télécharger"></script>
-<script src="./wired.entry.neocities_files/jquery-ui.min.js.télécharger"></script>
-<script src="./wired.entry.neocities_files/mebious.js.télécharger"></script>
-<script src="./table.js"></script>
-<!-- End of Scripts -->
-
-</head> <!--End of head -->  
-<!-- Start of body -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Panel</title>
+    <link href="./wired.entry.neocities_files/mebious.css" media="all" rel="stylesheet" type="text/css">
+    <!-- CSS pour le style -->
+    <style>
+        * {
+            font-family: Consolas, monospace !important;
+        }
+        body {
+            background-color: black;
+            color: #00FF00;
+        }
+        .tabs p {
+            cursor: pointer;
+        }
+        .header-banner {
+            margin-bottom: 20px;
+        }
+        .header-button {
+            margin-right: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #00FF00;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .resetblink {
+            text-decoration: none;
+            color: #00FF00;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+    <!-- Inclure jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Inclure PapaParse -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
 <body oncontextmenu="return false;">
-    
- 
- <div style="position:relative;">
- <!-- Start of Tabs -->
-<div class="tabs">
-    <p class="taba maintab" style="background-color: rgb(0, 0, 0); color: rgb(0, 255, 0);">Main</p>
-    <p class="taba admintab" style="background-color: rgb(0, 255, 0); color: rgb(0, 0, 0);">Admin</p>
-</div>
-<!-- END of Tabs -->
+    <div style="position:relative;">
+        <div class="tabs">
+            <p class="taba maintab" style="background-color: rgb(0, 0, 0); color: rgb(0, 255, 0);">Main</p>
+            <p class="taba admintab" style="background-color: rgb(0, 255, 0); color: rgb(0, 0, 0);">Admin</p>
+        </div>
+        <div id="tab-2" class="tab-content" style="display: block;">
+            <h1 style="font-family: Consolas; text-align: center; color: #00FF00; background-color: black; border-style: inset; border-width: 5px; margin-top: 1%; margin-bottom: 10px; padding: 10px; border-color: #00FF00;">Administration Panel</h1>
+            <div>
+                <div class="header-banner">
+                    Rajouter des infos cools
+                    <button class="header-button">Ajouter</button>
+                    <button class="header-button">Supprimer</button>
+                    <button class="header-button">Modifier</button>
+                </div>
+                <div class="main" style="padding:1%;display:flex;">
+                    <div class="table-container">
+                        <table id="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Numéro</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>Pseudo</th>
+                                    <th>Mail</th>
+                                    <th>Mot de passe</th>
+                                    <th>Actif</th>
+                                    <th>Statut</th>
+                                    <th>Note</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Les données seront insérées ici -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div style="border:5px inset #00FF00; margin-bottom:1%; display:table; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:10px; padding-bottom:10px; background-color:black;">
+                    <a class="resetblink" href="./end1.html">[ALL RESET]</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!-- START OF UNDER2 -->
-<div id="tab-2" class="tab-content" style="display: block;">
-<!-- START OF HEADER -->
-<h1 style="font-family:Consolas;text-align:center;color:#00FF00;background-color:black;border-style:inset; border-width:5px;margin-top:1%;margin-bottom:10px;padding:10px;border-color:#00FF00;">Administration Panel</h1>
-<!-- END OF HEADER -->
-<div>
-<div class="header-banner">
-    rajotuer des ifnos cools
-    <button class="header-button">Ajouter</button>
-    <button class="header-button">Supprimer</button>
-    <button class="header-button">Modifier</button>
-</div>
-<!-- BEGINNING OF MAIN CONTENT -->  
-<div class="main" style="padding:1%;display:flex;">
-    
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Numéro</th>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Pseudo</th>
-                    <th>Mail</th>
-                    <th>Mot de passe</th>
-                    <th>Actif</th>
-                    <th>Statut</th>
-                    <th>Note</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-
-
-
-
-        <tr><td>Dupont</td><td>Jean</td><td>jdupont</td><td>jdupont@mail.com</td><td>password123</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Martin</td><td>Lucie</td><td>lmartin</td><td>lmartin@mail.com</td><td>1234abcd</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Durand</td><td>Pierre</td><td>pdurand</td><td>pdurand@mail.com</td><td>pass2021</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Lefevre</td><td>Marie</td><td>mlefevre</td><td>mlefevre@mail.com</td><td>marie2022</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Moreau</td><td>Claude</td><td>cmoreau</td><td>cmoreau@mail.com</td><td>claude789</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Laurent</td><td>Sophie</td><td>slaurent</td><td>slaurent@mail.com</td><td>sophiepass</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Simon</td><td>Paul</td><td>psimon</td><td>psimon@mail.com</td><td>password</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Michel</td><td>Anne</td><td>amichel</td><td>amichel@mail.com</td><td>anne1234</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Bernard</td><td>Julien</td><td>jbernard</td><td>jbernard@mail.com</td><td>bernard567</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Roux</td><td>Claire</td><td>croux</td><td>croux@mail.com</td><td>claire890</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Fontaine</td><td>Laura</td><td>lfontaine</td><td>lfontaine@mail.com</td><td>laura098</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Morel</td><td>Eric</td><td>emorel</td><td>emorel@mail.com</td><td>ericpass</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Girard</td><td>Isabelle</td><td>igirard</td><td>igirard@mail.com</td><td>isabelle</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Garcia</td><td>Thomas</td><td>tgarcia</td><td>tgarcia@mail.com</td><td>thomaspass</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Perrin</td><td>Elise</td><td>eperrin</td><td>eperrin@mail.com</td><td>elise789</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Morin</td><td>Antoine</td><td>amorin</td><td>amorin@mail.com</td><td>antoine123</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Blanc</td><td>Luc</td><td>lblanc</td><td>lblanc@mail.com</td><td>lucpass</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Garnier</td><td>Julie</td><td>jgarnier</td><td>jgarnier@mail.com</td><td>julie456</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Faure</td><td>Emilie</td><td>efaure</td><td>efaure@mail.com</td><td>emilie1234</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Carpentier</td><td>Vincent</td><td>vcarpentier</td><td>vcarpentier@mail.com</td><td>vincent890</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Thomas</td><td>Matthieu</td><td>mthomas</td><td>mthomas@mail.com</td><td>matthieu567</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Leroy</td><td>Juliette</td><td>jleroy</td><td>jleroy@mail.com</td><td>juliettepass</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Legrand</td><td>Marcel</td><td>legrand</td><td>mlegrand@mail.com</td><td>marcel123</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Lemoine</td><td>Maxime</td><td>mlemoine</td><td>mlemoine@mail.com</td><td>maximepass</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Lecomte</td><td>Manon</td><td>mlecomte</td><td>mlecomte@mail.com</td><td>manon789</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Rousseau</td><td>David</td><td>drousseau</td><td>drousseau@mail.com</td><td>davidpass</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Vincent</td><td>Charlotte</td><td>cvincent</td><td>cvincent@mail.com</td><td>charlotte123</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Picard</td><td>Lucas</td><td>lpicard</td><td>lpicard@mail.com</td><td>lucaspass</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Deschamps</td><td>Camille</td><td>cdeschamps</td><td>cdeschamps@mail.com</td><td>camille789</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Caron</td><td>Antoine</td><td>acaron</td><td>acaron@mail.com</td><td>antoinepass</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Marie</td><td>Chloé</td><td>cmarie</td><td>cmarie@mail.com</td><td>chloepass</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Lopez</td><td>Théo</td><td>tlopez</td><td>tlopez@mail.com</td><td>theopass</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Dubois</td><td>Clémence</td><td>cdubois</td><td>cdubois@mail.com</td><td>clemence123</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Roger</td><td>Juliette</td><td>jroger</td><td>jroger@mail.com</td><td>juliette567</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Philippe</td><td>Emma</td><td>ephilippe</td><td>ephilippe@mail.com</td><td>emmapass</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Gasquet</td><td>Hugo</td><td>hgasquet</td><td>hgasquet@mail.com</td><td>hugopass</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Lemoine</td><td>Léa</td><td>llemoine</td><td>llemoine@mail.com</td><td>leapass</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Mercier</td><td>Jules</td><td>jmercier</td><td>jmercier@mail.com</td><td>jules123</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Arnaud</td><td>Manon</td><td>marnaud</td><td>marnaud@mail.com</td><td>manonpass</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Dupuis</td><td>Romain</td><td>rdupuis</td><td>rdupuis@mail.com</td><td>romain123</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Lambert</td><td>Marine</td><td>mlambert</td><td>mlambert@mail.com</td><td>marinepass</td><td>Non</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Leroux</td><td>Nathan</td><td>nleroux</td><td>nleroux@mail.com</td><td>nathan567</td><td>Oui</td><td>RAS</td><td>Membre de niveau 2</td></tr>
-        <tr><td>Paris</td><td>Emma</td><td>eparis</td><td>eparis@mail.com</td><td>emmapass</td><td>Non</td><td>RAS</td><td>Membre de
-
-
-
-        </tbody>
-    </table>
-
-   </div><!--
-/*
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
-    <script src="./jquery.csv.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-    <script src="./table.js"></script>
     <script>
-        function format_link(link) {
-            if (link)
-                return "<a href='" + link + "' target='_blank'>" + link + "</a>";
-            else return "";
+        // Fonction pour charger et parser le fichier CSV
+        function loadCSV() {
+            Papa.parse("./data.csv", {
+                download: true,
+                header: true,
+                complete: function(results) {
+                    populateTable(results.data);
+                }
+            });
         }
 
-        CsvToHtmlTable.init({
-            csv_path: "./data.csv",
-            element: "table-container",
-            allow_download: true,
-            csv_options: {
-                separator: ",",
-                delimiter: '"'
-            },
-            datatables_options: {
-                paging: false
-            },
-            custom_formatting: [
-                [4, format_link]
-            ]
+        // Fonction pour peupler le tableau avec les données CSV
+        function populateTable(data) {
+            const tableBody = document.querySelector("#data-table tbody");
+            data.forEach(row => {
+                const tr = document.createElement("tr");
+                Object.values(row).forEach(cell => {
+                    const td = document.createElement("td");
+                    td.textContent = cell;
+                    tr.appendChild(td);
+                });
+                tableBody.appendChild(tr);
+            });
+        }
+
+        // Charger le fichier CSV lors du chargement de la page
+        $(document).ready(function() {
+            loadCSV();
         });
-    </script>-->
-
-</div><!-- End of main -->
-</div>
-<!--Beginning of blinking ALL RESET -->
- <!-- START OF DIV INSIDE DIV -->
-<div style="border:5px inset #00FF00;margin-bottom:1%;display:table;margin-left:auto;margin-right:auto;padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;background-color:black;">
-<a class="resetblink" href="./end1.html">
-[ALL RESET]
-</a>
-</div>
-<!--END OF ALL RESET -->
-</div> <!-- end of under2 -->
-</div>
-
- 
-    </body><!-- End of body --></html>
+    </script>
+</body>
+</html>
