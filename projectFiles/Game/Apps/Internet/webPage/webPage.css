@@ -93,9 +93,18 @@ nav {
 }
 
 article {
+    display: flex; /* Utiliser Flexbox pour le layout de l'article */
     flex: 1;
     padding: 20px;
     background: #000000;
+}
+
+article > div:first-child {
+    flex: 1; /* Faire en sorte que le contenu principal de l'article prenne tout l'espace disponible */
+}
+
+.image-gallery {
+    margin-left: 20px; /* Ajouter un espace à gauche de la galerie d'images */
 }
 
 footer {
@@ -105,7 +114,6 @@ footer {
     padding: 10px;
     width: 100%;
 }
-
 
 .menu-list {
     list-style: none; /* Enlève les puces par défaut */
@@ -131,8 +139,6 @@ aside {
     background-color: #000000;
     color: #00FF00;
     padding: 20px;
-    width: 180px;
     flex-shrink: 0;
     width: 150px;
-
 }
