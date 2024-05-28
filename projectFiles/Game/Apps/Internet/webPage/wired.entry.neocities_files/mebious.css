@@ -271,3 +271,55 @@ h1 {font-family:liquidcrystal;text-align:center;color:#00FF00;background-color:b
     .layerlink0{padding:2px;font-size:0.4em;} 
     .prvw{padding:2px;font-size:0.4em;} 
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #00FF00;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: black;
+    color: #00FF00;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #222;
+}
+
+.table-container {
+    border: 5px solid #00FF00;
+    padding: 10px;
+    margin: auto;
+    background-color: black;
+}
+.header-banner {
+    background-color: black;
+    color: #00FF00;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-button {
+    background-color: #00FF00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-family: Consolas, monospace;
+}
+
+.header-button:hover {
+    background-color: #007700;
+}
