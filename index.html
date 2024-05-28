@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Jeu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+            /* Couleur sombre de fond */
+            color: #f0f0f0;
+            /* Couleur du texte */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .start-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.5em;
+            color: #fff;
+            text-decoration: none;
+            background-color: #333;
+            border: 2px solid #555;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .start-button:hover {
+            background-color: #555;
+            border-color: #777;
+        }
+
+        .start-button:active {
+            background-color: #777;
+            border-color: #999;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Bienvenue dans mon jeu</h1>
-    <a href="./projectFiles/Intro/startComputer.html">Start</a>
+    <div class="container">
+        <h1>LOST PC</h1>
+        <a href="./projectFiles/Intro/startComputer.html" class="start-button">Start</a>
+    </div>
 </body>
+
 </html>
