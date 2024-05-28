@@ -19,6 +19,7 @@
         }
         .header-banner {
             margin-bottom: 20px;
+            align-items: center;
         }
         .header-button {
             margin-right: 10px;
@@ -37,7 +38,7 @@
         }
         .resetblink {
             text-decoration: none;
-            color: #00FF00;
+            color: #ff0000;
             animation: blink 1s infinite;
         }
         @keyframes blink {
@@ -57,11 +58,10 @@
             <p class="taba maintab" style="background-color: rgb(0, 0, 0); color: rgb(0, 255, 0);">Main</p>
             <p class="taba admintab" style="background-color: rgb(0, 255, 0); color: rgb(0, 0, 0);">Admin</p>
         </div>
-        <div id="tab-2" class="tab-content" style="display: block;">
+        <div id="admintab" class="tab-content" style="display: block;">
             <h1 style="font-family: Consolas; text-align: center; color: #00FF00; background-color: black; border-style: inset; border-width: 5px; margin-top: 1%; margin-bottom: 10px; padding: 10px; border-color: #00FF00;">Administration Panel</h1>
             <div>
                 <div class="header-banner">
-                    Rajouter des infos cools
                     <button class="header-button">Ajouter</button>
                     <button class="header-button">Supprimer</button>
                     <button class="header-button">Modifier</button>
@@ -79,7 +79,7 @@
                                     <th>Mot de passe</th>
                                     <th>Actif</th>
                                     <th>Statut</th>
-                                    <th>Note</th>
+                                    <th>Commentaire</th>
                                 </tr>
                             </thead>
                             <tbody>
