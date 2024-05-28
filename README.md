@@ -21,3 +21,4 @@ Admin website.
 Jauge chargement curseur.
 test cicada.
 decodeur de mots corbeille tuto?
+background image moins bonne qualité.

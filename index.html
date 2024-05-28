@@ -18,16 +18,18 @@
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
-            background-color: #1a1a1a;
-            /* Couleur sombre de fond */
+            align-items: flex-start; /* Aligne le conteneur en haut */
+            background: url('/images/start.png') no-repeat center center/cover;
             color: #f0f0f0;
-            /* Couleur du texte */
             font-family: 'Arial', sans-serif;
+            padding-top: 50px; /* Ajoute une marge en haut pour améliorer l'apparence */
         }
 
         .container {
             text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
         }
 
         h1 {
@@ -62,7 +64,6 @@
 
 <body>
     <div class="container">
-        <h1>LOST PC</h1>
         <a href="./projectFiles/Intro/startComputer.html" class="start-button">Start</a>
     </div>
 </body>
