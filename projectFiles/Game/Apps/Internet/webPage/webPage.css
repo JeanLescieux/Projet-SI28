@@ -99,12 +99,42 @@ article {
     background: #000000;
 }
 
-article > div:first-child {
+article .content {
     flex: 1; /* Faire en sorte que le contenu principal de l'article prenne tout l'espace disponible */
+    color: #FFFFFF; /* Couleur du texte du contenu principal */
 }
 
 .image-gallery {
     margin-left: 20px; /* Ajouter un espace à gauche de la galerie d'images */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #FFD700; /* Couleur du titre principal */
+}
+
+article section {
+    margin-bottom: 20px;
+}
+
+article section h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #00FF00; /* Couleur des sous-titres */
+}
+
+article section p {
+    margin-bottom: 10px;
+    line-height: 1.6; /* Espacement entre les lignes */
+    color: #FFFFFF; /* Couleur du texte */
+}
+
+article section span {
+    font-weight: bold;
 }
 
 footer {
