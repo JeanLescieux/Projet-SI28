@@ -1,26 +1,32 @@
 const moisData = [
-    { nom: 'Janvier', jours: 31, avant: 0, apres: 3, evenements: {} },
-    { nom: 'Février', jours: 28, avant: 3, apres: 0, evenements: {} },
-    { nom: 'Mars', jours: 31, avant: 0, apres: 2, evenements: {} },
-    { nom: 'Avril', jours: 30, avant: 2, apres: 1, evenements: {} },
-    { nom: 'Mai', jours: 31, avant: 1, apres: 1, evenements: {} },
-    { nom: 'Juin', jours: 30, avant: 4, apres: 2, evenements: {} },
-    { nom: 'Juillet', jours: 31, avant: 0, apres: 1, evenements: { 5: "Anniversaire de maman<br> Ne pas oublier!", 14: "Déménagement ami", 31: "Faire le test pour rentrer dans le groupe" } },
-    { nom: 'Août', jours: 31, avant: 1, apres: 5, evenements: { 5: "Arroser les plantes", 14: "Pas grand chose ici", 22: "RDV avec Thomas<br>14 rue du Boulouris, au café, 23h" } },
-    { nom: 'Septembre', jours: 30, avant: 4, apres: 3, evenements: {} },
-    { nom: 'Octobre', jours: 31, avant: 3, apres: 2, evenements: {} },
-    { nom: 'Novembre', jours: 30, avant: 2, apres: 2, evenements: {} },
-    { nom: 'Décembre', jours: 31, avant: 2, apres: 4, evenements: {} }
+    { nom: 'Janvier', jours: 31, avant: 6, apres: 5, evenements: {} },
+    { nom: 'Février', jours: 28, avant: 2, apres: 5, evenements: {} },
+    { nom: 'Mars', jours: 31, avant: 2, apres: 2, evenements: {} },
+    { nom: 'Avril', jours: 30, avant: 5, apres: 0, evenements: {} },
+    { nom: 'Mai', jours: 31, avant: 0, apres: 4, evenements: {} },
+    { nom: 'Juin', jours: 30, avant: 3, apres: 2, evenements: {} },
+    { nom: 'Juillet', jours: 31, avant: 5, apres: 6, evenements: { 5: "Anniversaire de maman<br> Ne pas oublier!", 14: "Déménagement ami", 31: "Faire le test pour rentrer dans le groupe" } },
+    { nom: 'Août', jours: 31, avant: 1, apres: 3, evenements: { 5: "Arroser les plantes", 14: "Pas grand chose ici", 22: "RDV avec Thomas<br>14 rue du Boulouris, au café, 23h" } },
+    { nom: 'Septembre', jours: 30, avant: 4, apres: 1, evenements: {} },
+    { nom: 'Octobre', jours: 31, avant: 6, apres: 5, evenements: {} },
+    { nom: 'Novembre', jours: 30, avant: 2, apres: 3, evenements: {} },
+    { nom: 'Décembre', jours: 31, avant: 4, apres: 0, evenements: {} }
 ];
 
 function afficherMois(moisIndex) {
     const mois = moisData[moisIndex];
+    var moisAvant = mois;
+    if (moisIndex!=0){
+        var p = moisIndex - 1;
+        moisAvant = moisData[p];
+    }
+
     document.querySelector('.calendrier').innerHTML = '';
     // Jours avant le mois
     for (let i = 1; i <= mois.avant; i++) {
         document.querySelector('.calendrier').innerHTML += `
             <div class="jour inactive">
-                <div class="jour-titre">${mois.jours - mois.avant + i}</div>
+                <div class="jour-titre">${moisAvant.jours - mois.avant + i}</div>
                 <div class="jour-contenu"></div>
             </div>
         `;
