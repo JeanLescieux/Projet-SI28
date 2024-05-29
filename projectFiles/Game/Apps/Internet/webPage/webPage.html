@@ -10,9 +10,20 @@
 
 <body>
     <div class="container">
-        <!-- Ajout des boutons flottants -->
-        <div class="button-left">Main</div>
-        <div class="button-right">Admin</div>
+        <div class="tab"><input id="tab-1" checked="checked" name="tab-group-1" type="radio" /> <label for="tab-1">Accueil</label>
+            <div class="content">
+            <p><a href="#">Retour Acceuil</a></p>
+            <p><a href="#">Contact</a></p>
+            <p><a href="#">Newsletter</a></p>
+            </div>
+            </div>
+
+        <div role="tablist">
+            <button class="button-right " role="tab" id="onglet-1" tabindex="-1" aria-selected="false" aria-controls="panneau-1">Main</button>
+            <button class="button-left " role="tab" id="onglet-2" tabindex="-1" aria-selected="false" aria-controls="panneau-2">Admin</button>
+            <a href="./admin.html" >Admin</a>
+          </div>
+          <div role="tabpanel" id="panneau-1" aria-labelledby="onglet-1" tabindex="0">
 
         <header>
             <h2>HELLO WORLD</h2>
@@ -106,6 +117,10 @@
                     <!-- Ajoutez plus d'images si nécessaire -->
                 </aside>
             </article>
+        </div>
+        <div role="tabpanel" id="panneau-2" aria-labelledby="onglet-2" tabindex="0">
+            </div>
+
         </main>
         <footer>
             <p>Footer content here.</p>

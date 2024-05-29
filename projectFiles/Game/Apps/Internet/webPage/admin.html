@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Panel</title>
+    <link href="./wired.entry.neocities_files/mebious.css" media="all" rel="stylesheet" type="text/css">
+    <!-- CSS pour le style -->
+    <style>
+        * {
+            font-family: Consolas, monospace !important;
+        }
+        body {
+            background-color: black;
+            color: #00FF00;
+        }
+        .tabs p {
+            cursor: pointer;
+        }
+        .header-banner {
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        .header-button {
+            margin-right: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #00FF00;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .resetblink {
+            text-decoration: none;
+            color: #ff0000;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+    <!-- Inclure jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Inclure PapaParse -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body oncontextmenu="return false;">
+    <div style="position:relative;">
+        <div class="tabs">
+            <p class="taba maintab" style="background-color: rgb(0, 0, 0); color: rgb(0, 255, 0);">Main</p>
+            <p class="taba admintab" style="background-color: rgb(0, 255, 0); color: rgb(0, 0, 0);">Admin</p>
+        </div>
+        <div id="admintab" class="tab-content" style="display: block;">
+            <h1 style="font-family: Consolas; text-align: center; color: #00FF00; background-color: black; border-style: inset; border-width: 5px; margin-top: 1%; margin-bottom: 10px; padding: 10px; border-color: #00FF00;">Administration Panel</h1>
+            <div>
+                <div class="header-banner">
+                    <button class="header-button">Ajouter</button>
+                    <button class="header-button">Supprimer</button>
+                    <button class="header-button">Modifier</button>
+                </div>
+                <div class="main" style="padding:1%;display:flex;">
+                    <div class="table-container">
+                        <table id="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Numéro</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>Pseudo</th>
+                                    <th>Mail</th>
+                                    <th>Mot de passe</th>
+                                    <th>Actif</th>
+                                    <th>Statut</th>
+                                    <th>Commentaire</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Les données seront insérées ici -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div style="border:5px inset #00FF00; margin-bottom:1%; display:table; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:10px; padding-bottom:10px; background-color:black;">
+                    <a class="resetblink" href="./end1.html">[ALL RESET]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour charger et parser le fichier CSV
+        function loadCSV() {
+            Papa.parse("./data.csv", {
+                download: true,
+                header: true,
+                complete: function(results) {
+                    populateTable(results.data);
+                }
+            });
+        }
+
+        // Fonction pour peupler le tableau avec les données CSV
+        function populateTable(data) {
+            const tableBody = document.querySelector("#data-table tbody");
+            data.forEach(row => {
+                const tr = document.createElement("tr");
+                Object.values(row).forEach(cell => {
+                    const td = document.createElement("td");
+                    td.textContent = cell;
+                    tr.appendChild(td);
+                });
+                tableBody.appendChild(tr);
+            });
+        }
+
+        // Charger le fichier CSV lors du chargement de la page
+        $(document).ready(function() {
+            loadCSV();
+        });
+    </script>
+</body>
+</html>
