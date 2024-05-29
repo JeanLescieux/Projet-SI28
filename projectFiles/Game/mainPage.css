@@ -212,6 +212,11 @@ strong {
       background-size: 50px 50px;
     }
 
+    &.minesweeper {
+      background-image: url(../../images/minesweeper-1.png);
+      background-size: 50px 50px;
+    }
+
   }
 
   .desktop-icon:hover {

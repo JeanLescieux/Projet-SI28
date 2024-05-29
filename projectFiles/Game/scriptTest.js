@@ -196,3 +196,23 @@ function closeCalendar() {
   document.getElementById('fenetreModaleCalendar').style.display = 'none';
   console.log('Fenêtre modale cachée');
 }
+
+async function openMinesWeeper() {
+  var modalContent = document.getElementById('fenetreModaleMinesWeeper');
+  try {
+    const response = await fetch('./Apps/Minesweeper/minesweeper-js-master/index.html');
+    if (!response.ok) {
+      throw new Error('Erreur lors du chargement du démineur');
+    }
+    modalContent.innerHTML = await response.text();
+    document.getElementById('fenetreModaleMinesWeeper').style.display = 'block';
+    console.log('Fenêtre modale affichée');
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function closeMinesWeeper() {
+  document.getElementById('fenetreModaleMinesWeeper').style.display = 'none';
+  console.log('Fenêtre modale cachée');
+}
