@@ -6,7 +6,7 @@ Description:
 This project contains some HTML, CSS and Javascript files.
 
 Usage:
-To use this app, just open startComputer.html on a Live Server in your navigator.
+To use this app, just go to [this link](https://lostpc.netlify.app/).
 
 Inspired by: https://codepen.io/smpnjn/pen/ExLbvdJ
 https://win98icons.alexmeub.com/
@@ -37,3 +37,9 @@ description des personanges
 manifesto du transhumanisme
 journal de nicolas
 extrait de wikipedia sur les apotres
+Forum websites.
+Admin website.
+Jauge chargement curseur.
+test cicada.
+decodeur de mots corbeille tuto?
+background image moins bonne qualité.
