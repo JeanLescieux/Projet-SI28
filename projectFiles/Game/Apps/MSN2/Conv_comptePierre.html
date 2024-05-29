@@ -32,7 +32,7 @@
                     <div classe="side-left" style="margin-right: 90px;">
                         <ul class="tree-view" style="height: 90%; width: 300px;">
                             <aside class="groupes">
-                                <h3>Liste des groupes</h3>
+                                <h3>Conversations</h3>
                                 <ul class="liste">
                                     <!--<li><img src="../../../../images/write_yellow-1.png" alt="message" class="img"><a href="#" class="conv" type-conversation="Conversation/Groupe_discussion_large.txt">   Groupe discussion large</a></li>-->
                                     <li><img src="../../../../images/write_yellow-1.png" alt="message" class="img" ><a href="#" class="conv" type-conversation="Conversation/Groupe_des_12.txt">   Groupe des 12</a></li>
@@ -64,7 +64,17 @@
         </div>
 
         
-        
+        <div id="custom-alert" class="window custom-alert hidden" style="width: 300px">
+            <div class="title-bar">
+              <div class="title-bar-text">Erreur</div>
+              <div class="title-bar-controls">
+                <button aria-label="Close" onclick="closebtn()"></button>
+              </div>
+            </div>
+            <div class="window-body custom-alert-content">
+                <p><img src="../../../../images/msg_error-0.png" alt="logo erreur" class="imgErr"> Vous ne pouvez pas envoyer de message.</p>
+            </div>
+          </div>
 
     </div>
 </body>
