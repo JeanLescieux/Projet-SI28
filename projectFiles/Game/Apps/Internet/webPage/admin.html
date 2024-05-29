@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,41 +11,123 @@
         * {
             font-family: Consolas, monospace !important;
         }
+
         body {
             background-color: black;
             color: #00FF00;
         }
+
         .tabs p {
             cursor: pointer;
         }
+
         .header-banner {
             margin-bottom: 20px;
             align-items: center;
         }
+
         .header-button {
             margin-right: 10px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
-        table, th, td {
+
+        table,
+        th,
+        td {
             border: 1px solid #00FF00;
         }
-        th, td {
+
+        th,
+        td {
             padding: 10px;
             text-align: left;
         }
+
         .resetblink {
             text-decoration: none;
             color: #ff0000;
             animation: blink 1s infinite;
         }
+
         @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: black;
+            color: #00FF00;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal-button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100px;
+        }
+        #confirmBtn {
+            background-color: #00FF00;
+            color: black;
+            border: none;
+        }
+        #cancelBtn {
+            background-color: black;
+            color: #00FF00;
+            border: 1px solid #00FF00;
+        }
+        .modal-footer {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
         }
     </style>
     <!-- Inclure jQuery -->
@@ -52,21 +135,17 @@
     <!-- Inclure PapaParse -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
+
 <body oncontextmenu="return false;">
     <div style="position:relative;">
-        <div class="tabs">
-            <p class="taba maintab" style="background-color: rgb(0, 0, 0); color: rgb(0, 255, 0);">Main</p>
-            <p class="taba admintab" style="background-color: rgb(0, 255, 0); color: rgb(0, 0, 0);">Admin</p>
-        </div>
+
         <div id="admintab" class="tab-content" style="display: block;">
-            <h1 style="font-family: Consolas; text-align: center; color: #00FF00; background-color: black; border-style: inset; border-width: 5px; margin-top: 1%; margin-bottom: 10px; padding: 10px; border-color: #00FF00;">Administration Panel</h1>
+            <h1
+                style="font-family: Consolas; text-align: center; color: #00FF00; background-color: black; border-style: inset; border-width: 5px; margin-top: 1%; margin-bottom: 10px; padding: 10px; border-color: #00FF00;">
+                Administration Panel</h1>
             <div>
-                <div class="header-banner">
-                    <button class="header-button">Ajouter</button>
-                    <button class="header-button">Supprimer</button>
-                    <button class="header-button">Modifier</button>
-                </div>
-                <div class="main" style="padding:1%;display:flex;">
+
+                <div class="main" style="padding:1%;display:flex;overflow-x: hidden;">
                     <div class="table-container">
                         <table id="data-table">
                             <thead>
@@ -88,9 +167,52 @@
                         </table>
                     </div>
                 </div>
-                <div style="border:5px inset #00FF00; margin-bottom:1%; display:table; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:10px; padding-bottom:10px; background-color:black;">
-                    <a class="resetblink" href="./end1.html">[ALL RESET]</a>
+                <div
+                    style="border:5px inset #00FF00; margin-bottom:1%; display:table; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:10px; padding-bottom:10px; background-color:black;">
+                    <a class="resetblink" href="#" id="resetLink">[ALL RESET]</a>
                 </div>
+
+                <!-- La modale de confirmation -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Êtes-vous sûr de vouloir tout réinitialiser ?</p>
+                        <div class="modal-footer">
+                            <button id="confirmBtn" class="modal-button">Oui</button>
+                            <button id="cancelBtn" class="modal-button">Non</button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    // Récupère les éléments de la modale
+                    var modal = document.getElementById("myModal");
+                    var resetLink = document.getElementById("resetLink");
+                    var span = document.getElementsByClassName("close")[0];
+                    var confirmBtn = document.getElementById("confirmBtn");
+                    var cancelBtn = document.getElementById("cancelBtn");
+
+                    // Affiche la modale lorsque l'utilisateur clique sur le lien
+                    resetLink.onclick = function (event) {
+                        event.preventDefault();
+                        modal.style.display = "block";
+                    }
+
+                    // Ferme la modale lorsque l'utilisateur clique sur (x)
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
+
+                    // Ferme la modale lorsque l'utilisateur clique sur "Non"
+                    cancelBtn.onclick = function () {
+                        modal.style.display = "none";
+                    }
+
+                    // Redirige vers end1.html lorsque l'utilisateur clique sur "Oui"
+                    confirmBtn.onclick = function () {
+                        window.location.href = "./end1.html";
+                    }
+
+                </script>
             </div>
         </div>
     </div>
@@ -101,7 +223,7 @@
             Papa.parse("./data.csv", {
                 download: true,
                 header: true,
-                complete: function(results) {
+                complete: function (results) {
                     populateTable(results.data);
                 }
             });
@@ -122,9 +244,10 @@
         }
 
         // Charger le fichier CSV lors du chargement de la page
-        $(document).ready(function() {
+        $(document).ready(function () {
             loadCSV();
         });
     </script>
 </body>
+
 </html>
