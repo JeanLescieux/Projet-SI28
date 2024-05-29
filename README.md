@@ -18,7 +18,7 @@ TODO's:
 Secte website.
 Forum websites.
 Admin website.
-Calendar.
 Jauge chargement curseur.
-modifier date à 2002 au lieu de 1998.
-test cicada corbeille.
+test cicada.
+decodeur de mots corbeille tuto?
+background image moins bonne qualité.
