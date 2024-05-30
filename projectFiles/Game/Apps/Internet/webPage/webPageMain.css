@@ -140,7 +140,7 @@ article section span {
 
 footer {
     background-color: #000000;
-    color: black;
+    color: white;
     text-align: center;
     padding: 10px;
     width: 100%;
@@ -172,4 +172,8 @@ aside {
     padding: 20px;
     flex-shrink: 0;
     width: 150px;
+}
+
+.highlight {
+    color: #ff00cc; /* Couleur des mots importants */
 }
