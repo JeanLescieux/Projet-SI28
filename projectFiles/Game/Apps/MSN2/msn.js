@@ -129,7 +129,7 @@ function connexion() {
 
 
     if (email === "pierre@email.com" && password === "motdepasse") {
-        window.location.href = "Conv_comptePierre.html";
+        window.location.href = "Conv_compteMikael.html";
         return false;
     } else if (email === "thomas@email.com" && password === "mdp") {
         window.location.href = "Conv_compteThomas.html";
