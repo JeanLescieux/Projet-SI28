@@ -47,7 +47,7 @@ Thomas#16:00 :    #Alors, que penses-tu du blog ?
 Moi#16:06 :    #Je le trouve très intéressant, j’ai beaucoup appris, mais je ne suis pas très sûr de vouloir rejoindre, je n’y connais pas grand-chose dans ce genre de technologie... et puis ma mère m’a dit de me méfier des gens sur internet.
 Thomas#16:10 :    #Tu n’as pas besoin d’y connaître grand-chose, nous t’apprendrons tout ce que nous savons ! Et puis pense à l’opportunité géniale que c’est !
 Moi#16:14 :    #Je ne vois pas trop ce que j’ai à gagner à vrai dire...
-Thomas#16:16 :    #Tu as tellement à gagner, le savoir, et puis tu feras partie des premiers à avoir accès à l’immortalité si tu décides de rejoindre *(argument pour le convaincre de le rejoindre)*
+Thomas#16:16 :    #Tu as tellement à gagner, le savoir, et puis tu feras partie des premiers à avoir accès à l’immortalité si tu décides de rejoindre, tu vas vraiment passer à coté d'une des plus grandes révolutions de l'humanité ??
 Moi#16:17 :    #Je ne sais pas trop...
 Thomas#16:19 :    #Ça ne te prendra pas beaucoup de temps en plus, et puis tu pourras prendre des décisions, c’est super cool non ? Je serais super déçu si tu ne viens pas...
 Moi#16:20 :    #Bon, d’accord, je veux bien essayer alors. Je vais y réfléchir.
@@ -63,7 +63,7 @@ Thomas#14:56 :    #Eh bien il faut que tu saches que maintenant que tu es membre
 Moi#15:01 :    #D’accord c’est noté, je n’en parlerai pas.
 Thomas
 
-#15:25 :    #Tu ne dois non plus communiquer avec des personnes hors du groupe, même ta famille, je sais que c’est un peu restrictif mais on ne peut pas prendre le risque que certaines informations confidentielles fuient.
+#15:25 :    #Tu ne dois non plus communiquer avec des personnes hors du groupe, même ta famille, je sais que c’est un peu restrictif mais on ne peut pas prendre le risque que certaines informations confidentielles fuitent.
 Moi#15:10 :    #Oh, donc je ne peux pas parler à ma mère et mon meilleur ami ?
 Thomas#15:12 :    #Il faut que tu évites le plus possible, ne t’inquiète pas ça ira tu peux me parler à moi je suis ton ami, ce n’est que pour quelques temps, le temps que la technologie soit terminée.
 Moi#15:12 :    #D’accord...

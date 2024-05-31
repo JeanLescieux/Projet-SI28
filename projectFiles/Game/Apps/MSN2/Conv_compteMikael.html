@@ -51,12 +51,36 @@
                     
                     <div class="side-right">
                         <p class="titre"><strong></strong></p>
-                        <ul class="tree-view chat-fenetre" style="height: 71%; width: 750px;">
-                       
-                        </ul>
+                        <ul class="tree-view chat-fenetre" style="height: 71%; width: 750px;"></ul>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const sendMsgMom = localStorage.getItem('sendMsgMom') === 'true';
+                                const messageInput = document.querySelector('#message-form input[type="text"]');
+                                const messageForm = document.getElementById('send');
+                                const activeConversation = document.querySelector('.conv-active'); // Sélectionnez la conversation active
+
+                                if (sendMsgMom && activeConversation && activeConversation.getAttribute('type-conversation') === 'Conversation/Maman.txt') {
+                                    messageInput.value = "Votre fils se trouve ici : 48.667506; 2.245672";
+                                }
+                    
+                                messageForm.addEventListener('click', function(event) {
+                                    if (sendMsgMom) {
+                                        event.preventDefault();
+                                        window.top.location.href = './end2.html';
+                                    }
+                                });
+
+                                document.querySelectorAll('.conv').forEach(conv => {
+                                    conv.addEventListener('click', function() {
+                                        document.querySelectorAll('.conv').forEach(c => c.classList.remove('conv-active'));
+                                        this.classList.add('conv-active');
+                                    });
+                                });
+                            });
+                        </script>
                         <form action="" id="message-form" class="envoi-msg">
                             <input type="text" placeholder="Écrire un message ...">
-                            <button type="submit">Envoyer</button>
+                            <button id="send" >Envoyer</button>
                         </form>
                     </div>
                 </div>
