@@ -193,3 +193,49 @@ aside {
     font-weight: bold; /* Met les liens en gras */
     margin-right: 10px; /* Ajoute un espace entre les tags */
 }
+
+.comment-section {
+    background-color: #0a0101; /* Couleur de fond pâle */
+    border: 1px solid #ccc; /* Bordure grise */
+    padding: 10px;
+    margin: 10px 0;
+    font-family: "Verdana", sans-serif; /* Police classique des années 2000 */
+}
+
+.comment {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #eee; /* Séparation entre les commentaires */
+}
+
+.comment strong {
+    color: #333; /* Couleur du nom de l'auteur */
+    font-weight: bold;
+}
+
+.comment p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4; /* Espacement des lignes */
+}
+
+.comment span.highlight {
+    background-color: #ffff99; /* Surlignage en jaune */
+    font-weight: bold;
+}
+
+.return-button {
+    background-color: #FFD700;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.return-button:hover {
+    background-color: #FF4500;
+    color: #fff;
+}

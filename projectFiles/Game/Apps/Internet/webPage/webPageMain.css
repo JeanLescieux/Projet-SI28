@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Consolas, monospace !important;
 }
 
 html,
@@ -19,6 +20,9 @@ body {
     justify-content: center;
     align-items: flex-start;
     color: white;
+}
+p {
+    font-size: 12px;
 }
 
 .container {
