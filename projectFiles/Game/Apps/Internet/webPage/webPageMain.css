@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Consolas, monospace !important;
 }
 
 html,
@@ -19,6 +20,9 @@ body {
     justify-content: center;
     align-items: flex-start;
     color: white;
+}
+p {
+    font-size: 12px;
 }
 
 .container {
@@ -140,7 +144,7 @@ article section span {
 
 footer {
     background-color: #000000;
-    color: black;
+    color: white;
     text-align: center;
     padding: 10px;
     width: 100%;
@@ -172,4 +176,8 @@ aside {
     padding: 20px;
     flex-shrink: 0;
     width: 150px;
+}
+
+.highlight {
+    color: #ff00cc; /* Couleur des mots importants */
 }

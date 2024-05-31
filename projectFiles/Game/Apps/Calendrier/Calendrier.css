@@ -1,4 +1,9 @@
-.nav_mois{
+* {
+  font-family: Consolas, monospace !important;
+}
+
+
+.nav_mois {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -8,32 +13,34 @@
   font-weight: bold;
 }
 
-.fleche{
+.fleche {
   font-size: 1.2em;
   cursor: pointer;
 }
 
-#grisé{
+#grisé {
   color: rgb(155, 155, 155);
   font-weight: normal;
   cursor: not-allowed;
 }
 
-.window-body{
-  margin-top: 10px; 
-  margin-bottom: 10px; 
+.window-body {
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-right: 30px;
   margin-left: 30px;
 }
-.nom_jour{
+
+.nom_jour {
   text-align: center;
 }
 
-.titre{
+.titre {
   display: block;
 }
 
-.contenu, .titre{
+.contenu,
+.titre {
   margin: 0.4rem 0;
 }
 
@@ -43,6 +50,7 @@
   gap: 10px;
   padding: 10px;
 }
+
 .calendrier {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -74,7 +82,7 @@
   text-align: center;
 }
 
-.jour_couleur{
+.jour_couleur {
   color: red;
 }
 
