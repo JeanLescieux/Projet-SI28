@@ -1,3 +1,7 @@
+* {
+    font-family: Consolas, monospace !important;
+}
+
 .tree-view li[data-path] {
     cursor: pointer;
     font-weight: bold;

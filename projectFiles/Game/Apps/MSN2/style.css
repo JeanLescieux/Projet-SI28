@@ -1,3 +1,7 @@
+* {
+    font-family: Consolas, monospace !important;
+  }
+
 button:hover {
     transform: scale(1.1);
 }
