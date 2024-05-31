@@ -20,6 +20,7 @@
             background-color: black;
             color: #00FF00;
         }
+
         .custom-button {
             background: none;
             border: none;
@@ -27,6 +28,7 @@
             font: inherit;
             cursor: pointer;
         }
+
         .tabs p {
             cursor: pointer;
         }
@@ -56,6 +58,7 @@
         td {
             padding: 10px;
             text-align: left;
+            font-size: 11px;
         }
 
         .resetblink {
@@ -183,7 +186,7 @@
             <div>
 
 
-                <div class="main" style="padding:1%;display:flex;overflow-x: hidden; flex-direction: column;">
+                <div class="main" style="padding:1%;display:flex; flex-direction: column;">
                     <div style="display: flex; flex-direction: row;align-items: flex-start; margin-bottom: 5px;">
                         <a class="adminbutton" href="#">Utilisateurs : 94</a>
                         <a class="adminbutton" href="#"></a>
@@ -283,8 +286,8 @@
                 }
             });
         }
-// Initialize the boolean variable
-let isInfoTransmitted = false;
+        // Initialize the boolean variable
+        let isInfoTransmitted = false;
         // Fonction pour peupler le tableau avec les données CSV
         function populateTable(data) {
             const tableBody = document.querySelector("#data-table tbody");
@@ -300,7 +303,8 @@ let isInfoTransmitted = false;
             data.forEach(row => {
                 const tr = document.createElement("tr");
                 if (row.Statut === "Niveau 1") {
-                    tr.classList.add("red-text");}
+                    tr.classList.add("red-text");
+                }
                 if (row.Prénom === "Mikaël") {
 
                     const button = document.createElement("button");
@@ -318,8 +322,8 @@ let isInfoTransmitted = false;
                     // Create table cells and append to the row
                     Object.values(row).forEach(cell => {
                         const td = document.createElement("td");
-                        if (cell == "48.667506; 2.245672"){
-                        }else{
+                        if (cell == "48.667506; 2.245672") {
+                        } else {
                             td.textContent = cell;
                             tr.appendChild(td);
 
