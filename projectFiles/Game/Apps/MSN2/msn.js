@@ -137,22 +137,27 @@ function connexion() {
     } else {
 
         MessageErr.style.display = "block";
-        MessageErr.textContent = "Email ou mot de passe incorrect";
+        //MessageErr.textContent = "Email ou mot de passe incorrect";
+
         MessageHelp.style.display = "none"
         if (email == "mikbouch@mail.com") {
-            j++
-            i = 0
-            if (j >= 3) {
-                MessageHelp.style.display = "block";
-                MessageHelp.textContent = "indice : Anniversaire de maman";
-            }
+            MessageErr.textContent = "Mot de passe oublié ? \n Indice : Anniversaire de maman";
+
+            // j++
+            // i = 0
+            // if (j >= 3) {
+            //     //MessageHelp.style.display = "block";
+            //     MessageErr.textContent = "indice : Anniversaire de maman";
+            // }
         } else if (email === "thomas@mail.com") {
-            i++
-            j = 0
-            if (i >= 3) {
-                MessageHelp.style.display = "block";
-                MessageHelp.textContent = "indice : ???";
-            }
+            MessageErr.textContent = "Mot de passe oublié ? \n Indice : ???";
+
+            // i++
+            // j = 0
+            // if (i >= 3) {
+            //     //MessageHelp.style.display = "block";
+            //     MessageErr.textContent = "indice : ???";
+            // }
         } else {
             j = 0
             i = 0
