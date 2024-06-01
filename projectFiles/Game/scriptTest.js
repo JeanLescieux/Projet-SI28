@@ -216,3 +216,23 @@ function closeMinesWeeper() {
   document.getElementById('fenetreModaleMinesWeeper').style.display = 'none';
   console.log('Fenêtre modale cachée');
 }
+
+async function openTerminal() {
+  var modalContent = document.getElementById('fenetreModaleTerminal');
+  try {
+    const response = await fetch('./Apps/Terminal/terminal.html');
+    if (!response.ok) {
+      throw new Error('Erreur lors du chargement du terminal');
+    }
+    modalContent.innerHTML = await response.text();
+    document.getElementById('fenetreModaleTerminal').style.display = 'block';
+    console.log('Fenêtre modale affichée');
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function closeTerminal() {
+  document.getElementById('fenetreModaleTerminal').style.display = 'none';
+  console.log('Fenêtre modale cachée');
+}
