@@ -1,6 +1,8 @@
 // terminal.js
 const terminal = document.getElementById('terminal');
 const output = document.getElementById('output');
+const exitt = document.getElementById('exit');
+const test = document.getElementById('test');
 const input = document.getElementById('command-input');
 const inputLine = document.getElementById('input-line');
 const prompt = document.querySelector('.prompt');
@@ -35,7 +37,6 @@ To view a detailled list of available command, type 'help'
 
 ________________________________________________________________________________
 ________________________________________________________________________________
-
 
 
 
@@ -79,6 +80,9 @@ function executeCommand(command) {
             break;
         case 'open':
             openCommand(params,cmd);
+            break;
+        case 'exit':
+            exit();
             break;
         default:
             output.innerHTML += `Command not found: ${command}\n`;
@@ -183,10 +187,76 @@ Available commands:
 - cd: Change directory
 - open: Open a file
 - clear: Clear the terminal screen
+- exit: Close this window (not the end of the game !!)
 - help: Display this help message
 `;
     output.innerHTML += helpText;
 }
+
+function exit() {
+    clearCommand();
+    let index = 0;
+
+    // Charger le contenu du fichier exit.txt
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'exit.txt', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const lines = xhr.responseText.split('\n'); // Diviser le contenu en lignes
+            const intervalId = setInterval(() => {
+                if (index < lines.length) {
+                    exitt.innerHTML += `${lines[index]}\n<br>`; // Afficher la ligne
+                    updatePrompt();
+                    index++;
+                } else {
+                    clearInterval(intervalId); // Arrêter l'intervalle si toutes les lignes ont été affichées
+                     
+                    exit2(); // Appeler exit2() une fois que exit() est terminée
+                }
+            }, 375);
+        }
+    };
+    xhr.send();
+}
+
+function exit2() {
+
+    let index = 0;
+    let tab = '&nbsp;&emsp;&nbsp;'
+    for (let i = 0; i < 9; i++) {
+        tab+='&nbsp;&emsp;&nbsp;'
+    }
+    const intervalId = setInterval(() => {
+        switch (index) {
+            case 3:
+                test.innerHTML += `${tab}<span>&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;____&nbsp;&nbsp;_____&nbsp;&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;____ </span><br>`;
+                break;
+            case 4:
+                test.innerHTML += `${tab}<span>&nbsp;/ &bsol;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;_ &bsol;/ ___&bsol;/__ __&bsol;&nbsp;&nbsp;/&nbsp;&nbsp;__&bsol;/&nbsp;&nbsp;&nbsp;_&bsol;</span><br>`;
+                break
+            case 5:
+                test.innerHTML += `${tab}<span>&nbsp;| |&nbsp;&nbsp;&nbsp;| / &bsol;||&nbsp;&nbsp;&nbsp;&nbsp;&bsol;&nbsp;&nbsp;/ &bsol;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&bsol;/||  /  </span><br>`;
+                break
+            case 6:
+                test.innerHTML += `${tab}<span>&nbsp;| |_/&bsol;| &bsol;_/|&bsol;___ |&nbsp;&nbsp;| |&nbsp;&nbsp;&nbsp;&nbsp;|  __/|&nbsp;&nbsp;&bsol;__</span><br>`;
+                break
+            case 7:
+                test.innerHTML += `${tab}<span>&nbsp;&bsol;____/&bsol;____/&bsol;____/&nbsp;&nbsp;&bsol;_/&nbsp;&nbsp;&nbsp;&nbsp;&bsol;_/&nbsp;&nbsp;&nbsp;&bsol;____/</span><br>`;
+                break
+            default:
+                test.innerHTML += ` <br>`;
+                break
+        }
+        
+        updatePrompt();
+        index++;
+        if (index === 34) {
+            clearInterval(intervalId);
+            parent.closeTerminal();
+        }
+    }, 375);
+}
+
 
 function updatePrompt() {
     prompt.innerText = `${currentDirectory}`;

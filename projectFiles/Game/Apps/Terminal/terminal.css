@@ -72,3 +72,7 @@ a {
 .blue-text {
     color: rgb(67, 67, 249);
 }
+
+#test{
+    color: rgba(148, 9, 9, 0.811);
+}

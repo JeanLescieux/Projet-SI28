@@ -1,0 +1,29 @@
+- Lost PC -
+
+
+
+Remerciements :
+------------------------------
+Nous tenons à remercier chaleureusement tous ceux qui ont contribué à la réalisation de ce chef-d'œuvre technologique.
+
+&copy; Crédits :
+------------------------------
+- Concept original et coordinatrice: Chloé
+- Développement en HTML, CSS et JavaScript : Jean
+- Développement en HTML, CSS et JavaScript : Alexandre
+- Conception des discussions : Arnaud 
+- Conception des discussions : Justine 
+- Graphiste : Justine
+- Graphiste : Chloé
+- Rédaction : Arnaud
+- Idées farfelues : Tous les étudiants de SI28
+
+------------------------------
+
+Nous remercions également nos professeurs pour leur précieux enseignement qui nous a permis de donner vie à cette merveille technologique.
+
+------------------------------
+
+Lost PC
+
+------------------------------
