@@ -9,13 +9,13 @@ let currentDirectory = 'C:/';
 
 const fileSystem = {
     'C:/': ['Users'],
-    'C:/Users': ['PierreDisk'],
-    'C:/Users/PierreDisk': ['Documents','Images','Téléchargements','Journal','Cours'],
-    'C:/Users/PierreDisk/Documents': ['Article.pdf', 'classe.exe','odj.txt'],
-    'C:/Users/PierreDisk/Images': ['img1', 'img2','img3'],
-    'C:/Users/PierreDisk/Téléchargements': ['Article.pdf', 'classe.exe','odj.txt'],
-    'C:/Users/PierreDisk/Journal': ['1\\26juin','2\\6juillet','3\\12juilet','4\\21juillet','5\\26juillet','6\\3aout','7\\5aout','8\\9aout','9\\16aout'],
-    'C:/Users/PierreDisk/Cours': ['Article.pdf', 'classe.exe','odj.txt'],
+    'C:/Users': ['MickaelDisk'],
+    'C:/Users/MickaelDisk': ['Documents','Images','Téléchargements','Journal','Cours'],
+    'C:/Users/MickaelDisk/Documents': ['Article.pdf', 'classe.exe','odj.txt'],
+    'C:/Users/MickaelDisk/Images': ['img1', 'img2','img3'],
+    'C:/Users/MickaelDisk/Téléchargements': ['Article.pdf', 'classe.exe','odj.txt'],
+    'C:/Users/MickaelDisk/Journal': ['1\\26juin','2\\6juillet','3\\12juilet','4\\21juillet','5\\26juillet','6\\3aout','7\\5aout','8\\9aout','9\\16aout'],
+    'C:/Users/MickaelDisk/Cours': ['Article.pdf', 'classe.exe','odj.txt'],
 };
 
 // Text to display at the start
