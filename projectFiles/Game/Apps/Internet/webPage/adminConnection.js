@@ -24,7 +24,8 @@ function openTab(tabName) {
     }
 }
 function code(){
-    valeur = document.getElementById(address).value
+    valeur = document.getElementById(address)
+    console.log(valeur)
     if (valeur=="2512"){
         console.log ('oui')
     }
