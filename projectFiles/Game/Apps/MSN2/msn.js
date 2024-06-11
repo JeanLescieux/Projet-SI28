@@ -1,7 +1,24 @@
-document.getElementById("message-form").addEventListener("submit", function(event) {
+/*document.getElementById("message-form").addEventListener("submit", function(event) {
     event.preventDefault();
     alert("Vous ne pouvez pas envoyer de message.");
+});*/
+
+document.getElementById("message-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    showCustomAlert();
 });
+
+
+
+function showCustomAlert() {
+    document.getElementById("custom-alert").classList.remove("hidden");
+    document.getElementById("custom-alert").style.display = "block";
+}
+
+function hideCustomAlert() {
+    document.getElementById("custom-alert").style.display = "none";
+}
+
 
 document.getElementById("deconnexion-btn").addEventListener("click", function() {
     if (confirm("Êtes-vous sûr de vouloir vous déconnecter ?") == true) {
@@ -10,6 +27,11 @@ document.getElementById("deconnexion-btn").addEventListener("click", function() 
         return false;
     }
 });
+
+function closebtn(){
+    document.getElementById('custom-alert').style.display = 'none';
+  console.log('Fenêtre modale cachée');
+}
 
 
 
