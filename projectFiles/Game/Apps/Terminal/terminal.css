@@ -1,0 +1,78 @@
+/* terminal.css */
+.content {
+    margin: 3px;
+    background-color: black;
+    height: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 6px;
+    box-sizing: border-box;
+    color: whitesmoke;
+    font-family: monospace;
+}
+
+#terminal {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#terminal::-webkit-scrollbar {
+    display: none;
+}
+
+#output {
+    white-space: pre-wrap;
+    line-height: 1.2; /* Adjust the line height to increase spacing */
+}
+
+#input-line {
+    display: flex;
+    line-height: 1.2; /* Adjust the line height to match the output */
+    margin-top: 3px;
+}
+
+.prompt {
+    margin-right: 5px;
+    padding-top: 4px;
+}
+
+#command-input {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    color: whitesmoke;
+    font-family: monospace;
+    outline: none;
+    /* Annuler les styles de 98.css */
+    border-width: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.directory {
+    color: blue;
+}
+
+.command {
+    color: white;
+}
+
+a {
+    color: lightblue;
+}
+
+.user-command {
+    color: cyan;
+}
+
+.blue-text {
+    color: rgb(67, 67, 249);
+}
+
+#test{
+    color: rgba(148, 9, 9, 0.811);
+}
