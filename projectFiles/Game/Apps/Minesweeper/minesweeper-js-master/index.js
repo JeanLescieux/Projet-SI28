@@ -202,6 +202,7 @@ function checkGame() {
     finishGame();
     stopClock(false);
     $('#smiley').removeClass().addClass('win');
+    displayEndGameGif();
     start = false;
     
   }
@@ -219,6 +220,26 @@ function finishGame() {
     }
   }
 }
+
+function displayEndGameGif() {
+  const gifContainer = document.createElement('div');
+  gifContainer.id = 'gif-container';
+  gifContainer.innerHTML = `
+    <img src="img/secte.gif">
+  `;
+  document.body.appendChild(gifContainer);
+  
+  // Display the GIF
+  gifContainer.style.display = 'block';
+  
+  // Hide the GIF after 10 seconds
+  setTimeout(() => {
+    gifContainer.style.display = 'none';
+    document.body.removeChild(gifContainer);
+  }, 4000);
+}
+
+
 
 function getSurroundingCells(row, col, obj = false) {
   let prevRow = row-1;

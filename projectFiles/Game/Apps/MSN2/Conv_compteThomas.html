@@ -53,6 +53,19 @@
                             <input type="text" placeholder="Écrire un message ...">
                             <button type="submit">Envoyer</button>
                         </form>
+
+                        <div id="custom-alert" class="window custom-alert hidden" style="width: 300px">
+                            <div class="title-bar">
+                              <div class="title-bar-text">Erreur</div>
+                              <div class="title-bar-controls">
+                                <button aria-label="Close" onclick="closebtn()"></button>
+                              </div>
+                            </div>
+                            <div class="window-body custom-alert-content">
+                                <p><img src="../../../../images/msg_error-0.png" alt="logo erreur" class="imgErr"> Vous ne pouvez pas envoyer de message.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
