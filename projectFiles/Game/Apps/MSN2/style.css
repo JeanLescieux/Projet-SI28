@@ -113,3 +113,47 @@ h3{
     height: 110px;
     width: auto;
 }
+
+.custom-alert {
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: whitesmoke;
+}
+
+.custom-alert-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-alert-content p {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+
+.custom-alert .close-btn {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.custom-alert .close-btn:hover {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.imgErr {
+    height: 70%;
+    width: auto;
+    margin-right: 10px;
+}
