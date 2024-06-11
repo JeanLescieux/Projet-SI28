@@ -54,6 +54,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log('Ouverture de J2.txt');
                 openIMG('/images/test2Cic.png');
             }
+            else {
+                console.log('Fichier non reconnu, ouverture msg erreur');
+                openError();
+            }
         }
     });
 });
@@ -193,4 +197,24 @@ function checkAndShowFiles() {
         document.getElementById('file8').style.display = 'block';
         localStorage.removeItem('showFiles');
     }
+}
+
+async function openError() {
+    var modalContent = document.getElementById('fenetreModaleError');
+    try {
+        const response = await fetch('../../Usables/errorMsg.html');
+        if (!response.ok) {
+            throw new Error('Erreur lors du chargement de errorMsg.html');
+        }
+        modalContent.innerHTML = await response.text();
+        document.getElementById('fenetreModaleError').style.display = 'block';
+        console.log('Fenêtre modale affichée');
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function closeEve() {
+    document.getElementById('fenetreModaleError').style.display = 'none';
+    console.log('Fenêtre modale cachée');
 }
