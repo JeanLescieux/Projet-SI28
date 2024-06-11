@@ -30,13 +30,25 @@
             color: rgb(0, 0, 0); /* Change la couleur du texte pour le rendre visible sur fond noir */
             font-size: 36px;
         }
+        #redirectButton {
+            display: block;
+            padding: 10px 20px;
+            margin-top: 200px;
+            font-size: 16px;
+            background-color: #000000;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="randomText">
         Vous avez contacté la mère de Mikaël    </div>
     <div class="randomText">
-        Fin 2/4    </div>
+        Fin 2/3    </div>
+        <button id="redirectButton" onclick="redirect()">Reprendre au début</button>
 
     <script>
         // Fonction pour changer la couleur de chaque lettre de manière aléatoire
@@ -54,6 +66,13 @@
             });
         }
         localStorage.getItem('sendMsgMom');
+        function redirect() {
+            window.location.href = "../../../../../index.html"; // Remplacez cette URL par l'URL de redirection souhaitée
+        }
+        setTimeout(function() {
+            document.getElementById('redirectButton').style.color = 'white';
+        }, 5000);
+
 
         // Appel de la fonction pour changer la couleur du texte
         setTimeout(changeColor, 1500);

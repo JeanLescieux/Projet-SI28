@@ -23,3 +23,21 @@ function openTab(tabName) {
         tablinks[1].style.color = "rgb(0, 0, 0)";
     }
 }
+function code(){
+    valeur = document.getElementById(address)
+    console.log(valeur)
+    if (valeur=="2512"){
+        console.log ('oui')
+    }
+    if (valeur=="40000"){
+
+    }
+    if (valeur=="1"){
+        
+    }
+    if (valeur=="2503"){
+        
+    }
+
+
+}
