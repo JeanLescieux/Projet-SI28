@@ -55,6 +55,7 @@ Thomas#10:16 :    #Oui c'est un pote à moi... Tu es sûr que c'était lui ?
 Bernardo#10:20 :    #Je viens d'aller voir une photo de lui et je suis 100% sûr.
 Nicolas#10:23 :    #Thomas, tu dois gérer ça. Ce sont les règles.
 Bernardo#10:26 :    #On doit faire comme le gars la dernière fois. En plus ça pourrait nous servir.
+Justine#10:14 :    #C'était à l'ancien abattoir de Nozay non ?
 Thomas#10:29 :    #Après il a peut-être rien vu... On peut essayer de trouver une autre solution ?
 Nicolas#10:33 :    #On ne peut pas prendre ce risque. Règle ça le plus vite possible.
 Thomas#10:36 :    #Je vais lui donner rendez-vous.

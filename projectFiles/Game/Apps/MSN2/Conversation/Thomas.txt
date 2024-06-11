@@ -7,7 +7,7 @@ Thomas#15:20 :    #Ça fait longtemps que tu joues aux jeux vidéos ?
 Moi#15:23 :    #Depuis le collège, on jouait pas mal avec mon ami d’enfance, mais il a déménagé y’a pas longtemps :(
 Thomas#15:25 :    #C’est pour ça que tu cherches des compagnons de jeu sur internet ?
 Moi#15:30 :    #Oui en partie, je suis assez timide donc c’est plus facile de rencontrer des gens derrière un écran, et puis je n’aime pas trop sortir mdr.
-Thomas#15:31 :    #Je vois... bon qu’est-ce qu’on attend pour jouer, ajoute-moi sur le jeu!
+Thomas#15:31 :    #Je vois... bon qu’est-ce qu’on attend pour jouer, ajoute-moi sur le jeu! Mon adresse mail c'est : thomas@mail.com 
 
 ---------------  Lundi 7 Juillet  ---------------
 
@@ -27,7 +27,7 @@ Thomas#16:50 :    #Eh bien l’idée part du fait que les corps humains sont imp
 Thomas#16:53 :    #Je sais c’est un peu vague mais c’est un projet assez hum... confidentiel alors je ne peux pas t’en dire plus tant que tu ne fais pas partie de ce groupe...
 Moi#17:12 :    #Et comment on fait pour faire partie de ce groupe ?
 Thomas#17:16 :    #Oh, tu es donc intéressé ? C’est super, je vais t’ajouter sur le blog, tu pourras te renseigner par toi-même !
-Thomas#17:18 :    #Voici le lien : [lien du blog], tu verras il y a une petite contribution financière mais c’est pour financer les recherches, tu comprends ?
+Thomas#17:18 :    #Voici le lien : http://digital-saviors.org, tu verras il y a une petite contribution financière mais c’est pour financer les recherches, tu comprends ?
 Moi#17:23 :    #Merci beaucoup, je vais me renseigner. On se refait une partie ce soir ?
 Thomas#17:23 :    #Avec plaisir !
 
@@ -47,7 +47,7 @@ Thomas#16:00 :    #Alors, que penses-tu du blog ?
 Moi#16:06 :    #Je le trouve très intéressant, j’ai beaucoup appris, mais je ne suis pas très sûr de vouloir rejoindre, je n’y connais pas grand-chose dans ce genre de technologie... et puis ma mère m’a dit de me méfier des gens sur internet.
 Thomas#16:10 :    #Tu n’as pas besoin d’y connaître grand-chose, nous t’apprendrons tout ce que nous savons ! Et puis pense à l’opportunité géniale que c’est !
 Moi#16:14 :    #Je ne vois pas trop ce que j’ai à gagner à vrai dire...
-Thomas#16:16 :    #Tu as tellement à gagner, le savoir, et puis tu feras partie des premiers à avoir accès à l’immortalité si tu décides de rejoindre *(argument pour le convaincre de le rejoindre)*
+Thomas#16:16 :    #Tu as tellement à gagner, le savoir, et puis tu feras partie des premiers à avoir accès à l’immortalité si tu décides de rejoindre, tu vas vraiment passer à coté d'une des plus grandes révolutions de l'humanité ??
 Moi#16:17 :    #Je ne sais pas trop...
 Thomas#16:19 :    #Ça ne te prendra pas beaucoup de temps en plus, et puis tu pourras prendre des décisions, c’est super cool non ? Je serais super déçu si tu ne viens pas...
 Moi#16:20 :    #Bon, d’accord, je veux bien essayer alors. Je vais y réfléchir.
@@ -63,11 +63,11 @@ Thomas#14:56 :    #Eh bien il faut que tu saches que maintenant que tu es membre
 Moi#15:01 :    #D’accord c’est noté, je n’en parlerai pas.
 Thomas
 
-#15:25 :    #Tu ne dois non plus communiquer avec des personnes hors du groupe, même ta famille, je sais que c’est un peu restrictif mais on ne peut pas prendre le risque que certaines informations confidentielles fuient.
+#15:25 :    #Tu ne dois non plus communiquer avec des personnes hors du groupe, même ta famille, je sais que c’est un peu restrictif mais on ne peut pas prendre le risque que certaines informations confidentielles fuitent.
 Moi#15:10 :    #Oh, donc je ne peux pas parler à ma mère et mon meilleur ami ?
 Thomas#15:12 :    #Il faut que tu évites le plus possible, ne t’inquiète pas ça ira tu peux me parler à moi je suis ton ami, ce n’est que pour quelques temps, le temps que la technologie soit terminée.
 Moi#15:12 :    #D’accord...
-Thomas#15:15 :    #Autre conseil, évite de trop débattre avec le chef, il n’aime pas trop ça XDD et pense bien à lire les règles du groupe, sinon ils peuvent te virer...
+Thomas#15:15 :    #Autre conseil, évite de trop débattre avec le chef, Nicolas, il n’aime pas trop ça XDD et pense bien à lire les règles du groupe, sinon ils peuvent te virer...
 Moi#15:16 :    #C’est noté
 
 ---------------  Mercredi 16 Juillet  ---------------

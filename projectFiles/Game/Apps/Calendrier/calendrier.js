@@ -1,16 +1,16 @@
 const moisData = [
     { nom: 'Janvier', jours: 31, avant: 6, apres: 5, evenements: {} },
-    { nom: 'Février', jours: 28, avant: 2, apres: 5, evenements: {} },
-    { nom: 'Mars', jours: 31, avant: 2, apres: 2, evenements: {} },
+    { nom: 'Février', jours: 28, avant: 2, apres: 5, evenements: {2: "Rentrée"} },
+    { nom: 'Mars', jours: 31, avant: 2, apres: 2, evenements: {6: "Anniversaire de maman<br> Ne pas oublier!", } },
     { nom: 'Avril', jours: 30, avant: 5, apres: 0, evenements: {} },
     { nom: 'Mai', jours: 31, avant: 0, apres: 4, evenements: {} },
-    { nom: 'Juin', jours: 30, avant: 3, apres: 2, evenements: {} },
-    { nom: 'Juillet', jours: 31, avant: 5, apres: 6, evenements: { 5: "Anniversaire de maman<br> Ne pas oublier!", 14: "Déménagement ami", 31: "Faire le test pour rentrer dans le groupe" } },
-    { nom: 'Août', jours: 31, avant: 1, apres: 3, evenements: { 5: "Arroser les plantes", 14: "Pas grand chose ici", 22: "RDV avec Thomas<br>14 rue du Boulouris, au café, 23h" } },
-    { nom: 'Septembre', jours: 30, avant: 4, apres: 1, evenements: {} },
+    { nom: 'Juin', jours: 30, avant: 3, apres: 2, evenements: {13: "Déménagement Pierre", 20: "Début des examens"} },
+    { nom: 'Juillet', jours: 31, avant: 5, apres: 6, evenements: {  31: "Faire le test pour rentrer dans le groupe" } },
+    { nom: 'Août', jours: 31, avant: 1, apres: 3, evenements: { 17: "RDV avec Thomas<br>14 rue du Boulouris, au café, 16h" } },
+    { nom: 'Septembre', jours: 30, avant: 4, apres: 1, evenements: {12: "Anniversaire d'adoption de Loki"} },
     { nom: 'Octobre', jours: 31, avant: 6, apres: 5, evenements: {} },
     { nom: 'Novembre', jours: 30, avant: 2, apres: 3, evenements: {} },
-    { nom: 'Décembre', jours: 31, avant: 4, apres: 0, evenements: {} }
+    { nom: 'Décembre', jours: 31, avant: 4, apres: 0, evenements: {25: "Noël"} }
 ];
 
 function afficherMois(moisIndex) {

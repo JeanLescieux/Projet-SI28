@@ -1,0 +1,241 @@
+/* Reset du style pour éliminer les marges par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, monospace !important;
+
+}
+
+html,
+body {
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    background: black;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    background-image: url('/images/lain.jpg');
+    /* Remplacez URL_DE_VOTRE_IMAGE par l'URL de votre image */
+    background-size: cover;
+    /* Ajuste la taille de l'image pour couvrir tout le fond */
+    background-position: center;
+    /* Centre l'image de fond */
+    background-repeat: no-repeat;
+    /* Empêche la répétition de l'image */
+}
+
+h4 {
+    background-color: rgba(233, 4, 176, 0.49);
+    color: white;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+.container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 20px;
+    width: 100%;
+    max-width: 92%;
+    min-height: 80vh;
+    flex: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+header,
+nav,
+article,
+footer {
+    background-color: #000000;
+    box-shadow: inset 0 0 10px #00FF00;
+    color: #00FF00;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    margin: 10px 0;
+}
+
+nav {
+    background-color: #000000;
+    padding: 15px;
+    width: 150px;
+    flex-shrink: 0;
+    width: 18%;
+}
+
+article {
+    display: flex;
+    /* Utiliser Flexbox pour le layout de l'article */
+    flex: 1;
+    padding: 20px;
+    background: #000000;
+    margin-left: 10px;
+    /* Ajustez la valeur de la marge selon vos besoins */
+}
+
+
+article .content {
+    flex: 1;
+    /* Faire en sorte que le contenu principal de l'article prenne tout l'espace disponible */
+    color: #FFFFFF;
+    /* Couleur du texte du contenu principal */
+}
+
+.image-gallery {
+    margin-left: 20px;
+    /* Ajouter un espace à gauche de la galerie d'images */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #FFD700;
+    /* Couleur du titre principal */
+}
+
+article section {
+    margin-bottom: 20px;
+}
+
+article section h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #00FF00;
+    /* Couleur des sous-titres */
+}
+
+article section p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    /* Espacement entre les lignes */
+    color: #FFFFFF;
+    /* Couleur du texte */
+}
+
+article section span {
+    font-weight: bold;
+}
+
+.highlight {
+    color: #ff00cc;
+    /* Couleur des mots importants */
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+}
+
+.menu-list {
+    list-style: none;
+    /* Enlève les puces par défaut */
+    padding: 0;
+    /* Supprime le padding par défaut de la liste */
+}
+
+.menu-list li {
+    color: #00FF00 !important;
+    /* Couleur du texte en vert */
+    padding: 5px 0 5px 25px;
+    /* Ajoute un padding à gauche pour l'image */
+    border-bottom: 1px solid #00FF00;
+    /* Bordure sous chaque élément pour le soulignement */
+    background-image: url('https://win98icons.alexmeub.com/icons/png/web_file_set-2.png');
+    /* Définissez l'image à utiliser */
+    background-repeat: no-repeat;
+    /* Ne répète pas l'image */
+    background-size: 24px 24px;
+    /* Taille de l'image */
+    background-position: 0px center;
+    /* Positionne l'image à 10px du bord gauche, centrée verticalement */
+}
+
+.menu-list li a {
+    color: inherit;
+    /* Utilise la couleur définie sur le li */
+    display: block;
+    /* Étend le lien sur toute la largeur et la hauteur du li */
+}
+
+aside {
+    background-color: #000000;
+    color: #00FF00;
+    padding: 20px;
+    flex-shrink: 0;
+    width: 150px;
+}
+
+.tags-container a {
+    text-decoration: underline; /* Souligne les liens */
+    color: #FFD700; /* Couleur des liens */
+    font-weight: bold; /* Met les liens en gras */
+    margin-right: 10px; /* Ajoute un espace entre les tags */
+}
+
+.comment-section {
+    background-color: #0a0101; /* Couleur de fond pâle */
+    border: 1px solid #ccc; /* Bordure grise */
+    padding: 10px;
+    margin: 10px 0;
+    font-family: "Verdana", sans-serif; /* Police classique des années 2000 */
+}
+
+.comment {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #eee; /* Séparation entre les commentaires */
+}
+
+.comment strong {
+    color: #333; /* Couleur du nom de l'auteur */
+    font-weight: bold;
+}
+
+.comment p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4; /* Espacement des lignes */
+}
+
+.comment span.highlight {
+    background-color: #ffff99; /* Surlignage en jaune */
+    font-weight: bold;
+}
+
+.return-button {
+    background-color: #FFD700;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.return-button:hover {
+    background-color: #FF4500;
+    color: #fff;
+}
