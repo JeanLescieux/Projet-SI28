@@ -225,7 +225,7 @@ function displayEndGameGif() {
   const gifContainer = document.createElement('div');
   gifContainer.id = 'gif-container';
   gifContainer.innerHTML = `
-    <img src="img/secte.gif">
+    <img style="width:300px" src="img/ok-all.gif">
   `;
   document.body.appendChild(gifContainer);
   
