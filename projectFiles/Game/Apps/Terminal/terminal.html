@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Simulator</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link rel="stylesheet" href="terminal.css">
+</head>
+<body>
+
+    <div class="window" style="width: 700px;height:400px;background-color: whitesmoke;">
+        <div class="title-bar">
+            <div class="title-bar-text">Terminal</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="parent.closeTerminal()"></button>
+            </div>
+        </div>
+        
+        <iframe id="fenetreModaleNP" class="modal" src="../../Usables/notePad.html" frameborder="0" width="480px"
+            height="520px" style="border:none; position:absolute"></iframe>
+        
+        <iframe id="fenetreModaleIMG" class="modal" src="../../Usables/notePad.html" frameborder="0" width="480px"
+            height="520px" style="border:none; position:absolute"></iframe>
+
+        <div class="content">
+            <div class="content">
+                <div id="terminal">
+                    <div id="output"></div>
+                    <div id="exit" style="text-align: center;"></div>
+                    <div id="test"></div>
+                    <div id="input-line">
+                        <span class="prompt">$</span>
+                        <input type="text" id="command-input" autofocus>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        
+
+    <script src="terminal.js"></script>
+</body>
+</html>

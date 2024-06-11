@@ -224,6 +224,11 @@ strong {
       background-size: 50px 50px;
     }
 
+    &.terminal {
+      background-image: url(../../images/console_prompt-0.png);
+      background-size: 50px 50px;
+    }
+
   }
 
   .desktop-icon:hover {
