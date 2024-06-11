@@ -42,6 +42,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log('Ouverture de J2.txt');
                 openNP('./Texte/9.txt');
             }
+            else if (file.id === 'img1') {
+                console.log('Ouverture de J2.txt');
+                openIMG('/images/cicada-3301-location.jpg');
+            }
+            else if (file.id === 'img2') {
+                console.log('Ouverture de J2.txt');
+                openIMG('/images/test1Cic.jpg');
+            }
+            else if (file.id === 'img3') {
+                console.log('Ouverture de J2.txt');
+                openIMG('/images/test2Cic.png');
+            }
         }
     });
 });
@@ -95,6 +107,53 @@ async function openNP(textFilePath) {
         iframe.style.display = 'none';
     }
 }
+
+async function openIMG(imagePath) {
+    var iframe = document.getElementById('fenetreModaleIMG');
+    iframe.style.display = 'none';
+
+    try {
+        const responseHTML = await fetch('../../Usables/imgOpen.html'); // Change this to the actual path of your HTML
+        if (!responseHTML.ok) {
+            throw new Error('Erreur lors du chargement de imgOpen.html');
+        }
+        iframe.src = '../../Usables/imgOpen.html';
+
+        iframe.onload = async () => {
+            const imgElement = iframe.contentWindow.document.getElementById('imgOpen');
+            if (imgElement) {
+                console.log('Element #imgOpen trouvé, chargement de l\'image...');
+                try {
+                    const responseIMG = await fetch(imagePath);
+                    if (!responseIMG.ok) {
+                        throw new Error('Erreur lors du chargement de l\'image');
+                    }
+                    imgElement.src = imagePath;
+                    console.log('Image insérée dans le DOM');
+                    iframe.style.display = 'block';
+                    console.log('Fenêtre modale affichée');
+                } catch (error) {
+                    console.error('Erreur lors de la tentative de chargement de l\'image: ', error);
+                    iframe.style.display = 'none';
+                }
+            } else {
+                console.log('Element #imgOpen non trouvé.');
+                iframe.style.display = 'none';
+            }
+        };
+    } catch (error) {
+        console.error('Erreur globale: ', error);
+        iframe.style.display = 'none';
+    }
+}
+
+
+function closeIMG() {
+    document.getElementById('fenetreModaleIMG').style.display = 'none';
+    console.log('Fenêtre modale cachée');
+}
+
+
 
 
 document.addEventListener('DOMContentLoaded', function () {

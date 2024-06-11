@@ -7,14 +7,63 @@
   <title>SI28 Project</title>
   <link rel="stylesheet" href="./resetComputer.css">
   <link rel="stylesheet" href="https://unpkg.com/98.css">
+  <style>
+    #loading {
+      display: none;
+    }
+
+    .window {
+      width: 300px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: #ffffff; /* white background */
+      height: 20px;
+      margin-top: 10px;
+      display: flex;
+      border: 1px solid #c0c0c0; /* border to distinguish the area */
+    }
+
+    .progress {
+      background-color: #000080;
+      height: 14px;
+      width: 16px; 
+      margin-top: 2px;
+      margin-bottom: 2px;
+      margin-left: 2px;
+      display: none;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .button {
+      width: 80px;
+      text-align: center;
+      padding: 5px;
+      border: 2px solid;
+      background: #c0c0c0;
+    }
+
+    .disabled {
+      color: #808080;
+      border-color: #808080;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
 </head>
 
 <body>
 
   <div id="desktop">
-    <div class="window" style="width: 300px">
+    <div class="window" id="window">
       <div class="title-bar">
-        <div class="title-bar-text">D4rk sasuke's computer reset</div>
+        <div class="title-bar-text">Réinitialisation ordinateur Mickaël</div>
         <div class="title-bar-controls">
           <button aria-label="Minimize"></button>
           <button aria-label="Maximize"></button>
@@ -22,30 +71,51 @@
         </div>
       </div>
       <div class="window-body" style="text-align: center;">
-        <img src="/images/msg_warning-0.png" alt="Warning Image"
-          style="float: left; margin-right: 10px; width: 43px; height: 43px;">
-        <p>Do you really want to reset this computer ?</p>
-        <p>(This action might be irreversible, this is the final warning)</p>
-        <button>Yes</button>
-        <button onClick="window.location.href='./progressBar.html'">No</button>
+        <img src="/images/msg_warning-0.png" alt="Warning Image" style="float: left; margin-right: 10px; width: 43px; height: 43px;">
+        <p>Voulez-vous vraiment réinitialiser cet ordinateur</p>
+        <p>(Cette décision pourrait être irréversible, ceci est le dernier avertissement...)</p>
+        <button onclick="window.location.href = './anull.html'">Oui</button>
+        <button onclick="showLoading()">Non</button>
+      </div>
+    </div>
+    <div class="window" id="loading">
+      <div class="title-bar">
+        <div class="title-bar-text">Chargement...</div>
+      </div>
+      <div class="window-body">
+        <div class="progress-bar" id="progressBar">
+          <!-- Adding multiple progress elements -->
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+        </div>
+        <div class="buttons">
+          <button class="button disabled" id="doneButton" disabled>Finir</button>
+          <button class="button" id="cancelButton">Annuler</button>
+        </div>
       </div>
     </div>
   </div>
 
   <div id="toolbar">
     <div class="toolbar-start-menu">
-      <button class="start-button">
-        Start
-      </button>
+      <button class="start-button">Start</button>
     </div>
     <div class="toolbar-separator"></div>
-
-    <div class="toolbar-left">
-
-    </div>
-
+    <div class="toolbar-left"></div>
     <div class="toolbar-separator"></div>
-
     <div class="toolbar-right">
       <div class="time" id="currentTime"></div>
       <script>
@@ -62,14 +132,50 @@
           // Add the date with the year always being 1998
           var month = now.getMonth() + 1; // JavaScript months are 0-11
           var day = now.getDate();
-          var date = month + "/" + day + "/1998 -";
+          var date = month + "/" + day + "/2003 -";
 
           document.getElementById('currentTime').innerHTML = date + ' ' + time;
         }
+
         setInterval(updateTime, 1000);
+
+        function showLoading() {
+          document.getElementById('window').style.display = 'none';
+          document.getElementById('loading').style.display = 'block';
+          initializeProgressBar();
+        }
+
+        function initializeProgressBar() {
+          const progressBar = document.getElementById("progressBar");
+          const progressElements = progressBar.querySelectorAll(".progress");
+          const doneButton = document.getElementById("doneButton");
+
+          // Function to show the progress squares
+          function showProgress(index) {
+            if (index < progressElements.length) {
+              progressElements[index].style.display = "block";
+              setTimeout(function () {
+                showProgress(index + 1);
+              }, 500); // Change this value to control the appearance interval
+            } else {
+              // Enable the Done button after all squares are shown
+              doneButton.disabled = false;
+              doneButton.classList.remove("disabled");
+              doneButton.addEventListener("click", function () {
+                window.location.href = "../Game/mainPage.html";
+              });
+            }
+          }
+
+          // Start showing the progress squares
+          showProgress(0);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          updateTime(); // Initialize time on page load
+        });
       </script>
     </div>
-  </div>
   </div>
   <script src="/projectFiles/Game/scriptTest.js"></script>
 </body>
