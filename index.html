@@ -57,7 +57,7 @@
 <body>
   <div id="fullscreen-container">
     <video id="fullscreen-video" preload="auto" muted>
-      <source src="/images/video_start.mov" type="video/mp4">
+      <source src="/images/video_start.mp4" type="video/mp4">
     </video>
 
     <div id="start-screen">
@@ -85,7 +85,6 @@
     const video = document.getElementById('fullscreen-video');
     const startButton = document.getElementById('start-button');
     const startScreen = document.getElementById('start-screen');
-    localStorage.setItem('sendMsgMom') = false;
 
     startButton.addEventListener('click', function () {
       startScreen.style.display = 'none';
@@ -104,6 +103,8 @@
     function redirectToNextPage() {
       window.location.href = './projectFiles/Intro/resetComputer.html';
     }
+
+    localStorage.setItem('sendMsgMom') = false;
   </script>
 
     <script>
