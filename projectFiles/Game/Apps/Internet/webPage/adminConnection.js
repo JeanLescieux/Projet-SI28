@@ -28,6 +28,8 @@ function code(){
     console.log(valeur)
     if (valeur=="2512"){
         console.log ('oui')
+
+        window.location.href='../webPage.html'
     }
     if (valeur=="40000"){
 
