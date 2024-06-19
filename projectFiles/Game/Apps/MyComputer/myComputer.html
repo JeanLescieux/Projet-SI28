@@ -8,9 +8,24 @@
     <link rel="stylesheet" href="https://unpkg.com/98.css">
 
 </head>
+<style>
+    @font-face {
+  font-family: 'Levi Windows';
+  src: url('../../../../images/Windows-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text {
+  font-family: Levi Windows, monospace !important;
+  color: red;
+}
+
+</style>
 
 <body>
     <div class="sunken-panel" style="height: 200px; width: 320px;">
+       
         <table class="interactive">
             <thead>
                 <tr>
@@ -153,6 +168,9 @@
                 </tr>
             </tbody>
         </table>
+        <div>
+            <p class="text">Envie de nous faire un retour ? Ecrivez à lostpcproject@gmail.com</p>
+        </div>        
         <div style="display: flex; justify-content: center; margin-top: 20px;">
             <button onclick="parent.closeMC()">Close</button>
         </div>

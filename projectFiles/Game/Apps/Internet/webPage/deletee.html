@@ -30,7 +30,7 @@
             color: rgb(0, 0, 0); /* Change la couleur du texte pour le rendre visible sur fond noir */
             font-size: 36px;
         }
-        #redirectButton {
+        .button {
             display: block;
             padding: 10px 20px;
             margin-top: 200px;
@@ -49,8 +49,10 @@
     <div class="randomText">
         Fin 1/3    </div>
 
-        <button id="redirectButton" onclick="redirect()">Reprendre au début</button>
-
+        <div style="gap: 10px; display: flex;">
+            <button id="redirectButton" class="button" onclick="redirect()">Reprendre au début</button>
+            <button id="copyButton"class="button" >Nous faire un retour</button>
+        </div>
 
     <script>
         // Fonction pour changer la couleur de chaque lettre de manière aléatoire
@@ -72,7 +74,18 @@
         }
         setTimeout(function() {
             document.getElementById('redirectButton').style.color = 'white';
+            document.getElementById('copyButton').style.color = 'white';
+
         }, 5000);
+        document.getElementById('copyButton').addEventListener('click', function () {
+            const email = 'lostpcproject@gmail.com';  // Remplacez par l'adresse e-mail désirée
+
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Adresse e-mail copiée dans le presse-papier !');
+            }).catch(err => {
+                console.error('Erreur lors de la copie : ', err);
+            });
+        });
 
         // Appel de la fonction pour changer la couleur du texte
         setTimeout(changeColor, 1500);
