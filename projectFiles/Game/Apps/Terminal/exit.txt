@@ -1,10 +1,10 @@
 - Lost PC -
 
-
+Lost PC est un projet étudiant, développé en 6 mois et réalisé en juin 2024.
 
 Remerciements :
 ------------------------------
-Nous tenons à remercier chaleureusement tous ceux qui ont contribué à la réalisation de ce chef-d'œuvre technologique.
+Nous tenons à remercier chaleureusement tous ceux qui ont contribué à la réalisation de ce chef-d'œuvre technologique (à peine exagéré).
 
 &copy; Crédits :
 ------------------------------
@@ -20,7 +20,7 @@ Nous tenons à remercier chaleureusement tous ceux qui ont contribué à la réa
 
 ------------------------------
 
-Nous remercions également nos professeurs pour leur précieux enseignement qui nous a permis de donner vie à cette merveille technologique.
+Nous remercions également nos professeurs pour leur précieux enseignement qui nous a permis de donner vie à ce jeu.
 
 ------------------------------
 

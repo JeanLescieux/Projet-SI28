@@ -6,52 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Full Screen Video Player</title>
   <link rel="stylesheet" href="https://unpkg.com/98.css">
-  <style>
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    #fullscreen-container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    #fullscreen-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: fill;
-      z-index: 1;
-    }
-
-    #start-screen {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url() no-repeat center center/cover;
-      z-index: 2;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start; /* Aligne le contenu en haut */
-    }
-
-    .window {
-      width: 500px;
-      height: 150px;
-      z-index: 3;
-      margin-top: 100px;
-      margin-left: 600px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS externe -->
 </head>
 
 <body>
@@ -70,10 +25,10 @@
             <button aria-label="Close"></button>
           </div>
         </div>
-        <div class="window-body" style="text-align: center;">
-          <img src="/images/joystick-5.png" alt="Warning Image" style="float: left; margin-right: 10px; width: 70px; height: 70px;">
+        <div class="window-body">
+          <img src="/images/joystick-5.png" alt="Warning Image">
           <p>Welcome to Lost PC, a french indie game. An english version is coming soon.</p>
-          <p><strong style="color: rgb(168, 21, 48)">Please press F11 for a better experience.</strong></p>
+          <p><strong>Please press F11 for a better experience.</strong></p>
           <p>Please press start to launch the PC you just bought...</p>
           <button id="start-button">Start</button>
         </div>
@@ -81,40 +36,15 @@
     </div>
   </div>
 
+  <script src="script.js"></script> <!-- Lien vers le fichier JS externe -->
   <script>
-    const video = document.getElementById('fullscreen-video');
-    const startButton = document.getElementById('start-button');
-    const startScreen = document.getElementById('start-screen');
-
-    startButton.addEventListener('click', function () {
-      startScreen.style.display = 'none';
-      video.play();
-      video.playbackRate = 0.65;
-    });
-
-    video.addEventListener('timeupdate', function () {
-      if (video.currentTime >= video.duration - 2) {
-        video.pause();
-        video.currentTime = video.duration - 2;
-        document.addEventListener('keydown', redirectToNextPage);
-      }
-    });
-
-    function redirectToNextPage() {
-      window.location.href = './projectFiles/Intro/resetComputer.html';
-    }
-
-    localStorage.setItem('sendMsgMom') = false;
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
   </script>
-
-    <script>
-        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
-    <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 
 </html>

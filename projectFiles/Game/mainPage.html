@@ -108,26 +108,7 @@
 
       <div class="toolbar-right">
         <div class="time" id="currentTime"></div>
-        <script>
-          function updateTime() {
-            var now = new Date();
-            var hours = now.getHours();
-            var minutes = now.getMinutes();
-            var ampm = hours >= 12 ? 'PM' : 'AM';
-            hours = hours % 12;
-            hours = hours ? hours : 12;
-            minutes = minutes < 10 ? '0' + minutes : minutes;
-            var time = hours + ":" + minutes + ' ' + ampm;
-
-            // Add the date with the year always being 1998
-            var month = now.getMonth() + 1; // JavaScript months are 0-11
-            var day = now.getDate();
-            var date = month + "/" + day + "/2003 -";
-
-            document.getElementById('currentTime').innerHTML = date + ' ' + time;
-          }
-          setInterval(updateTime, 1000);
-        </script>
+        
       </div>
     </div>
   </div>
