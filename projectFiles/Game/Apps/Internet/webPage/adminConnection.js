@@ -23,23 +23,38 @@ function openTab(tabName) {
         tablinks[1].style.color = "rgb(0, 0, 0)";
     }
 }
-function code(){
-    valeur = document.getElementById(address)
-    console.log(valeur)
-    if (valeur=="2512"){
-        console.log ('oui')
 
-        window.location.href='../webPage.html'
-    }
-    if (valeur=="40000"){
+function adminConnexion (username, password){
+    
+    // Remplacez ces valeurs par les identifiants corrects
+    const correctUsername = 'admin';
+    const correctPassword = '12345';
 
-    }
-    if (valeur=="1"){
-        
-    }
-    if (valeur=="2503"){
-        
-    }
+    if (username === correctUsername && password === correctPassword) {
+        // Redirection vers une autre page HTML
+        return true
+    } else {
+        return false    }
+}
+function addValue(val) {
+    document.getElementById('address').value += val;
+}
 
+function clearValue() {
+    document.getElementById("address").value = "";
+}
 
+function code() {
+    let valeur = document.getElementById('address').value;
+    if (valeur === "2512") {
+        window.location.href = './easterEgg/jesus.html';
+    } else if (valeur === "40000") {
+        window.location.href = './easterEgg/omnissiah.html';
+    } else if (valeur === "1") {
+        window.location.href = './easterEgg/jugement.html';
+    } else if (valeur === "2503") {
+        window.location.href = './easterEgg/Nicolas.html';
+    } else {
+        console.log('value is not recognized');
+    }
 }

@@ -189,3 +189,38 @@ function connexion() {
 
 
 }
+document.querySelectorAll('.conv').forEach(conv => {
+    conv.addEventListener('click', function () {
+        document.querySelectorAll('.conv').forEach(c => c.classList.remove('conv-active'));
+        this.classList.add('conv-active');
+
+        const sendMsgMom = localStorage.getItem('sendMsgMom') === 'true';
+        const messageInput = document.querySelector('#message-form input[type="text"]');
+        const messageForm = document.getElementById('send');
+        const activeConversation = this.getAttribute('type-conversation'); // Sélectionnez la conversation active
+
+        if (sendMsgMom && activeConversation === "Conversation/Maman.txt") {
+            messageInput.value = "Votre fils se trouve ici : 48.667506; 2.245672";
+
+            messageForm.addEventListener('click', function (event) {
+                event.preventDefault();
+                window.top.location.href = './momm.html';
+            }, { once: true }); // Ajoutez { once: true } pour que cet écouteur ne s'exécute qu'une seule fois
+        } else {
+            resetMessageInput();
+            disableSendButton();
+
+        }
+    });
+});
+
+function resetMessageInput() {
+    const messageInput = document.querySelector('#message-form input[type="text"]');
+    messageInput.value = ""; // Réinitialisez la valeur de l'input texte
+}
+function disableSendButton() {
+    const messageForm = document.getElementById('send');
+    messageForm.addEventListener('click', function (event) {
+        event.cancelable();
+    }, { once: true }); // Ajoutez { once: true } pour que cet écouteur ne s'exécute qu'une seule fois
+}

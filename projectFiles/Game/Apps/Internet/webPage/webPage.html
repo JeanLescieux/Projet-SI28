@@ -19,7 +19,7 @@
             }
         </style>
         <!-- Start of Scripts -->
-       
+
         <script src="./adminConnection.js"></script>
 
         <!-- End of Scripts -->
@@ -98,16 +98,13 @@
 
                             const username = document.getElementById('username').value;
                             const password = document.getElementById('password').value;
-
-                            // Remplacez ces valeurs par les identifiants corrects
-                            const correctUsername = 'admin';
-                            const correctPassword = '12345';
-
-                            if (username === correctUsername && password === correctPassword) {
+                            isCorrect = adminConnexion(username, password)
+                            if (isCorrect) {
                                 // Redirection vers une autre page HTML
                                 window.location.href = 'admin.html';
                             } else {
-                                alert('Identifiants incorrects. Veuillez réessayer.');
+                                document.getElementById('username').value = '';
+                                document.getElementById('password').value = '';
                             }
                         }
 
@@ -131,67 +128,42 @@
                                 style="display:block;font-family:Consolas;margin:5px;text-decoration:underline;text-align:center;">
                                 Digital portal</p>
                             <!-- ALLOWS THE USER TO ACCESS THIS Pr7 NODE TO CONNECT TO THE WIRED (Invalid INPUTS ARE DANGEROUS((FIX IT LATER)) )-->
-                                <input id="address" style="color:gray;text-align:center;" type="text"
-                                    placeholder="???" maxlength="20">
+                            <input id="address" style="color:gray;text-align:center;" type="text" placeholder="???"
+                                maxlength="20">
 
-                                <div class="phonepad">
-                                    <div class="frow">
-                                        <input onclick="addValue(7)" class="fbutt" type="button" value="7">
-                                        <input onclick="addValue(8)" class="fbutt" type="button" value="8">
-                                        <input onclick="addValue(9)" class="fbutt" type="button" value="9">
-                                    </div>
-                                    <div class="frow">
-                                        <input onclick="addValue(4)" class="fbutt" type="button" value="4">
-                                        <input onclick="addValue(5)" class="fbutt" type="button" value="5">
-                                        <input onclick="addValue(6)" class="fbutt" type="button" value="6">
-                                    </div>
-                                    <div class="frow">
-                                        <input onclick="addValue(1)" class="fbutt" type="button" value="1">
-                                        <input onclick="addValue(2)" class="fbutt" type="button" value="2">
-                                        <input onclick="addValue(3)" class="fbutt" type="button" value="3">
-                                    </div>
-                                    <div class="frow">
-                                        <input onclick="addValue(0)" class="fbutt" type="button" value="0">
-                                      
-                                            <button onclick="clearValue()"
-                                            style="padding-left: 27.5px;padding-right:27.5px;margin:3px;border:outset 7px #00FF00;background-color:#00FF00; color:black;">CLEAR </button>
-                                    </div>
-                                    <div class="frow">
-                                        <input id="mbutton"
-                                            style="padding:6px;margin:3px;border: inset 7px #00FF00;width:100%;"
-                                            onclick="code()" value="Enter">
-                                    </div>
-                                </div><!-- END of wrapper -->
+                            <div class="phonepad">
+                                <div class="frow">
+                                    <input onclick="addValue(7)" class="fbutt" type="button" value="7">
+                                    <input onclick="addValue(8)" class="fbutt" type="button" value="8">
+                                    <input onclick="addValue(9)" class="fbutt" type="button" value="9">
+                                </div>
+                                <div class="frow">
+                                    <input onclick="addValue(4)" class="fbutt" type="button" value="4">
+                                    <input onclick="addValue(5)" class="fbutt" type="button" value="5">
+                                    <input onclick="addValue(6)" class="fbutt" type="button" value="6">
+                                </div>
+                                <div class="frow">
+                                    <input onclick="addValue(1)" class="fbutt" type="button" value="1">
+                                    <input onclick="addValue(2)" class="fbutt" type="button" value="2">
+                                    <input onclick="addValue(3)" class="fbutt" type="button" value="3">
+                                </div>
+                                <div class="frow">
+                                    <input onclick="addValue(0)" class="fbutt" type="button" value="0">
+                                    <button onclick="clearValue()"
+                                        style="padding-left: 27.5px;padding-right:27.5px;margin:3px;border:outset 7px #00FF00;background-color:#00FF00; color:black;">
+                                        CLEAR
+                                    </button>
+                                </div>
+                                <div class="frow">
+                                    <input id="mbutton" type="button"
+                                        style="padding:6px;margin:3px;border: inset 7px #00FF00;width:100%;"
+                                        onclick="code()" value="Enter">
+                                </div>
+                            </div><!-- END of wrapper -->
                         </div><!-- END of Phonepad -->
 
                     </div><!-- End OF NUMPAD -->
 
-                    <script>
-                        function addValue(val) {
-
-                            document.getElementById('address').value += value;
-
-                        }
-
-                        function clearValue() {
-                            document.getElementById("address").value = "";
-                        }
-
-                        function code() {
-                            let valeur = document.getElementById('address').value;
-                            if (valeur === "2512") {
-                                window.location.href = './easterEgg/jesus.html';
-                            } else if (valeur === "40000") {
-                                window.location.href = './easterEgg/omnissiah.html';
-                            } else if (valeur === "1") {
-                                window.location.href = './easterEgg/jugement.html';
-                            } else if (valeur === "2503") {
-                                window.location.href = './easterEgg/Nicolas.html';
-                            } else {
-                                console.log('value is not recognized');
-                            }
-                        }
-                    </script>
 
                 </div><!-- End of main -->
 
