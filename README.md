@@ -6,7 +6,7 @@ Description:
 This project contains some HTML, CSS and Javascript files.
 
 Usage:
-To use this app, just go to [this link](https://lostpc.netlify.app/).
+To use this app, just go to [this link](https://lost-pc.vercel.app/).
 
 Inspired by: https://codepen.io/smpnjn/pen/ExLbvdJ
 https://win98icons.alexmeub.com/
