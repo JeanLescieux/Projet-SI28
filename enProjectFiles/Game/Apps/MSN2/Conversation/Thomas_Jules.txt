@@ -1,12 +1,12 @@
 Thomas - Jules
----------------  Vendredi 15 Août  ---------------
+--------------- Friday, August 15 ---------------
 
-Thomas#19:11 :    #Hello
-Jules#19:19 :    #Hello, qu'est-ce qu'il y a ?
-Thomas#19:25 :    #Je me sens mal pour Mikaël... Tu penses pas qu'on pourrait trouver une alternative ?
-Jules#19:28 :    #... Je pense vraiment pas, surtout qu'il a vu ce qu'on faisait mais aussi à quoi ressemblait Nicolas.
-Thomas#19:35 :    #C'est si grave que ça ?
-Jules#19:45 :    #Il ne supporte pas que des gens sachent à quoi il ressemble sans qu'il sache qui c'est.
-Thomas#19:50 :    #Mais pourquoi ?
-Jules#19:55 :    #Ben, tu as vu comment il est Nicolas... Physiquement c'est compliqué. Alors que sur les forums il se décrit comme super grand et beau. Il considère ça comme humiliant du coup.
-Thomas#20:05 :    #...
+Thomas#19:11 : #Hello
+Jules#19:19 : #Hello, what’s going on?
+Thomas#19:25 : #I feel bad for Mikaël... Don’t you think we could find an alternative?
+Jules#19:28 : #... I really don’t think so, especially since he saw what we were doing but also what Nicolas looks like.
+Thomas#19:35 : #Is it that serious?
+Jules#19:45 : #He can’t stand the idea that people know what he looks like without him knowing who they are.
+Thomas#19:50 : #But why?
+Jules#19:55 : #Well, you saw how Nicolas is... Physically it’s complicated. But on the forums, he describes himself as super tall and handsome. He considers it humiliating, so.
+Thomas#20:05 : #...

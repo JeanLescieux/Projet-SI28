@@ -1,19 +1,19 @@
 Thomas - Nicolas
----------------  Jeudi 10 Juillet  ---------------
+--------------- Thursday, July 10 ---------------
 
-Moi#19:11 :    #Bonjour Nicolas, j’ai trouvé un nouveau membre, je lui ai donné le lien du blog. Il s’appelle Pierre.
-Nicolas#19:19 :    #D’accord, essaie de le convaincre de rejoindre le groupe des 70, nous avons encore besoin de membres.
-Moi#19:25 :    #Je vais essayer. Je ne garantis rien, il est assez réticent.
+Me#19:11 : #Hello Nicolas, I found a new member, I gave him the blog link. His name is Pierre.
+Nicolas#19:19 : #Alright, try to convince him to join the group of 70, we still need members.
+Me#19:25 : #I’ll try. I can’t guarantee anything, he’s pretty reluctant.
 
----------------  Jeudi 24 Juillet  ---------------
+--------------- Thursday, July 24 ---------------
 
-Nicolas#12:12 :    #Les résultats de Pierre sont favorables, il peut rejoindre le groupe. Maintenant, tu ne dois discuter avec lui que par l’intermédiaire du groupe.
-Thomas#12:14 :    #Oui, je l’ai prévenu. Je vais l’inscrire sur la base de données. Peux-tu me renvoyer le mot de passe administrateur ? Je l’ai encore oublié.
-Nicolas#12:17 :    #C’est pas vrai ! T'es stupide ou quoi ? C’est la dernière fois que je te le donne, c’est trop risqué. C'est admin et 12345
-Thomas#12:20 :    #Merci, cette fois-ci je m’en souviendrai, c’est promis.
-Nicolas#12:22 :    #Tu as intérêt.
+Nicolas#12:12 : #Pierre’s results are favorable, he can join the group. Now, you must only communicate with him through the group.
+Thomas#12:14 : #Yes, I warned him. I’ll add him to the database. Can you send me the admin password again? I’ve forgotten it again.
+Nicolas#12:17 : #Unbelievable! Are you stupid or what? This is the last time I’m giving it to you, it’s too risky. It’s admin and 12345.
+Thomas#12:20 : #Thanks, I’ll remember it this time, I promise.
+Nicolas#12:22 : #You better.
 
----------------  Mardi 12 Août  ---------------
+--------------- Tuesday, August 12 ---------------
 
-Nicolas#21:51 :    #Bonjour Thomas, n'oublie pas l'expérience de demain.
-Thomas#21:54 :    #C’est noté.
+Nicolas#21:51 : #Hello Thomas, don’t forget tomorrow’s experiment.
+Thomas#21:54 : #Got it.

@@ -1,29 +1,30 @@
 - Lost PC -
 
-Lost PC est un projet étudiant, développé en 6 mois et réalisé en juin 2024.
+Lost PC is a student project, developed over 6 months and completed in June 2024.
 
-Remerciements :
+Acknowledgements :
 ------------------------------
-Nous tenons à remercier chaleureusement tous ceux qui ont contribué à la réalisation de ce chef-d'œuvre technologique (à peine exagéré).
+We would like to warmly thank everyone who contributed to the creation of this technological masterpiece (slightly exaggerated).
 
-&copy; Crédits :
+&copy; Credits :
 ------------------------------
-- Concept original et coordinatrice: Chloé
-- Développement en HTML, CSS et JavaScript : Jean
-- Développement en HTML, CSS et JavaScript : Alexandre
-- Conception des discussions : Arnaud 
-- Conception des discussions : Justine 
-- Graphiste : Justine
-- Graphiste : Chloé
-- Rédaction : Arnaud
-- Idées farfelues : Tous les étudiants de SI28
+Original concept and coordinator: Chloé
+Development in HTML, CSS, and JavaScript: Jean
+Development in HTML, CSS, and JavaScript: Alexandre
+Chat design: Arnaud
+Chat design: Justine
+Graphic designer: Justine
+Graphic designer: Chloé
+Writing: Arnaud
+Wacky ideas: All the students of SI28
 
 ------------------------------
 
-Nous remercions également nos professeurs pour leur précieux enseignement qui nous a permis de donner vie à ce jeu.
+We also thank our professors for their invaluable teaching, which allowed us to bring this game to life.
 
 ------------------------------
 
 Lost PC
 
 ------------------------------
+

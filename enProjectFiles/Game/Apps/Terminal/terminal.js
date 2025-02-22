@@ -12,12 +12,12 @@ let currentDirectory = 'C:/';
 const fileSystem = {
     'C:/': ['Users'],
     'C:/Users': ['MickaelDisk'],
-    'C:/Users/MickaelDisk': ['Documents','Images','Téléchargements','Journal','Cours'],
-    'C:/Users/MickaelDisk/Documents': ['Article.pdf', 'classe.exe','odj.txt'],
-    'C:/Users/MickaelDisk/Images': ['img1', 'img2','img3'],
-    'C:/Users/MickaelDisk/Téléchargements': ['Article.pdf', 'classe.exe','odj.txt'],
-    'C:/Users/MickaelDisk/Journal': ['1\\26juin','2\\6juillet','3\\12juilet','4\\21juillet','5\\26juillet','6\\3aout','7\\5aout','8\\9aout','9\\16aout'],
-    'C:/Users/MickaelDisk/Cours': ['Article.pdf', 'classe.exe','odj.txt'],
+    'C:/Users/MickaelDisk': ['Documents', 'Images', 'Downloads', 'Journal', 'Courses'],
+    'C:/Users/MickaelDisk/Documents': ['Article.pdf', 'class.exe', 'agenda.txt'],
+    'C:/Users/MickaelDisk/Images': ['img1', 'img2', 'img3'],
+    'C:/Users/MickaelDisk/Downloads': ['Article.pdf', 'class.exe', 'agenda.txt'],
+    'C:/Users/MickaelDisk/Journal': ['1\\26june', '2\\6july', '3\\12july', '4\\21july', '5\\26july', '6\\3aug', '7\\5aug', '8\\9aug', '9\\16aug'],
+    'C:/Users/MickaelDisk/Courses': ['Article.pdf', 'class.exe', 'agenda.txt'],
 };
 
 // Text to display at the start
@@ -140,24 +140,24 @@ function openCommand(params, cmd){
         output.innerHTML += 'Usage: open <file>\n';
         return;
     } else {
-        if (params=="1\\26juin" || params=="Article.pdf"){
-            openNP('../FileExplorer/Texte/1.txt')
-        } else if (params=="2\\6juillet" || params=="classe.exe"){
-            openNP('../FileExplorer/Texte/2.txt')
-        } else if (params=="3\\12juillet" || params=="odj.txt"){
-            openNP('../FileExplorer/Texte/3.txt')
-        } else if (params=="4\\21juillet"){
-            openNP('../FileExplorer/Texte/4.txt')
-        } else if (params=="5\\26juillet"){
-            openNP('../FileExplorer/Texte/5.txt')
-        } else if (params=="6\\3aout"){
-            openNP('../FileExplorer/Texte/6.txt')
-        } else if (params=="7\\5aout"){
-            openNP('../FileExplorer/Texte/7.txt')
-        } else if (params=="8\\9aout"){
-            openNP('../FileExplorer/Texte/8.txt')
-        } else if (params=="9\\16aout"){
-            openNP('../FileExplorer/Texte/9.txt')
+        if (params=="1\\26june" || params=="Article.pdf"){
+            openNP('../FileExplorer/Text/1.txt');
+        } else if (params=="2\\6july" || params=="class.exe"){
+            openNP('../FileExplorer/Text/2.txt');
+        } else if (params=="3\\12july" || params=="agenda.txt"){
+            openNP('../FileExplorer/Text/3.txt');
+        } else if (params=="4\\21july"){
+            openNP('../FileExplorer/Text/4.txt');
+        } else if (params=="5\\26july"){
+            openNP('../FileExplorer/Text/5.txt');
+        } else if (params=="6\\3august"){
+            openNP('../FileExplorer/Text/6.txt');
+        } else if (params=="7\\5august"){
+            openNP('../FileExplorer/Text/7.txt');
+        } else if (params=="8\\9august"){
+            openNP('../FileExplorer/Text/8.txt');
+        } else if (params=="9\\16august"){
+            openNP('../FileExplorer/Text/9.txt');
         } else if (params=="img1"){
             openIMG('/images/cicada-3301-location.jpg');
         } else if (params=="img2"){
@@ -171,7 +171,7 @@ function openCommand(params, cmd){
     }
     output.innerHTML += `${currentDirectory} ${cmd} ${params}\n`;
     if (exist ==false) {
-        output.innerHTML += `Le fichier ${params} n'existe pas\n`;
+        output.innerHTML += `The file ${params} doesn't exist\n`;
     }
     
 }

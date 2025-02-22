@@ -79,7 +79,7 @@ function chargerConversation(nomFichier) {
                 const messageDiv = document.createElement('div');
                 messageDiv.classList.add('message');
                 let nomClass = 'nom';
-                if (nom === 'Moi') {
+                if (nom === 'Me') {
                     messageDiv.classList.add('envoyé');
                     nomClass += '-moi';
                 } else {
@@ -163,7 +163,7 @@ function connexion() {
 
         MessageHelp.style.display = "none"
         if (email == "mikbouch@mail.com") {
-            MessageErr.textContent = "Mot de passe oublié ? \n Indice : Anniversaire de maman";
+            MessageErr.textContent = "Forgot your password ? \n Clue : Mom's birthday";
 
             // j++
             // i = 0
@@ -172,7 +172,7 @@ function connexion() {
             //     MessageErr.textContent = "indice : Anniversaire de maman";
             // }
         } else if (email === "thomas@mail.com") {
-            MessageErr.textContent = "Mot de passe oublié ? \n Indice : ???";
+            MessageErr.textContent = "Forgot your password ? \n Clue : ???";
 
             // i++
             // j = 0
@@ -200,7 +200,7 @@ document.querySelectorAll('.conv').forEach(conv => {
         const activeConversation = this.getAttribute('type-conversation'); // Sélectionnez la conversation active
 
         if (sendMsgMom && activeConversation === "Conversation/Maman.txt") {
-            messageInput.value = "Votre fils se trouve ici : 48.667506; 2.245672";
+            messageInput.value = "Your son is located here : 48.667506; 2.245672";
 
             messageForm.addEventListener('click', function (event) {
                 event.preventDefault();

@@ -1,16 +1,16 @@
 const moisData = [
-    { nom: 'Janvier', jours: 31, avant: 6, apres: 5, evenements: {} },
-    { nom: 'Février', jours: 28, avant: 2, apres: 5, evenements: {2: "Rentrée"} },
-    { nom: 'Mars', jours: 31, avant: 2, apres: 2, evenements: {6: "Anniversaire de maman<br> Ne pas oublier!", } },
-    { nom: 'Avril', jours: 30, avant: 5, apres: 0, evenements: {} },
-    { nom: 'Mai', jours: 31, avant: 0, apres: 4, evenements: {} },
-    { nom: 'Juin', jours: 30, avant: 3, apres: 2, evenements: {13: "Déménagement Pierre", 20: "Début des examens"} },
-    { nom: 'Juillet', jours: 31, avant: 5, apres: 6, evenements: {  31: "Faire le test pour rentrer dans le groupe" } },
-    { nom: 'Août', jours: 31, avant: 1, apres: 3, evenements: { 17: "RDV avec Thomas<br>14 rue du Boulouris, au café, 16h" } },
-    { nom: 'Septembre', jours: 30, avant: 4, apres: 1, evenements: {12: "Anniversaire d'adoption de Loki"} },
-    { nom: 'Octobre', jours: 31, avant: 6, apres: 5, evenements: {} },
-    { nom: 'Novembre', jours: 30, avant: 2, apres: 3, evenements: {} },
-    { nom: 'Décembre', jours: 31, avant: 4, apres: 0, evenements: {25: "Noël"} }
+    { nom: 'January', jours: 31, avant: 6, apres: 5, evenements: {} },
+    { nom: 'February', jours: 28, avant: 2, apres: 5, evenements: {2: "Back to school"} },
+    { nom: 'March', jours: 31, avant: 2, apres: 2, evenements: {6: "Mom's birthday<br> Don't forget!" } },
+    { nom: 'April', jours: 30, avant: 5, apres: 0, evenements: {} },
+    { nom: 'May', jours: 31, avant: 0, apres: 4, evenements: {} },
+    { nom: 'June', jours: 30, avant: 3, apres: 2, evenements: {13: "Pierre's moving day", 20: "Start of exams"} },
+    { nom: 'July', jours: 31, avant: 5, apres: 6, evenements: {  31: "Take the test to join the group" } },
+    { nom: 'August', jours: 31, avant: 1, apres: 3, evenements: { 17: "Meeting with Thomas<br>14 rue du Boulouris, at the café, 4 PM" } },
+    { nom: 'September', jours: 30, avant: 4, apres: 1, evenements: {12: "Loki's adoption anniversary"} },
+    { nom: 'October', jours: 31, avant: 6, apres: 5, evenements: {} },
+    { nom: 'November', jours: 30, avant: 2, apres: 3, evenements: {} },
+    { nom: 'December', jours: 31, avant: 4, apres: 0, evenements: {25: "Christmas"} }
 ];
 
 function afficherMois(moisIndex) {

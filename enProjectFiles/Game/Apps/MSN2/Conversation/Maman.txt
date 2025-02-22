@@ -1,47 +1,47 @@
-Maman
----------------  Mardi 8 Juillet  ---------------
+Mom
+--------------- Tuesday, July 8 ---------------
 
-Maman#18:25 :    #Bonsoir mon fils, comment vas-tu ?
-Moi#18:35 :    #Bof, je m’ennuie depuis que Pierre est parti vivre à Paris, j’ai pas grand-chose à faire. Et toi, quoi de neuf ? Comment va Loki ?
-Maman#18:45 :    #La routine tu sais, ton père travaille, Loki dort... Comme d’habitude ^^
-Maman#18:46 :    #=img=
-Moi#18:48 :    #Loki tout craché !
-Maman#18:50 :    #Tu as prévu quelque chose ce soir ? Ça te changerait les idées de sortir avec des amis...
-Moi#18:53 :    #Pas vraiment, c’est compliqué de rencontrer des gens quand on ne connaît personne. Je me vois mal aller seul au bar.
-Maman#18:59 :    #Bien... Comme tu veux. Je m’inquiète tu sais, ce n’est pas sain de rester enfermé toute la journée, tu devrais passer un peu à la maison...
-Moi#19:02 :    #Ne t’en fais pas. Et puis avec papa, c’est un peu compliqué. Je ne suis pas sûr que ça lui plairait de m’avoir dans ses pattes. Et puis, je ne suis pas vraiment tout seul, j’ai rencontré un ami sur internet !
-Maman#19:25 :    #Sur internet ? Comment s’appelle-t-il ?
-Moi#19:26 :    #Il s’appelle Thomas, je l’ai rencontré sur un forum de jeux vidéos.
-Maman#19:28 :    #Bien... méfie-toi quand même, on ne sait jamais vraiment qui sont les gens avant de les avoir rencontrés. Ton père m’attend pour dormir, bonne nuit mon fils.
-Moi#19:30 :    #Bonne nuit maman.
+Mom#18:25 :    #Good evening my son, how are you?
+Me#18:35 :    #Eh, I'm bored since Pierre moved to Paris, I don't have much to do. And you, what's new? How’s Loki?
+Mom#18:45 :    #Same old, your dad is working, Loki is sleeping... As usual ^^
+Mom#18:46 :    #=img=
+Me#18:48 :    #That's totally Loki!
+Mom#18:50 :    #Do you have any plans tonight? It might change your mind to go out with friends...
+Me#18:53 :    #Not really, it's hard to meet people when you don’t know anyone. I can’t see myself going to the bar alone.
+Mom#18:59 :    #Well... It's up to you. I'm worried, you know, it’s not healthy to stay locked up all day, you should come by the house...
+Me#19:02 :    #Don’t worry. And with dad, it's a bit complicated. I’m not sure he'd like having me underfoot. And besides, I'm not really alone, I met a friend online!
+Mom#19:25 :    #Online? What's his name?
+Me#19:26 :    #His name is Thomas, I met him on a video game forum.
+Mom#19:28 :    #Well... be careful, you never really know who people are until you’ve met them. Your dad is waiting for me to sleep, good night my son.
+Me#19:30 :    #Good night, mom.
 
----------------  Jeudi 17 Juillet  ---------------
+--------------- Thursday, July 17 ---------------
 
-Moi#10:01 :    #Coucou maman, tu te souviens de mon ami Thomas ?
-Moi#10:03 :    #Je pense que c’est vraiment un bon ami. On joue et discute de jeux vidéos, ça fait du bien de rencontrer de nouvelles personnes.
-Maman#10:26 :    #Je suis contente pour toi mon fils, c’est une bonne chose.
-Moi#10:29 :    #Il m’a même proposé de rejoindre son groupe d’amis en ligne. Je pense que je vais dire oui.
-Maman#10:35 :    #Un groupe d’amis en ligne ? Qu’est-ce que c’est ?
-Moi#10:45 :    #Je ne sais pas trop. Apparemment, ils aiment la technologie et chercheraient à s’en servir pour améliorer le corps humain, un vrai scénario de jeu vidéo !
-Maman#10:50 :    #Je ne sais pas trop Mikaël, tu ne les connais pas ces personnes, et puis la technologie, tout ça, ça me fait peur, tu devrais faire attention...
-Moi#11:00 :    #Ne t’en fais pas maman, ces gens ont l’air très gentils. De toute façon, je ne peux pas trop t’en parler, c’est un projet top secret.
-Maman#11:25 :    #Bon, d’accord, passe à la maison quand tu as le temps, tu nous manques.
-Moi#11:26 :    #Je passerai la semaine prochaine, c’est promis.
+Me#10:01 :    #Hey mom, do you remember my friend Thomas?
+Me#10:03 :    #I think he’s really a good friend. We play and talk about video games, it feels good to meet new people.
+Mom#10:26 :    #I’m happy for you my son, it’s a good thing.
+Me#10:29 :    #He even offered me to join his online friend group. I think I'm going to say yes.
+Mom#10:35 :    #An online friend group? What is it?
+Me#10:45 :    #I’m not sure. Apparently, they like technology and want to use it to improve the human body, a real video game scenario!
+Mom#10:50 :    #I’m not sure Mikaël, you don’t know these people, and all that technology stuff scares me, you should be careful...
+Me#11:00 :    #Don’t worry mom, these people seem very nice. Anyway, I can't talk much about it, it's a top secret project.
+Mom#11:25 :    #Alright, come by the house when you have time, we miss you.
+Me#11:26 :    #I’ll come by next week, I promise.
 
----------------  Mardi 29 Juillet  ---------------
+--------------- Tuesday, July 29 ---------------
 
-Maman#17:21 :    #Bonsoir mon fils, je sais que tu es occupé mais tu devais passer cette semaine, et je ne t’ai pas vu, tout va bien ?
-Maman#17:22 :    #Il ne t’est rien arrivé ?
-Moi#17:25 :    #Tout va bien, je suis très occupé avec mon groupe d’amis, je passerai une autre fois.
-Maman#17:30 :    #D’accord, mais tu es sûr que tu vas bien ? Tu ne m’appelles plus non plus...
-Moi#17:32 :    #Puisque je te dis que ça va ! J’ai beaucoup de travail.
-Maman#17:34 :    #Je m’inquiète beaucoup Mikaël, ton comportement a changé, je ne pense pas que ces amis soient bons pour toi...
-Moi#17:35 :    #Je sais ce qui est bon pour moi.
+Mom#17:21 :    #Good evening my son, I know you’re busy but you were supposed to come this week, and I haven’t seen you, is everything okay?
+Mom#17:22 :    #Did something happen to you?
+Me#17:25 :    #Everything’s fine, I'm really busy with my friend group, I’ll come by another time.
+Mom#17:30 :    #Okay, but are you sure you're okay? You haven’t called me either...
+Me#17:32 :    #I told you, I’m fine! I have a lot of work.
+Mom#17:34 :    #I’m really worried Mikaël, your behavior has changed, I don’t think these friends are good for you...
+Me#17:35 :    #I know what’s good for me.
 
----------------  Jeudi 7 Août  ---------------
+--------------- Thursday, August 7 ---------------
 
-Maman#09:30 :    #Coucou, comment vas-tu ?
+Mom#09:30 :    #Hey, how are you?
 
----------------  Dimanche 17 Août  ---------------
+--------------- Sunday, August 17 ---------------
 
-Maman#09:14 :    #Tu vas bien ? Où es-tu ? Pierre m’a dit que ça faisait longtemps que tu ne lui as pas parlé, ce n’est pas toi. Je suis morte d’inquiétude, réponds-moi.
+Mom#09:14 :    #Are you okay? Where are you? Pierre told me it’s been a long time since you talked to him, that's not like you. I'm so worried, please answer me.
