@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texte aléatoire</title>
+    <style>
+        @font-face {
+            font-family: 'Levi Windows';
+            src: url('../../images/Windows-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            box-sizing: border-box;
+            font-family: 'Levi Windows', monospace !important;
+        }
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* S'assure que le body prend toute la hauteur de la fenêtre */
+            margin: 0; /* Retire les marges par défaut */
+            color: black; /* Couleur initiale des lettres */
+            font-size: 36px; /* Taille de la police */
+            flex-direction: column; /* Affiche les div en colonne */
+        }
+        .randomText {
+            color: rgb(0, 0, 0); /* Change la couleur du texte pour le rendre visible sur fond noir */
+            font-size: 36px;
+        }
+        .button {
+            display: block;
+            padding: 10px 20px;
+            margin-top: 200px;
+            font-size: 16px;
+            background-color: #000000;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="randomText">
+        Vous avez perdu les données compromettantes de cet ordinateur
+    </div>
+    <div class="randomText">
+        Fin 3/3
+    </div>
+    <div style="gap: 10px; display: flex;">
+        <button id="redirectButton" class="button" onclick="redirect()">Reprendre au début</button>
+        <button id="copyButton"class="button" >Nous faire un retour</button>
+    </div>
+    <script>
+        // Fonction pour changer la couleur de chaque lettre de manière aléatoire
+        function changeColor() {
+            var texts = document.querySelectorAll('.randomText');
+            texts.forEach(function(text) {
+                var letters = text.innerText.split(''); // Séparer chaque lettre du texte
+                letters.forEach(function(letter, index) {
+                    var color = 'white';
+                    setTimeout(function() {
+                        letters[index] = '<span style="color:' + color + '">' + letter + '</span>'; // Remplacer la lettre par une span de couleur aléatoire
+                        text.innerHTML = letters.join(''); // Mettre à jour le texte avec les nouvelles couleurs
+                    }, Math.random() * 3000); // Délai aléatoire pour chaque lettre
+                });
+            });
+        }
+        function redirect() {
+            window.location.href = "../../../../../index.html"; // Remplacez cette URL par l'URL de redirection souhaitée
+        }
+        setTimeout(function() {
+            document.getElementById('redirectButton').style.color = 'white';
+            document.getElementById('copyButton').style.color = 'white';
+
+        }, 5000);
+        document.getElementById('copyButton').addEventListener('click', function () {
+            const email = 'lostpcproject@gmail.com';  // Remplacez par l'adresse e-mail désirée
+
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Adresse e-mail copiée dans le presse-papier !');
+            }).catch(err => {
+                console.error('Erreur lors de la copie : ', err);
+            });
+        });
+
+
+        // Appel de la fonction pour changer la couleur du texte
+        setTimeout(changeColor, 1500);
+    </script>
+</body>
+</html>

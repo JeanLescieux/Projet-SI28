@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Panel</title>
+    <link href="./wired.entry.neocities_files/mebious.css" media="all" rel="stylesheet" type="text/css">
+    <!-- CSS pour le style -->
+    <style>
+        * {
+            font-family: Consolas, monospace !important;
+        }
+
+        .red-text {
+            color: red;
+        }
+
+        body {
+            background-color: black;
+            color: #00FF00;
+        }
+
+        .custom-button {
+            background: none;
+            border: none;
+            color: #00FF00;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        .tabs p {
+            cursor: pointer;
+        }
+
+        .header-banner {
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .header-button {
+            margin-right: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #00FF00;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            font-size: 11px;
+        }
+
+        .resetblink {
+            text-decoration: none;
+            color: #ff0000;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+
+        }
+
+        .modal-content {
+            background-color: black;
+            color: #00FF00;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-style: outset;
+            border-width: 5px;
+            border-color: #00FF00;
+            padding: 5px;
+        }
+
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100px;
+        }
+
+        #confirmBtn {
+            background-color: #00FF00;
+            color: black;
+            border: none;
+        }
+
+        #cancelBtn {
+            background-color: black;
+            color: #00FF00;
+            border: 1px solid #00FF00;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .adminbutton {
+            height: 20px;
+            width: 100%;
+            text-decoration: none;
+            color: #00FF00;
+            border-style: outset;
+            border-width: 5px;
+            border-color: #00FF00;
+            padding: 5px;
+            text-align: center;
+            background-color: black;
+        }
+    </style>
+    <!-- Inclure jQuery -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Inclure PapaParse -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+
+<body oncontextmenu="return false;">
+    <div style="position:relative;">
+
+        <div id="admintab" class="tab-content" style="display: block;">
+            <h1
+                style="font-family: Consolas; text-align: center; color: #00FF00; background-color: black; border-style: inset; border-width: 5px; margin-top: 1%; margin-bottom: 10px; padding: 10px; border-color: #00FF00;">
+                Administration Panel</h1>
+            <div>
+
+
+                <div class="main" style="padding:1%;display:flex; flex-direction: column;">
+                    <div style="display: flex; flex-direction: row;align-items: flex-start; margin-bottom: 5px;">
+                        <a class="adminbutton" href="#">Utilisateurs : 94</a>
+                        <a class="adminbutton" href="#"></a>
+
+                    </div>
+                    <div class="table-container">
+                        <table id="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Numéro</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>Pseudo</th>
+                                    <th>Mail</th>
+                                    <th>Mot de passe</th>
+                                    <th>Actif</th>
+                                    <th>Statut</th>
+                                    <th>Commentaire</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div
+                    style="border:5px inset #00FF00; margin-bottom:1%; display:table; margin-left:auto; margin-right:auto; padding-left:0px; padding-right:0px; padding-top:10px; padding-bottom:10px; background-color:black;">
+                    <a class="resetblink" href="#" id="resetLink">[ALL RESET]</a>
+                </div>
+
+                <!-- La modale de confirmation -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close"></span>
+                        <p>Voulez-vous réinitialiser complétement la base de données ?
+                        </p>
+                        <p>Cette action est irréversible.</p>
+
+                        <div class="modal-footer">
+                            <button id="confirmBtn" class="modal-button">Oui</button>
+                            <button id="cancelBtn" class="modal-button">Non</button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    // Récupère les éléments de la modale
+                    var modal = document.getElementById("myModal");
+                    var resetLink = document.getElementById("resetLink");
+                    var span = document.getElementsByClassName("close")[0];
+                    var confirmBtn = document.getElementById("confirmBtn");
+                    var cancelBtn = document.getElementById("cancelBtn");
+
+                    // Affiche la modale lorsque l'utilisateur clique sur le lien
+                    resetLink.onclick = function (event) {
+                        event.preventDefault();
+                        modal.style.display = "block";
+                    }
+
+                    // Ferme la modale lorsque l'utilisateur clique sur (x)
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
+
+                    // Ferme la modale lorsque l'utilisateur clique sur "Non"
+                    cancelBtn.onclick = function () {
+                        modal.style.display = "none";
+                    }
+
+                    // Redirige vers end1.html lorsque l'utilisateur clique sur "Oui"
+                    confirmBtn.onclick = function () {
+                        parent.parent.window.location.href = "./deletee.html";
+                    }
+
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour charger et parser le fichier CSV
+        function loadCSV() {
+            Papa.parse("./data.csv", {
+                download: true,
+                header: true,
+                complete: function (results) {
+                    populateTable(results.data);
+                }
+            });
+        }
+        // Fonction pour charger et parser le fichier CSV
+        function loadCSV() {
+            Papa.parse("./data.csv", {
+                download: true,
+                header: true,
+                complete: function (results) {
+                    populateTable(results.data);
+                }
+            });
+        }
+        // Initialize the boolean variable
+        let isInfoTransmitted = false;
+        // Fonction pour peupler le tableau avec les données CSV
+        function populateTable(data) {
+            const tableBody = document.querySelector("#data-table tbody");
+            const tableHeader = document.querySelector("#table-header");
+
+            // Create table headers
+            const headers = Object.keys(data[0]);
+            console.log(headers)
+
+
+            // Populate table rows
+            // Populate table rows
+            data.forEach(row => {
+                const tr = document.createElement("tr");
+                if (row.Statut === "Niveau 1") {
+                    tr.classList.add("red-text");
+                }
+                if (row.Prénom === "Mikaël") {
+
+                    const button = document.createElement("button");
+                    button.title = "Transmettre les informations concernant Mikaël";
+                    button.textContent = "48.667506; 2.245672";
+                    button.classList.add("custom-button");
+                    // Add a click event listener to the button
+                    button.addEventListener("click", () => {
+                        isInfoTransmitted = true;
+                        alert("Vous êtes maintenant en possession des informations concernant la disparition de Mikaël.");
+                        localStorage.setItem('sendMsgMom', 'true');
+                        console.log(localStorage.getItem('sendMsgMom'))
+                    });
+
+                    // Create table cells and append to the row
+                    Object.values(row).forEach(cell => {
+                        const td = document.createElement("td");
+                        if (cell == "48.667506; 2.245672") {
+                        } else {
+                            td.textContent = cell;
+                            tr.appendChild(td);
+
+                        }
+                    });
+
+                    // Append the button to the table row
+                    const buttonTd = document.createElement("td");
+                    buttonTd.appendChild(button);
+                    tr.appendChild(buttonTd);
+
+                } else {
+                    Object.values(row).forEach(cell => {
+                        const td = document.createElement("td");
+                        td.textContent = cell;
+                        tr.appendChild(td);
+                    });
+                }
+
+                tableBody.appendChild(tr);
+            });
+        }
+        // Charger le fichier CSV lors du chargement de la page
+        $(document).ready(function () {
+            loadCSV();
+        });
+    </script>
+</body>
+
+</html>

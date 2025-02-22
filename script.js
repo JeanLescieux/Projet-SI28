@@ -1,8 +1,16 @@
 const video = document.getElementById('fullscreen-video');
-const startButton = document.getElementById('start-button');
+const startButtonFR = document.getElementById('start-fr-button');
+const startButtonEN = document.getElementById('start-en-button');
+
 const startScreen = document.getElementById('start-screen');
 
-startButton.addEventListener('click', function () {
+startButtonFR.addEventListener('click', function () {
+  startScreen.style.display = 'none';
+  video.play();
+  video.playbackRate = 0.65;
+});
+
+startButtonEN.addEventListener('click', function () {
   startScreen.style.display = 'none';
   video.play();
   video.playbackRate = 0.65;
@@ -17,7 +25,7 @@ video.addEventListener('timeupdate', function () {
 });
 
 function redirectToNextPage() {
-  window.location.href = './projectFiles/Intro/resetComputer.html';
+  window.location.href = './enProjectFiles/Intro/resetComputer.html';
 }
 
 localStorage.setItem('sendMsgMom', false);

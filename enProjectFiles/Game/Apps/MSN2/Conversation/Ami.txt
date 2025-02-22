@@ -1,0 +1,79 @@
+Pierre
+---------------  Jeudi 12 Juin  ---------------
+
+Pierre#10:08 :    #Hello Mikaël, tu es toujours disponible pour m’aider pour le déménagement ?
+Pierre#10:10 :    #Je risque de galérer à descendre les meubles seul haha !
+Moi#10:15 :    #Oui, pas de soucis ! On se dit demain 10h ?
+
+---------------  Samedi 14 Juin  ---------------
+
+Pierre#09:30 :    #Merci encore pour hier, je n’aurai jamais réussi seul.
+Moi#09:42 :    #C’est normal, ça fait bizarre de ne plus t’avoir dans les parages.
+Pierre#09:56 :    #Tu m’étonnes, je ne connais personne dans cette nouvelle ville.
+Moi#10:02 :    #Comment est ton nouvel appartement au fait ?
+Pierre#10:07 :    #Plutôt pas mal ! Un petit peu bruyant mais super lumineux !
+Moi#10:13 :    #Tant mieux ! Tu vas pouvoir le décorer avec les posters de quand on était ados, ça te rappellera des bons souvenirs.
+Pierre#10:18 :    #J’y compte bien ! Au fait, comment va Loki ?
+Moi#10:26 :    #Je suppose qu’il va bien, ma mère vient de m’envoyer cette photo :
+Moi#10:29 :    #=img=
+Pierre#10:35 :    #Je reconnais bien Loki, toujours en train de dormir celui-là, quelle feignasse.
+Moi#10:41 :    #Eh oui, elle me manque presque autant que toi, c’est pour te dire !
+Pierre#10:47 :    #Dis donc, ça serait presque une déclaration ça ^^
+Pierre#10:48 :    #Vous l'avez depuis quand déjà ?
+Moi#10:49 :    #On l'a adopté le 12 septembre dernier, je me souviens de la date par coeur!
+Pierre#10:50 :    #Ca commence à faire un bout de temps aha
+Moi#10:53 :    #Au fait, tu te souviens de la période du collège où on s’était acheté des journaux intimes ?
+Pierre#11:01 :    #Oui ahah ! Je me souviens qu’on avait peur que quelqu’un découvre qu’on tenait des journaux intimes.
+Moi#11:09 :    #C’est clair, ça aurait été la honte à l’époque XD.
+Pierre#11:16 :    #C’était le bon vieux temps...
+Moi#11:24 :    #Eh bien, cette époque est de retour, grâce à la technologie !
+Pierre#11:28 :    #Comment ça ?
+Moi#11:35 :    #J’ai trouvé une super application de journal intime caché pour mon ordinateur !
+Pierre#11:42 :    #C’est vrai ? Comment ça marche ?
+Moi#11:49 :    #Le journal est caché dans une application qui ressemble à une calculette, et on peut y accéder en rentrant un code à 4 chiffres. C'est pratique car d'habitude je fais en sorte que tout mes mots de passe soient des dates dont je me rappelle.
+Pierre#11:56 :    #Ça a l’air super, tu me donneras le nom pour que je la télécharge aussi !
+Moi#12:02 :    #Bien sûr ! Bon, je dois y aller, à plus !
+Pierre#12:08 :    #À plus !
+
+---------------  Mercredi 16 Juillet  ---------------
+
+Moi#14:15 :    #Salut ! Quoi de neuf depuis le déménagement ? Ta nouvelle vie te plaît ?
+Pierre#14:23 :    #Oui, c’est top, la ville est très vivante et mes collègues très sympas. Il ne manque que toi. Et toi, quoi de neuf ?
+Moi#14:30 :    #Eh bien, je fais partie d’un groupe d’Pierres sur internet maintenant, c’est grâce à Thomas. Je l’ai rencontré sur un forum de jeux vidéo.
+Pierre#14:36 :    #Tu ne m’avais jamais parlé de lui, tu l’as déjà vu ?
+Moi#14:44 :    #Non, jamais encore, mais on se parle en ligne, il est très sympa.
+Pierre#14:52 :    #Et ce groupe d’Pierres, en quoi consiste-t-il ?
+Moi#14:59 :    #Oh, rien de spécial t’inquiète pas, on discute de technologies et de jeux vidéo.
+Pierre#15:05 :    #Super, je suis content que tu te sois fait de nouveaux Pierres !
+
+---------------  Dimanche 20 Juillet  ---------------
+
+Moi#12:11 :    #Hello, comment vas-tu ?
+
+---------------  Jeudi 24 Juillet  ---------------
+
+Moi#13:34 :    #Hello, t’es trop occupé, c’est ça ?
+Pierre#21:44 :    #Salut Mikaël, désolé, j’ai beaucoup de travail en ce moment...
+Moi#21:45 :    #Ok, pas de soucis.
+
+---------------  Vendredi 1 Août  ---------------
+
+Pierre#10:07 :    #Salut Mikaël, ça fait longtemps que je n’ai pas eu de nouvelles. Comment vas-tu ?
+Moi#10:12 :    #Désolé, je suis très occupé en ce moment.
+Pierre#10:18 :    #Oh, je vois... c’est ton groupe d’Pierres qui te prend tout ce temps ?
+Moi#10:24 :    #Oui, je commence à prendre des responsabilités, tu comprends. J’ai moins de temps à t’accorder. On se reparle un autre jour ?
+Pierre#10:30 :    #Je vois... Bon, je te laisse alors.
+
+---------------  Samedi 9 Août  ---------------
+
+Pierre#11:05 :    #Je commence à m’inquiéter, ta mère aussi trouve que tu as changé. Que se passe-t-il ? Tu as des problèmes ? Tu peux m’en parler, tu sais ?
+Moi#11:16 :    #Tout va bien, laissez-moi tranquille.
+Pierre#11:27 :    #Bien... Je reviens en ville ce week-end, ça te dirait de prendre un verre ?
+Moi#11:39 :    #Je ne peux pas, désolé. Thomas m’a déjà proposé de se voir pour la première fois.
+Pierre#11:45 :    #D’accord, une autre fois alors.
+
+---------------  Lundi 18 Août  ---------------
+
+Pierre#10:15 :    #J’ai sonné chez toi mais tu n’as pas répondu. Tout va bien ?
+Pierre#10:29 :    #Ta mère n’a plus de nouvelles non plus, on s’inquiète.
+Pierre#10:44 :    #Pierre ?
