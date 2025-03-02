@@ -60,7 +60,7 @@ Me#21:45 :    #Ok, no worries.
 
 Pierre#10:07 :    #Hey Mikaël, it's been a while since I heard from you. How are you?
 Me#10:12 :    #Sorry, I've been really busy lately.
-Pierre#10:18 :    #Oh, I see... is it your group of Pierres that’s taking up all your time?
+Pierre#10:18 :    #Oh, I see... is it your group that’s taking up all your time?
 Me#10:24 :    #Yes, I’m starting to take on more responsibilities, you know. I have less time for you. Can we talk another time?
 Pierre#10:30 :    #I see... Alright, I’ll let you go then.
 
@@ -76,4 +76,4 @@ Pierre#11:45 :    #Okay, another time then.
 
 Pierre#10:15 :    #I rang your doorbell but you didn’t answer. Everything okay?
 Pierre#10:29 :    #Your mom hasn’t heard from you either, we’re worried.
-Pierre#10:44 :    #Pierre?
+Pierre#10:44 :    #Mikaël?

@@ -6,6 +6,7 @@
 document.getElementById("message-form").addEventListener("submit", function(event) {
     event.preventDefault();
     showCustomAlert();
+    
 });
 
 
@@ -21,11 +22,8 @@ function hideCustomAlert() {
 
 
 document.getElementById("deconnexion-btn").addEventListener("click", function() {
-    if (confirm("Êtes-vous sûr de vouloir vous déconnecter ?") == true) {
-        window.location.href = "Connexion.html";
-    } else {
-        return false;
-    }
+    window.location.href = "Connexion.html";
+
 });
 
 function closebtn(){
@@ -33,6 +31,18 @@ function closebtn(){
   console.log('Fenêtre modale cachée');
 }
 
+function showClue() {
+    var email = document.getElementById("email").value;
+    var MessageHelp2 = document.getElementById("msg-help2");
+    MessageHelp2.style.display = "block"
+    if (email == "mikbouch@mail.com") {
+        MessageHelp2.textContent = "Clue : mom's birthday";
+
+    } else if (email === "thomas@mail.com") {
+        MessageHelp2.textContent = "Clue : ???";
+
+    }
+}
 
 
 
@@ -157,13 +167,13 @@ function connexion() {
         window.location.href = "Conv_compteThomas.html";
         return false;
     } else {
-
+/*
         MessageErr.style.display = "block";
         //MessageErr.textContent = "Email ou mot de passe incorrect";
 
         MessageHelp.style.display = "none"
         if (email == "mikbouch@mail.com") {
-            MessageErr.textContent = "Forgot your password ? \n Clue : Mom's birthday";
+            MessageErr.textContent = "Mot de passe oublié ? \n Indice : Anniversaire de maman";
 
             // j++
             // i = 0
@@ -172,7 +182,7 @@ function connexion() {
             //     MessageErr.textContent = "indice : Anniversaire de maman";
             // }
         } else if (email === "thomas@mail.com") {
-            MessageErr.textContent = "Forgot your password ? \n Clue : ???";
+            MessageErr.textContent = "Mot de passe oublié ? \n Indice : ???";
 
             // i++
             // j = 0
@@ -183,7 +193,7 @@ function connexion() {
         } else {
             j = 0
             i = 0
-        }
+        }*/
         return false;
     }
 
@@ -200,7 +210,7 @@ document.querySelectorAll('.conv').forEach(conv => {
         const activeConversation = this.getAttribute('type-conversation'); // Sélectionnez la conversation active
 
         if (sendMsgMom && activeConversation === "Conversation/Maman.txt") {
-            messageInput.value = "Your son is located here : 48.667506; 2.245672";
+            messageInput.value = "Your son is here : 48.667506; 2.245672";
 
             messageForm.addEventListener('click', function (event) {
                 event.preventDefault();

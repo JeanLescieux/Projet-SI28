@@ -60,7 +60,7 @@ Moi#21:45 :    #Ok, pas de soucis.
 
 Pierre#10:07 :    #Salut Mikaël, ça fait longtemps que je n’ai pas eu de nouvelles. Comment vas-tu ?
 Moi#10:12 :    #Désolé, je suis très occupé en ce moment.
-Pierre#10:18 :    #Oh, je vois... c’est ton groupe d’Pierres qui te prend tout ce temps ?
+Pierre#10:18 :    #Oh, je vois... c’est ton groupe qui te prend tout ce temps ?
 Moi#10:24 :    #Oui, je commence à prendre des responsabilités, tu comprends. J’ai moins de temps à t’accorder. On se reparle un autre jour ?
 Pierre#10:30 :    #Je vois... Bon, je te laisse alors.
 
@@ -76,4 +76,4 @@ Pierre#11:45 :    #D’accord, une autre fois alors.
 
 Pierre#10:15 :    #J’ai sonné chez toi mais tu n’as pas répondu. Tout va bien ?
 Pierre#10:29 :    #Ta mère n’a plus de nouvelles non plus, on s’inquiète.
-Pierre#10:44 :    #Pierre ?
+Pierre#10:44 :    #Mikaël ?
