@@ -236,6 +236,121 @@ function closeTerminal() {
   document.getElementById('fenetreModaleTerminal').style.display = 'none';
   console.log('Fenêtre modale cachée');
 }
+function triggerScreamer() {
+  // Create fullscreen screamer effect
+  const screamerWindow = window.open('./screamer.html', 'screamer', 'fullscreen=yes,scrollbars=no,resizable=no,toolbar=no,menubar=no,location=no,status=no');
+  
+  // Fallback if popup is blocked - create inline screamer
+  if (!screamerWindow) {
+    createInlineScreamer();
+  }
+}
+
+function createInlineScreamer() {
+  // Create screamer overlay
+  const screamerDiv = document.createElement('div');
+  screamerDiv.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ff0000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+  `;
+  
+  const textDiv = document.createElement('div');
+  textDiv.innerHTML = 'YOU HAVE BEEN<br>PRANKED!<br>💀👻💀';
+  textDiv.style.cssText = `
+    color: #ffffff;
+    font-size: 8em;
+    font-weight: bold;
+    text-shadow: 0 0 30px #000000;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    animation: shake 0.1s infinite, pulse 0.2s infinite;
+  `;
+  
+  screamerDiv.appendChild(textDiv);
+  document.body.appendChild(screamerDiv);
+  
+  // Add CSS animations
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes shake {
+      0% { transform: translate(0px, 0px) rotate(0deg); }
+      10% { transform: translate(-5px, -5px) rotate(-2deg); }
+      20% { transform: translate(-6px, 0px) rotate(2deg); }
+      30% { transform: translate(6px, 5px) rotate(0deg); }
+      40% { transform: translate(2px, -2px) rotate(2deg); }
+      50% { transform: translate(-2px, 5px) rotate(-2deg); }
+      60% { transform: translate(-6px, 2px) rotate(0deg); }
+      70% { transform: translate(6px, 2px) rotate(-2deg); }
+      80% { transform: translate(-2px, -2px) rotate(2deg); }
+      90% { transform: translate(2px, 5px) rotate(0deg); }
+      100% { transform: translate(2px, -5px) rotate(-2deg); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); background: #ff0000; }
+      25% { transform: scale(1.1); background: #000000; }
+      50% { transform: scale(1.2); background: #ff0000; }
+      75% { transform: scale(1.1); background: #000000; }
+      100% { transform: scale(1); background: #ff0000; }
+    }
+  `;
+  document.head.appendChild(style);
+  
+  // Apply animation to the container
+  screamerDiv.style.animation = 'pulse 0.2s infinite';
+  
+  // Play scary sound
+  playScarySound();
+  
+  // Remove after 3 seconds
+  setTimeout(() => {
+    document.body.removeChild(screamerDiv);
+    document.head.removeChild(style);
+  }, 3000);
+}
+
+function playScarySound() {
+  try {
+    // Create scary sound using Web Audio API
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    
+    oscillator.frequency.setValueAtTime(200, audioContext.currentTime);
+    oscillator.frequency.setValueAtTime(800, audioContext.currentTime + 0.1);
+    oscillator.frequency.setValueAtTime(200, audioContext.currentTime + 0.2);
+    oscillator.frequency.setValueAtTime(1200, audioContext.currentTime + 0.3);
+    
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.setValueAtTime(0, audioContext.currentTime + 2);
+    
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 2);
+  } catch (e) {
+    console.log('Audio playback failed:', e);
+  }
+  
+  // Use speech synthesis as backup
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance('AHHHHH! You have been pranked!');
+    utterance.rate = 0.5;
+    utterance.pitch = 0.1;
+    utterance.volume = 1;
+    speechSynthesis.speak(utterance);
+  }
+}
+
 function updateTime() {
   var now = new Date();
   var hours = now.getHours();
