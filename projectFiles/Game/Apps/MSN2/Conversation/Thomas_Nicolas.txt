@@ -1,13 +1,13 @@
 Thomas - Nicolas
 ---------------  Jeudi 10 Juillet  ---------------
 
-Moi#19:11 :    #Bonjour Nicolas, j’ai trouvé un nouveau membre, je lui ai donné le lien du blog. Il s’appelle Pierre.
+Moi#19:11 :    #Bonjour Nicolas, j’ai trouvé un nouveau membre, je lui ai donné le lien du blog. Il s’appelle Mikaël.
 Nicolas#19:19 :    #D’accord, essaie de le convaincre de rejoindre le groupe des 70, nous avons encore besoin de membres.
 Moi#19:25 :    #Je vais essayer. Je ne garantis rien, il est assez réticent.
 
 ---------------  Jeudi 24 Juillet  ---------------
 
-Nicolas#12:12 :    #Les résultats de Pierre sont favorables, il peut rejoindre le groupe. Maintenant, tu ne dois discuter avec lui que par l’intermédiaire du groupe.
+Nicolas#12:12 :    #Les résultats de Mikaël sont favorables, il peut rejoindre le groupe. Maintenant, tu ne dois discuter avec lui que par l’intermédiaire du groupe.
 Thomas#12:14 :    #Oui, je l’ai prévenu. Je vais l’inscrire sur la base de données. Peux-tu me renvoyer le mot de passe administrateur ? Je l’ai encore oublié.
 Nicolas#12:17 :    #C’est pas vrai ! T'es stupide ou quoi ? C’est la dernière fois que je te le donne, c’est trop risqué. C'est admin et 12345
 Thomas#12:20 :    #Merci, cette fois-ci je m’en souviendrai, c’est promis.

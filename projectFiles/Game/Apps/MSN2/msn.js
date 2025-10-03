@@ -6,6 +6,7 @@
 document.getElementById("message-form").addEventListener("submit", function(event) {
     event.preventDefault();
     showCustomAlert();
+    
 });
 
 
@@ -21,11 +22,8 @@ function hideCustomAlert() {
 
 
 document.getElementById("deconnexion-btn").addEventListener("click", function() {
-    if (confirm("Êtes-vous sûr de vouloir vous déconnecter ?") == true) {
         window.location.href = "Connexion.html";
-    } else {
-        return false;
-    }
+
 });
 
 function closebtn(){
@@ -33,6 +31,18 @@ function closebtn(){
   console.log('Fenêtre modale cachée');
 }
 
+function showClue() {
+    var email = document.getElementById("email").value;
+    var MessageHelp = document.getElementById("msg-help");
+    MessageErr.style.display = "block"
+    if (email == "mikbouch@mail.com") {
+        MessageErr.textContent = "Indice : Anniversaire de maman";
+
+    } else if (email === "thomas@mail.com") {
+        MessageErr.textContent = "Indice : ???";
+
+    }
+}
 
 
 
@@ -157,7 +167,7 @@ function connexion() {
         window.location.href = "Conv_compteThomas.html";
         return false;
     } else {
-
+/*
         MessageErr.style.display = "block";
         //MessageErr.textContent = "Email ou mot de passe incorrect";
 
@@ -183,7 +193,7 @@ function connexion() {
         } else {
             j = 0
             i = 0
-        }
+        }*/
         return false;
     }
 

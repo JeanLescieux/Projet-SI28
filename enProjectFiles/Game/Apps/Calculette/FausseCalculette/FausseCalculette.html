@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator ...</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+</head>
+<style>
+    button:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<body>
+    <div class="window" style="width: 400px;height:auto;background-color: whitesmoke;">
+        <div class="title-bar">
+            <div class="title-bar-text">Calculator ...</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="parent.closeWrongCalculator()"></button>
+            </div>
+        </div>
+
+        <div class="window-body" style="margin: 10px;">
+            <div class="calculator" style="display: flex; flex-wrap: wrap;">
+                <div class="buttons">
+                    <div style="margin-bottom: 10px;">
+                        <input type="text" id="display" readonly>
+                        <button onclick="clearDisplay()">C</button>
+                    </div>
+                    <div>
+                        <button onclick="appendToDisplay('+')">+</button>
+                        <button onclick="appendToDisplay('7')">7</button>
+                        <button onclick="appendToDisplay('8')">8</button>
+                        <button onclick="appendToDisplay('9')">9</button>
+                    </div>
+                    <div>
+                        <button onclick="appendToDisplay('-')">-</button>
+                        <button onclick="appendToDisplay('4')">4</button>
+                        <button onclick="appendToDisplay('5')">5</button>
+                        <button onclick="appendToDisplay('6')">6</button>
+                    </div>
+                    <div>
+                        <button onclick="appendToDisplay('*')">*</button>
+                        <button onclick="appendToDisplay('1')">1</button>
+                        <button onclick="appendToDisplay('2')">2</button>
+                        <button onclick="appendToDisplay('3')">3</button>
+                    </div>
+                    <div>
+                        <button onclick="appendToDisplay('/')">/</button>
+                        <button onclick="appendToDisplay('0')">0</button>
+                        <button onclick="appendToDisplay('.')">.</button>
+                        <button onclick="calculate()">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="fausseCalculette.js"></script>
+</body>
+
+</html>

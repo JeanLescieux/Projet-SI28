@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring - C:/WINDOWS</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link rel="stylesheet" href="fileExplorer.css">
+</head>
+
+<body>
+    <div class="window" style="width:750px; height: 500px;">
+        <div class="title-bar">
+            <div class="title-bar-text">Finder - C:/WINDOWS</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="parent.closeFileExplorer()"></button>
+            </div>
+        </div>
+
+        <div style="background-color: lightgrey; color: black;height:20px;margin-bottom: 2px;">
+            <div style="display: flex;">
+                <p style="margin-right: 20px;margin-left: 10px;margin-top:4px;color:rgba(33, 31, 31, 0.94);">
+                    <u>F</u>ile
+                </p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>E</u>dit</p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>V</u>iew</p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>F</u>avourites</p>
+                <p style="margin-right: 20px;margin-top:4px;color:rgba(33, 31, 31, 0.94);"><u>H</u>elp</p>
+            </div>
+        </div>
+
+        <div style="background-color: lightgrey; color: black; height: 45px;margin-bottom: 2px;">
+            <div class="window-body" style="padding: 10px;">
+                <div style="display: flex; flex-wrap: wrap;">
+                    <div id="back"
+                        style="margin-right:20px;cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: 0px;">
+                        <img src="/images/back.png" alt="Fichier" style="width: 20px; height: 20px;margin-bottom: 0px;">
+                        <div style="font-size: 9px;">Back</div>
+                    </div>
+                    <div id="forward"
+                        style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -8px;">
+                        <img src="/images/forward.png" alt="Fichier"
+                            style="width: 20px; height: 20px;margin-bottom: 8px;">
+                        <div style="font-size: 9px;">Forward</div>
+                    </div>
+                    <div id="home"
+                        style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
+                        <img src="/images/homepage_alt.png" alt="Fichier"
+                            style="width: 20px; height: 20px;margin-bottom: 5px;">
+                        <div style="font-size: 9px;">Home</div>
+                    </div>
+                    <div id="favorites"
+                        style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
+                        <img src="/images/favorites.png" alt="Fichier"
+                            style="width: 20px; height: 20px;margin-bottom: 5px;">
+                        <div style="font-size: 9px;">Favorites</div>
+                    </div>
+
+                    <div id="help"
+                        style="margin-right:20px; cursor:pointer; text-align: center; display: flex; flex-direction: column; align-items: center;margin-top: -5px;">
+                        <img src="/images/help.png" alt="Fichier" style="width: 20px; height: 20px;margin-bottom: 5px;">
+                        <div style="font-size: 9px;">Help</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: lightgrey; color: black;height:20px;">
+            <div style="display: flex;">
+                <p style="margin-right: 20px;margin-left: 10px;margin-top:4px;color:rgba(33, 31, 31, 0.94);">Path
+                </p>
+                <input id="addbar" type="text" style="width: 100%; margin-top:0px;color:rgba(33, 31, 31, 0.94);"
+                    value="C://">
+            </div>
+        </div>
+
+        <div class="window-body">
+            <div class="column left-column">
+                <ul class="tree-view" style="height: 100%;overflow-y: auto;">
+                    <li>
+                        <details open>
+                            <summary>C:/</summary>
+                            <ul>
+                                <li>
+                                    <details>
+                                        <summary>Users</summary>
+                                        <ul>
+                                            <li>
+                                                <details open>
+                                                    <summary>Mickaël Disk</summary>
+                                                    <ul>
+                                                        <li data-path="./Files/feDocument.html">Files</li>
+                                                        <li data-path="./Files/feImages.html">Pictures</li>
+                                                        <li data-path="./Files/feTelechargements.html">Download
+                                                        </li>
+                                                        <li data-path="./Files/feJournal.html">Diary</li>
+                                                        <li data-path="./Files/feCours.html">Classes</li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>Mickaël's computer</li>
+                </ul>
+            </div>
+            <div class="column right-column">
+
+            </div>
+
+
+            <div class="status-bar">
+                <p class="status-bar-field">Press F1 for help</p>
+                <p class="status-bar-field">Slide 1</p>
+                <p class="status-bar-field">CPU Usage: 14%</p>
+            </div>
+        </div>
+
+        <iframe id="fenetreModaleNP" class="modal" src="../../Usables/notePad.html" frameborder="0" width="480px"
+            height="520px" style="border:none; position:absolute"></iframe>
+
+        <iframe id="fenetreModaleIMG" class="modal" src="../../Usables/imgOpen.html" frameborder="0" width="500px"
+            height="520px" style="border:none; position:absolute"></iframe>
+
+        <iframe id="fenetreModaleError" class="modal" src="../../Usables/errorMsg.html" frameborder="0" width=700px
+            height=500px style="border: none;"></iframe>
+</body>
+<script src="fileExplorer.js"></script>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link rel="stylesheet" href="Calendrier.css">
+</head>
+
+<body>
+    <div class="window" style="width: 1100px;height:auto;background-color: whitesmoke;">
+        <div class="title-bar">
+            <div class="title-bar-text">Calendar</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="parent.closeCalendar()"></button>
+            </div>
+        </div>
+
+        <div class="nav_mois">
+            <div class="fleche gauche" id="grisé">&#9664;</div>
+            <div class="annee"></div>
+            <div class="fleche droite">&#9654;</div>
+        </div>
+
+
+        <div class="window-body">
+            <div class="calendrier-jour">
+                <div class="nom_jour">Monday</div>
+                <div class="nom_jour">Tuesday</div>
+                <div class="nom_jour">Wednesday</div>
+                <div class="nom_jour">Thursday</div>
+                <div class="nom_jour">Friday</div>
+                <div class="nom_jour">Saturday</div>
+                <div class="nom_jour">Sunday</div>
+            </div>
+            <div class="calendrier">
+
+            </div>
+        </div>
+    </div>
+    <script src="calendrier.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SI28 Project</title>
+  <link rel="stylesheet" href="./resetComputer.css">
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
+  <style>
+    #loading {
+      display: none;
+    }
+
+    .window {
+      width: 300px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: #ffffff; /* white background */
+      height: 20px;
+      margin-top: 10px;
+      display: flex;
+      border: 1px solid #c0c0c0; /* border to distinguish the area */
+    }
+
+    .progress {
+      background-color: #000080;
+      height: 14px;
+      width: 16px; 
+      margin-top: 2px;
+      margin-bottom: 2px;
+      margin-left: 2px;
+      display: none;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .button {
+      width: 80px;
+      text-align: center;
+      padding: 5px;
+      border: 2px solid;
+      background: #c0c0c0;
+    }
+
+    .disabled {
+      color: #808080;
+      border-color: #808080;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="desktop">
+    <div class="window" id="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Réinitialisation ordinateur Mickaël</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body" style="text-align: center;">
+        <img src="/images/msg_warning-0.png" alt="Warning Image" style="float: left; margin-right: 10px; width: 43px; height: 43px;">
+        <p>Do you really want to reinitialize this computer ?</p>
+        <p>(This choice could be irreversible, this is the last warning....)</p>
+        <button onclick="window.location.href = './anull.html'">Yes</button>
+        <button onclick="showLoading()">No</button>
+      </div>
+    </div>
+    <div class="window" id="loading">
+      <div class="title-bar">
+        <div class="title-bar-text">Loading...</div>
+      </div>
+      <div class="window-body">
+        <div class="progress-bar" id="progressBar">
+          <!-- Adding multiple progress elements -->
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+          <div class="progress"></div>
+        </div>
+        <div class="buttons">
+          <button class="button disabled" id="doneButton" disabled>Finish</button>
+          <button class="button" id="cancelButton">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toolbar">
+    <div class="toolbar-start-menu">
+      <button class="start-button">Start</button>
+    </div>
+    <div class="toolbar-separator"></div>
+    <div class="toolbar-left"></div>
+    <div class="toolbar-separator"></div>
+    <div class="toolbar-right">
+      <div class="time" id="currentTime"></div>
+    </div>
+  </div>
+
+  <script src="/projectFiles/Game/scriptTest.js"></script>
+  <script src="./resetComputer.js"></script> <!-- Lien vers le nouveau fichier JavaScript -->
+</body>
+
+</html>

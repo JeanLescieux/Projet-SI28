@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!-- Beginning of head -->
+    <html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!-- Beginning of head -->
+
+        <!-- Selects the typeface to use on the website -->
+        <!-- Start of CSS link -->
+        <link href="./wired.entry.neocities_files/mebious.css" media="all" rel="stylesheet" type="text/css">
+        <!-- End of CSS link -->
+        <style>
+            /* Tous les éléments utilisent maintenant la police Consolas */
+            * {
+                font-family: Consolas, monospace !important;
+            }
+        </style>
+        <!-- Start of Scripts -->
+
+        <script src="./adminConnection.js"></script>
+
+        <!-- End of Scripts -->
+
+    </head> <!--End of head -->
+</head> <!--End of head -->
+<!-- Start of body -->
+
+
+<body oncontextmenu="return false;">
+
+
+    <div style="position:relative;">
+        <!-- Start of Tabs -->
+        <div class="tabs">
+            <p class="taba maintab" onclick="openTab('main')"
+                style="background-color: rgb(0, 0, 0); color: rgb(0, 255, 0);">Main</p>
+            <p class="taba admintab" onclick="openTab('admin')"
+                style="background-color: rgb(0, 255, 0); color: rgb(0, 0, 0);">Admin</p>
+        </div>
+        <!-- END of Tabs -->
+        <!-- START OF UNDER1 -->
+        <div id="main" class="tab-content" style="display: block;">
+            <!-- START OF HEADER -->
+            <h1
+                style="font-family:Consolas;text-align:center;color:#00FF00;background-color:black;border-style:inset; border-width:5px;margin-top:1%;margin-bottom:10px;padding:10px;border-color:#00FF00;">
+                Main</h1>
+            <!-- END OF HEADER -->
+
+            <!-- BEGINNING OF MAIN CONTENT -->
+            <div class="main" style="padding:1%;display:flex;">
+
+            </div><!-- End of main -->
+
+
+        </div> <!-- end of under2 -->
+        <!-- START OF UNDER2 -->
+        <div id="admin" class="tab-content" style="display: none;">
+            <!-- START OF HEADER -->
+            <h1
+                style="font-family:Consolas;text-align:center;color:#00FF00;background-color:black;border-style:inset; border-width:5px;margin-top:1%;margin-bottom:10px;padding:10px;border-color:#00FF00;">
+                Administration Panel</h1>
+            <!-- END OF HEADER -->
+
+            <!-- BEGINNING OF MAIN CONTENT -->
+            <div class="main" style="padding:1%;display:flex;">
+                <!-- BEGINNING OF MAIN CONTENT -->
+                <div class="main" style="padding:1%;display:flex;">
+
+                    <!-- START OF TL PADLOCK IMAGE -->
+                    <div style="display:inherit;border:solid 2px #00FF00;flex-grow:1;align-self:auto;">
+                        <img alt="Tachibana Security Division Logo" draggable="false" class="lock"
+                            style="margin:10px;margin-left: auto;margin-right: auto;width:244px;height:295px;"
+                            src="./wired.entry.neocities_files/tachilock.png">
+                    </div>
+                    <!-- End OF TL PADLOCK IMAGE -->
+
+                    <!-- START OF LOGIN -->
+                    <div style="display: flex; flex-direction: column;">
+                        <div style="border: solid 2px #00FF00;margin-left:1%;padding:1%;">
+                            <p style="font-family:Consolas;margin:5px;text-decoration:underline;text-align:center;">
+                                Administrator Login</p><br>
+                            <form style="font-family: Consolas;" id="adminaccount">
+                                Username:<input style="color: gray;" id="username" type="text" name="username"
+                                    placeholder="Username">
+                                Password:<input style="color: gray;" id="password" type="password" name="password"
+                                    placeholder="Password">
+                                <input style="align-self: center;" type="submit" value="Login">
+                            </form>
+                        </div>
+                    </div>
+
+                    <script>
+                        function login(event) {
+                            event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+                            const username = document.getElementById('username').value;
+                            const password = document.getElementById('password').value;
+                            isCorrect = adminConnexion(username, password)
+                            if (isCorrect) {
+                                // Redirection vers une autre page HTML
+                                window.location.href = 'admin.html';
+                            } else {
+                                document.getElementById('username').value = '';
+                                document.getElementById('password').value = '';
+                            }
+                        }
+
+                        // Ajoute un écouteur d'événement pour l'envoi du formulaire
+                        document.getElementById('adminaccount').addEventListener('submit', login);
+
+                        document.addEventListener("DOMContentLoaded", function () {
+                            fetch("webPageMain.html")
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById("main").innerHTML = data;
+                                });
+                        });
+                    </script>
+                    <!-- End OF LOGIN -->
+                    <!-- START OF NUMPAD -->
+                    <div class="numpad" style="border:solid 2px #00FF00;margin-left:1%;padding:1%;">
+
+                        <div class="fapper">
+                            <p
+                                style="display:block;font-family:Consolas;margin:5px;text-decoration:underline;text-align:center;">
+                                Digital portal</p>
+                            <!-- ALLOWS THE USER TO ACCESS THIS Pr7 NODE TO CONNECT TO THE WIRED (Invalid INPUTS ARE DANGEROUS((FIX IT LATER)) )-->
+                            <input id="address" style="color:gray;text-align:center;" type="text" placeholder="???"
+                                maxlength="20">
+
+                            <div class="phonepad">
+                                <div class="frow">
+                                    <input onclick="addValue(7)" class="fbutt" type="button" value="7">
+                                    <input onclick="addValue(8)" class="fbutt" type="button" value="8">
+                                    <input onclick="addValue(9)" class="fbutt" type="button" value="9">
+                                </div>
+                                <div class="frow">
+                                    <input onclick="addValue(4)" class="fbutt" type="button" value="4">
+                                    <input onclick="addValue(5)" class="fbutt" type="button" value="5">
+                                    <input onclick="addValue(6)" class="fbutt" type="button" value="6">
+                                </div>
+                                <div class="frow">
+                                    <input onclick="addValue(1)" class="fbutt" type="button" value="1">
+                                    <input onclick="addValue(2)" class="fbutt" type="button" value="2">
+                                    <input onclick="addValue(3)" class="fbutt" type="button" value="3">
+                                </div>
+                                <div class="frow">
+                                    <input onclick="addValue(0)" class="fbutt" type="button" value="0">
+                                    <button onclick="clearValue()"
+                                        style="padding-left: 27.5px;padding-right:27.5px;margin:3px;border:outset 7px #00FF00;background-color:#00FF00; color:black;">
+                                        CLEAR
+                                    </button>
+                                </div>
+                                <div class="frow">
+                                    <input id="mbutton" type="button"
+                                        style="padding:6px;margin:3px;border: inset 7px #00FF00;width:100%;"
+                                        onclick="code()" value="Enter">
+                                </div>
+                            </div><!-- END of wrapper -->
+                        </div><!-- END of Phonepad -->
+
+                    </div><!-- End OF NUMPAD -->
+
+
+                </div><!-- End of main -->
+
+
+            </div> <!-- end of under2 -->
+        </div>
+
+
+</body><!-- End of body -->
+
+</html>
+
+</body><!-- End of body -->
+
+</html>

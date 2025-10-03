@@ -6,32 +6,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Full Screen Video Player</title>
   <link rel="stylesheet" href="https://unpkg.com/98.css">
-  <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS externe -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #fullscreen-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* La vidéo couvre tout l'écran */
+    }
+
+    #start-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/images/background.jpg'); /* L'image de fond */
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 
 <body>
   <div id="fullscreen-container">
-    <video id="fullscreen-video" preload="auto" muted>
-      <source src="/images/video_start.mp4" type="video/mp4">
-    </video>
+    <!-- La vidéo est ici, mais son contenu est modifié dynamiquement via JavaScript -->
+    <video id="fullscreen-video" preload="auto" muted></video>
+  </div>
 
-    <div id="start-screen">
-      <div id="startMenu" class="window">
-        <div class="title-bar">
-          <div class="title-bar-text">Hello!</div>
-          <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
-          </div>
+  <div id="start-screen">
+    <div id="startMenu" class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Hello!</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
         </div>
-        <div class="window-body">
-          <img src="/images/joystick-5.png" alt="Warning Image">
-          <p>Welcome to Lost PC, a french indie game. An english version is coming soon.</p>
-          <p><strong>Please press F11 for a better experience.</strong></p>
-          <p>Please press start to launch the PC you just bought...</p>
-          <button id="start-button">Start</button>
-        </div>
+      </div>
+      <div class="window-body">
+        <img src="/images/joystick-5.png" alt="Warning Image">
+        <p>Welcome to Lost PC, a french indie game. Which language do you prefer ?</p>
+        <button id="start-fr-button">French</button>
+        <button id="start-en-button">English</button>
       </div>
     </div>
   </div>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Explorer</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+
+</head>
+<style>
+    @font-face {
+  font-family: 'Levi Windows';
+  src: url('../../images/Windows-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+    * {
+        font-family: Levi Windows, monospace !important;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+
+    .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    display: none;
+}
+</style>
+
+<body>
+    <div class="window" style="width: 700px;height:400px;background-color: whitesmoke;">
+        <div class="title-bar">
+            <div class="title-bar-text">Recycle bin (E://HiddenDisk)</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" onclick="parent.closeRB()"></button>
+            </div>
+        </div>
+
+        <menu role="tablist" style="width: 698px; display: flex;background-color: lightgray;">
+            <li role="tab" aria-selected="true" style="background-color:whitesmoke"><a href="#tabs">Deleted
+                    documents</a></li>
+        </menu>
+
+        <div class="window-body" style="padding: 10px;display: flex;">
+            <div style="display: flex; flex-wrap: wrap;justify-content: flex-start;">
+                <div id="cesar"
+                    style="margin: 20px auto; padding: 0; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                    <img src="/images/fichier.png" alt="Fichier" style="width: 50px; height: 50px; margin-bottom: 5px;">
+                    <div style="font-size: 14px;">cesar.pdf</div>
+                </div>
+                <div id="regles"
+                    style="margin: 20px auto; padding-left: 40px; cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                    <img src="/images/fichier.png" alt="Fichier" style="width: 50px; height: 50px; margin-bottom: 5px;">
+                    <div style="font-size: 14px;">regles.pdf</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="status-bar" style="position: fixed; bottom: 90px; width: 697px;background-color: lightgray;">
+            <p class="status-bar-field">Double click to retrieve</p>
+            <p class="status-bar-field">Slide 1</p>
+            <p class="status-bar-field">Memory available: 42%</p>
+        </div>
+    </div>
+    <iframe id="fenetreModaleIMG" class="modal" src="../../Usables/imgOpen.html" frameborder="0" width="520px"
+            height="500px" style="border:none; position:absolute"></iframe>
+</body>
+<script>
+    // Récupère une référence vers chaque fichier div
+    const file1 = document.getElementById('cesar');
+    const file2 = document.getElementById('regles');
+
+    // Ajoute un gestionnaire d'événement de clic à chaque fichier div
+    // file1.addEventListener('click', function () {
+    //     console.log("Le fichier cesar a été cliqué !");
+    //     openIMG('/images/cesar.png');
+    // });
+
+    file2.addEventListener('click', function () {
+        console.log("Le fichier regles a été cliqué !");
+        openIMG('/images/regles.png');
+    });
+
+    async function openIMG(imagePath) {
+        var iframe = document.getElementById('fenetreModaleIMG');
+        iframe.style.display = 'none';
+
+        try {
+            const responseHTML = await fetch('../../Usables/imgOpen.html'); 
+            if (!responseHTML.ok) {
+                throw new Error('Erreur lors du chargement de imgOpen.html');
+            }
+            iframe.src = '../../Usables/imgOpen.html';
+
+            iframe.onload = async () => {
+                const imgElement = iframe.contentWindow.document.getElementById('imgOpen');
+                if (imgElement) {
+                    console.log('Element #imgOpen trouvé, chargement de l\'image...');
+                    try {
+                        const responseIMG = await fetch(imagePath);
+                        if (!responseIMG.ok) {
+                            throw new Error('Erreur lors du chargement de l\'image');
+                        }
+                        imgElement.src = imagePath;
+                        console.log('Image insérée dans le DOM');
+                        iframe.style.display = 'block';
+                        console.log('Fenêtre modale affichée');
+                    } catch (error) {
+                        console.error('Erreur lors de la tentative de chargement de l\'image: ', error);
+                        iframe.style.display = 'none';
+                    }
+                } else {
+                    console.log('Element #imgOpen non trouvé.');
+                    iframe.style.display = 'none';
+                }
+            };
+        } catch (error) {
+            console.error('Erreur globale: ', error);
+            iframe.style.display = 'none';
+        }
+    }
+
+
+    function closeIMG() {
+        document.getElementById('fenetreModaleIMG').style.display = 'none';
+        console.log('Fenêtre modale cachée');
+    }
+</script>
+
+</html>

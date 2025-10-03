@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .column {
+            float: left;
+        }
+
+        body {
+            margin: 0px
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="column" style="background-color:#aaa;flex: 30%;height:94vh">
+            <div class="title-bar inactive" style="width: 100%; display: flex; align-items: center;">
+                <img src="/images/file_gears-2.png" alt="Fichier"
+                    style="width: 20px; height: 20px;margin-bottom: 0px;">
+                <div class="title-bar-text">Dates</div>
+                <div class="title-bar-controls">
+                </div>
+            </div>
+            <ul style="list-style-type:none; padding:0">
+                <li><a id="01/01/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('January 1, 2003')">January 1, 1998</a></li>
+                <hr>
+                <li><a id="02/12/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('February 12, 2003')">February 12, 1998</a></li>
+                <hr>
+                <li><a id="03/23/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('March 23, 2003')">March 23, 1998</a></li>
+                <hr>
+                <li><a id="04/15/98" style="padding-left: 5px;color: black; cursor: pointer;"
+                        onclick="showContent('April 15, 2003')">April 15, 1998</a></li>
+                <hr>
+            </ul>
+        </div>
+        <div class="column" id="right-column" style="background-color:#bbb;flex: 70%;">
+            <a>digital saviors (http://digital-saviors.org/)</a>
+            <hr>
+            <a>amarr.empire (http://forums.com/sujets/politique-interne-de-l-empire-amarr/royaume-cosmique.789012/)</a>
+            <hr>
+            <a>caldari.corporation
+                (http://forums.com/sujets/economie-et-commerce-caldari/strategies-d-entreprise.345678/)</a>
+            <hr>
+            <a>digital saviors (http://digital-saviors.org/)</a>
+            <hr>
+            <a>sleepless.society
+                (http://forums.com/sujets/sommeil-et-conscience-sleepless/reveil-de-l-esprit.567890/)</a>
+            <hr>
+        </div>
+    </div>
+    <script>
+        function showContent(date) {
+            let content;
+            let url;
+            switch (date) {
+                case 'January 1, 2003':
+                    content = "<a>digital saviors (http://digital-saviors.org/)</a><hr>"
+                    content += "<a>amarr.empire (http://forums.com/sujets/politique-interne-de-l-empire-amarr/royaume-cosmique.789012/)</a><hr>";
+                    content += "<a>caldari.corporation (http://forums.com/sujets/economie-et-commerce-caldari/strategies-d-entreprise.345678/)</a><hr>";
+                    content += "<a>digital saviors (http://digital-saviors.org/)</a><hr>";
+                    content += "<a>sleepless.society (http://forums.com/sujets/sommeil-et-conscience-sleepless/reveil-de-l-esprit.567890/)</a><hr>";
+                    break;
+                case 'February 12, 2003':
+                    content = "<a>galacticfederation.forum (http://forums.com/sujets/discussion-generale-sur-la-federation-galactique/divulgation.123456/)</a><hr>"
+                    content += "<a>digital saviors (http://digital-saviors.org/)</a><hr>";
+                    content += "<a>minmatar.resistance (http://forums.com/sujets/resistance-minmatar/revolte-des-opprimes.901234/)</a><hr>";
+                    content += "<a>kybernaut.collective (http://forums.com/sujets/collectif-kybernaut/reconquete-de-l-abime.567890/)</a><hr>";
+                    content += "<a>digital saviors (http://digital-saviors.org/)</a><hr>";
+                    break;
+                case 'March 23, 2003':
+                    content = "<a>sleepless.society (http://forums.com/sujets/sommeil-et-conscience-sleepless/reveil-de-l-esprit.901234/)</a><hr>";
+                    content += "<a>theabyssal.portal (http://forums.com/sujets/portail-des-abimes/voyage-au-dela.567890/)</a><hr>";
+                    content += "<a>digital saviors (http://digital-saviors.org/)</a><hr>";
+                    content += "<a>jove.archives (http://forums.com/sujets/archives-jove/secrets-de-l-univers.789012/)</a><hr>";
+                    content += "<a>trigs.conclave (http://forums.com/sujets/conclave-triglavian/union-cosmique.345678/)</a><hr>";
+                    break;
+                case 'April 15, 2003':
+                    content = "<a>sleepless.society (http://forums.com/sujets/sommeil-et-conscience-sleepless/reveil-de-l-esprit.901234/)</a><hr>"
+                    content += "<a>thedark.path (http://forums.com/sujets/voie-sombre/recherche-du-savoir.567890/)</a><hr>";
+                    content += "<a>digital saviors (http://digital-saviors.org/)</a><hr>";
+                    content += "<a>drifter.encounter (http://forums.com/sujets/rencontre-avec-les-deriveurs/mysteres-de-l-espace.789012/)</a><hr>";
+                    content += "<a>theancient.mystery (http://forums.com/sujets/mystere-des-anciens/legende-ou-verite.345678/)</a><hr>";
+                    content += "<a>digital saviors (http://digital-saviors.org/)</a><hr>";
+                    break;
+                default:
+                    url = '#';
+                    content = "<h2>" + date + "</h2><p>This is the default content for " + date + ". Visit <a href='" + url + "'>Example Website</a></p>";
+            }
+            document.getElementById('right-column').innerHTML = content;
+        }
+
+    </script>
+</body>
+
+</html>
