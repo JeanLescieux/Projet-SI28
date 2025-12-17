@@ -42,18 +42,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log('Ouverture de J2.txt');
                 openNP('./Texte/9.txt');
             }
-            else if (file.id === 'img1') {
-                console.log('Ouverture de J2.txt');
-                openIMG('/images/cicada-3301-location.jpg');
-            }
-            else if (file.id === 'img2') {
-                console.log('Ouverture de J2.txt');
-                openIMG('/images/test1Cic.jpg');
-            }
-            else if (file.id === 'img3') {
-                console.log('Ouverture de J2.txt');
-                openIMG('/images/test2Cic.png');
-            }
+            // else if (file.id === 'img1') {
+            //     console.log('Ouverture de J2.txt');
+            //     openIMG('/images/cicada-3301-location.jpg');
+            // }
+            // else if (file.id === 'img2') {
+            //     console.log('Ouverture de J2.txt');
+            //     openIMG('/images/test1Cic.jpg');
+            // }
+            // else if (file.id === 'img3') {
+            //     console.log('Ouverture de J2.txt');
+            //     openIMG('/images/test2Cic.png');
+            // }
             else {
                 console.log('Fichier non reconnu, ouverture msg erreur');
                 openError();
